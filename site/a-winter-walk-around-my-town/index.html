@@ -79,6 +79,21 @@
 
 
 
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
 <!-- End: statamic-peak-seo::snippets/_seo.antlers.html -->
 
         <!-- /snippets/_browser_appearance.antlers.html -->
@@ -114,6 +129,26 @@
 
         
         
+        <!-- Matomo -->
+        <script>
+            var _paq = window._paq = window._paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function () {
+                var u = "//stats.marcelbootsman.nl/";
+                _paq.push(['setTrackerUrl', u + 'matomo.php']);
+                _paq.push(['setSiteId', '1']);
+                var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+                g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+            })();
+        </script>
+        <noscript>
+            <p><img src="//stats.marcelbootsman.nl/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p>
+        </noscript>
+        <!-- End Matomo Code -->
+
+        
     </head>
  
     <body class="flex flex-col min-h-screen bg-stone-100 selection:bg-primary selection:text-white">
@@ -148,8 +183,6 @@
 <!-- End: statamic-peak-tools::navigation/_skip_to_content.antlers.html -->
 
         <!-- statamic-peak-tools::components/_toolbar.antlers.html -->
-
-    <span class="nocache" data-nocache="a1f4f5d2c1e5de662681f9af0615702659328900">NOCACHE_PLACEHOLDER</span>
 
 <!-- End: statamic-peak-tools::components/_toolbar.antlers.html -->
 
