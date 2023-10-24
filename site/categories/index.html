@@ -1,0 +1,784 @@
+<!-- /layout.antlers.html -->
+<!doctype html>
+<html lang="en" class="antialiased">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <link rel="preload" as="style" href="https://marcelbootsman.nl/build/assets/site-4f566f44.css" /><link rel="modulepreload" href="https://marcelbootsman.nl/build/assets/site-81e99988.js" /><link rel="stylesheet" href="https://marcelbootsman.nl/build/assets/site-4f566f44.css" /><script type="module" src="https://marcelbootsman.nl/build/assets/site-81e99988.js"></script>
+        <!-- statamic-peak-seo::snippets/_seo.antlers.html -->
+
+<title>
+    
+    
+    
+        Categories - marcelbootsman.nl
+    
+</title>
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:site_name" content="marcelbootsman.nl">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+    <meta property="og:title" content="Categories">
+
+
+
+
+
+
+
+
+
+<!-- End: statamic-peak-seo::snippets/_seo.antlers.html -->
+
+        <!-- /snippets/_browser_appearance.antlers.html -->
+
+
+
+
+
+
+
+    
+    <link rel="icon" href="/favicons/mb-logo.svg" type="image/svg+xml">
+
+
+
+<link rel="manifest" href="/site.webmanifest">
+
+
+
+<!-- End: /snippets/_browser_appearance.antlers.html -->
+
+        <!-- statamic-peak-tools::snippets/_live_preview.antlers.html -->
+
+<!-- End: statamic-peak-tools::snippets/_live_preview.antlers.html -->
+
+        
+        <link rel="alternate" type="application/atom+xml" title="marcelbootsman.nl"  href="/feed/atom" />
+<link rel="alternate" type="application/rss+xml" title="marcelbootsman.nl"  href="/feed" />
+        
+        
+        
+    </head>
+ 
+    <body class="flex flex-col min-h-screen bg-stone-100 selection:bg-primary selection:text-white">
+        <script>
+            if (localStorage.getItem("pref-theme") === "dark") {
+                document.body.classList.add('dark');
+            } else if (localStorage.getItem("pref-theme") === "light") {
+                document.body.classList.remove('dark')
+            } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.add('dark');
+            }
+        </script>
+        <!-- statamic-peak-tools::snippets/_noscript.antlers.html -->
+
+    <noscript>
+        <style>
+            nav.hidden,
+            nav ul [x-cloak],
+            nav ul li ul {
+                display: block !important;
+            }
+        </style>
+        <p class="relative z-50 py-3 px-4 bg-gray-100 border-b border-gray-200 text-center font-bold text-xs text-gray-600">This website requires Javascript for some parts to function properly. Your experience may vary.</p>
+    </noscript>
+
+<!-- End: statamic-peak-tools::snippets/_noscript.antlers.html -->
+
+        <!-- statamic-peak-tools::navigation/_skip_to_content.antlers.html -->
+<a class="fixed z-50 px-4 py-2 text-sm font-bold text-white -translate-y-24 opacity-0 top-4 left-8 bg-primary focus-visible:translate-y-0 focus-visible:opacity-100 focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 motion-safe:transition-transform" href="#content">
+    Skip to content
+</a>
+<!-- End: statamic-peak-tools::navigation/_skip_to_content.antlers.html -->
+
+        <!-- statamic-peak-tools::components/_toolbar.antlers.html -->
+
+    <aside
+            class="fixed z-50 bottom-1 right-1 flex text-xs divide-x divide-white shadow-sm divide-solid motion-safe:transition-opacity hover:opacity-100"
+            x-data="{ toolbarVisible: $persist(true).as('toolbarVisible') }"
+            x-ref="toolbar"
+            :class="{ 'opacity-100': toolbarVisible, 'opacity-0': !toolbarVisible }"
+            x-cloak
+        >
+            <span title="Current Tailwind breakpoint" class="flex items-center p-2 space-x-1 text-yellow-800 bg-yellow-200">
+                <svg class="w-4 h-4 fill-current" alt="" aria-hidden="true" viewBox="0 0 496.8 496.8"><path d="M118 377.8l-64-64c-6.4-6.4-16-6.4-22.4 0-6.4 6.4-6.4 16 0 22.4l64 64c3.2 3.2 6.4 4.8 11.2 4.8s8-1.6 11.2-4.8c6.4-6.4 6.4-16 0-22.4z"/><path d="M486 107.4l-96-96a39.7 39.7 0 00-54.4 0L10.8 334.6a39.6 39.6 0 000 54.4l96 96c8 8 17.6 11.2 27.2 11.2 9.6 0 19.2-3.2 25.6-11.2L486 161.8c14.4-16 14.4-40 0-54.4zm-24 30.4L137.2 462.6c-3.2 3.2-4.8 3.2-8 0l-96-96c-1.6-1.6-1.6-6.4 0-8L356.4 33.8c1.6-1.6 3.2-1.6 4.8-1.6 1.6 0 3.2 0 4.8 1.6l96 96c1.6 1.6 1.6 6.4 0 8z"/><path d="M258.8 237l-64-64c-6.4-6.4-16-6.4-22.4 0-6.4 6.4-6.4 16 0 22.4l64 64c3.2 3.2 6.4 4.8 11.2 4.8s8-1.6 11.2-4.8c6.4-6.4 6.4-16 0-22.4zm-72 22.4l-40-38.4c-6.4-6.4-16-6.4-22.4 0-6.4 6.4-6.4 16 0 22.4l40 38.4c3.2 3.2 6.4 4.8 11.2 4.8s9.6-1.6 11.2-4.8c6.4-6.4 6.4-16 0-22.4zm-46.4 46.4L102 267.4c-6.4-6.4-16-6.4-22.4 0-6.4 6.4-6.4 16 0 22.4l38.4 38.4c3.2 3.2 6.4 4.8 11.2 4.8 4.8 0 8-1.6 11.2-4.8 6.4-6.4 6.4-16 0-22.4zm187.2-187.2l-38.4-38.4c-6.4-6.4-16-6.4-22.4 0-6.4 6.4-6.4 16 0 22.4l38.4 38.4c3.2 3.2 6.4 4.8 11.2 4.8 4.8 0 9.6-1.6 11.2-4.8 6.4-6.4 6.4-16 0-22.4zM281.2 165l-38.4-38.4c-6.4-6.4-16-6.4-22.4 0-6.4 6.4-6.4 16 0 22.4l38.4 38.4c3.2 3.2 6.4 4.8 11.2 4.8s8-1.6 11.2-4.8c6.4-6.4 6.4-16 0-22.4zm118.4-68.8l-64-64c-6.4-6.4-16-6.4-22.4 0-6.4 6.4-6.4 16 0 22.4l64 64c3.2 3.2 6.4 4.8 11.2 4.8 4.8 0 8-1.6 11.2-4.8 6.4-6.4 6.4-16 0-22.4z"/></svg>
+                <span class="breakpoint"></span>
+            </span>
+
+            
+
+            <button
+                @click="toolbarVisible = !toolbarVisible"
+                title="Toggle toolbar visibility" aria-label="Toggle toolbar visibility" class="flex items-center justify-center px-2 bg-gray-200 hover:bg-gray-300"
+            >
+                <div x-show="!toolbarVisible">
+                    <svg class="w-5 h-5 fill-current" alt="" aria-hidden="true" viewBox="0 0 152 88"><path d="M116.4 53.3l6.6 12.2a3.5 3.5 0 106.3-3.4l-6.6-12.2a3.6 3.6 0 10-6.3 3.4zM97 59.5l.8-.1c1.6 0 3 1 3.5 2.7l3.4 13.5a3.6 3.6 0 11-7 1.7l-3.3-13.5c-.5-1.9.7-3.8 2.6-4.3zm-51.8 7.8a3.6 3.6 0 117 1.7l-3.5 13.5a3.5 3.5 0 01-4.3 2.6c-2-.5-3-2.4-2.6-4.3l3.4-13.5zm27.5-.9c2 0 3.5 1.6 3.5 3.6v13.8a3.6 3.6 0 01-7 0V70c0-2 1.5-3.6 3.5-3.6zm77.6-25.1a3.6 3.6 0 01-2.5 6.1c-.9 0-1.7-.3-2.4-1-.2-.1-5.2-4.8-12.9-10.7-16.1 11.8-41.1 26.4-66 26.4C42 62.1 24.1 48.4 13 36.7c-4 5-6.4 8.8-6.5 9a3.6 3.6 0 01-4.8 1.2 3.5 3.5 0 01-1.3-4.8c.3-.6 3.1-5.1 7.8-10.9A94 94 0 01.5 20.4c-1-1.7-.4-3.9 1.3-4.8 1.7-1 3.8-.4 4.8 1.3.1 0 2.5 3.9 6.5 9C24.1 14 42.1.3 66.4.3c25 0 50 14.6 66.1 26.4A186 186 0 00145.4 16a3.6 3.6 0 015 0 3.6 3.6 0 01-.1 5.1c-.6.5-5 4.7-11.9 10 6.8 5.4 11.4 9.6 11.9 10zm-24-10c-15.4-11-38-23.8-59.9-23.8-21.8 0-38.4 13-48.5 23.8C28.1 42 44.6 55 66.4 55c22 0 44.5-12.8 60-23.7zM19 51.9a3.5 3.5 0 013-1.9 3.6 3.6 0 013.2 5.3l-6.6 12.2a3.6 3.6 0 01-6.2-3.4L19 52z"/></svg>
+                </div>
+                <div x-show="toolbarVisible">
+                    <svg class="w-5 h-5 fill-current" alt="" aria-hidden="true" viewBox="0 0 152 87"><path d="M116.4 34.8l6.6-12.2a3.5 3.5 0 116.3 3.3l-6.6 12.3a3.6 3.6 0 11-6.3-3.4zM97 28.5l.8.2c1.6 0 3-1.1 3.5-2.7l3.4-13.5a3.6 3.6 0 10-7-1.8l-3.3 13.5c-.5 2 .7 3.9 2.6 4.3zm-51.8-7.7a3.6 3.6 0 107-1.8L48.6 5.5A3.5 3.5 0 0044.4 3c-2 .5-3 2.5-2.6 4.3l3.4 13.6zm27.5.8c2 0 3.5-1.6 3.5-3.5V4a3.6 3.6 0 00-7 0v14c0 2 1.5 3.5 3.5 3.5zM150.3 66a3.6 3.6 0 01-2.5 6.1c-.9 0-1.7-.3-2.4-1-.2-.1-5.2-4.8-12.9-10.6-16.1 11.7-41.1 26.4-66 26.4C42 86.8 24.1 73 13 61.3c-4 5-6.4 8.8-6.5 9a3.6 3.6 0 01-4.8 1.2 3.5 3.5 0 01-1.3-4.8c.3-.5 3.1-5 7.8-10.8A94 94 0 01.5 45c-1-1.7-.4-3.8 1.3-4.8 1.7-1 3.8-.4 4.8 1.3.1 0 2.5 4 6.5 9 11-11.8 29-25.5 53.3-25.5 25 0 50 14.6 66.1 26.4a186 186 0 0012.9-10.7 3.6 3.6 0 015 .1 3.6 3.6 0 01-.1 5c-.6.5-5 4.7-11.9 10 6.8 5.4 11.4 9.6 11.9 10.1zm-24-10C111 44.9 88.4 32 66.5 32S28 45 18 55.9c10.2 10.8 26.7 23.8 48.5 23.8 22 0 44.5-12.9 60-23.8zM19 36a3.5 3.5 0 003 1.9 3.6 3.6 0 003.2-5.3l-6.6-12.2a3.6 3.6 0 00-6.2 3.4L19 36.1zm31 20a18 18 0 1036 0 18 18 0 00-36 0z"/></svg>
+                </div>
+            </button>
+
+            <button
+                @click="$refs.toolbar.remove()"
+                title="Remove toolbar" aria-label="Remove toolbar" class="flex items-center justify-center px-2 bg-gray-200 hover:bg-gray-300"
+            >
+                <svg class="w-4 h-4 text-yellow-800 stroke-current" alt="" aria-hidden="true" viewBox="0 0 140 140"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M100.625 122.5h-61.25a8.75 8.75 0 01-8.75-8.75V35h78.75v78.75a8.75 8.75 0 01-8.75 8.75zM56.875 96.25v-35M83.125 96.25v-35M13.125 35h113.75M83.125 17.5h-26.25a8.75 8.75 0 00-8.75 8.75V35h43.75v-8.75a8.75 8.75 0 00-8.75-8.75z" stroke-width="8.749995"/></g></svg>
+            </button>
+        </aside>
+
+<!-- End: statamic-peak-tools::components/_toolbar.antlers.html -->
+
+        
+
+        <!-- /layout/_header.antlers.html -->
+<header class="w-full py-4">
+    <div class="fluid-container flex justify-between items-center">
+        
+        <!-- /components/_logo.antlers.html -->
+<div class="basis-96">
+    <a class="p-2 -m-2 focus:outline-none focus-visible:ring-2 ring-primary"
+        aria-label="Logo marcelbootsman" href="/">
+        <img src="https://marcelbootsman.nl/visuals/marcelbootsman-logo.png" class="logo inline select-none " width="80" alt="marcelbootsman" />
+        <span class="border-b-4 border-brightgreen text-2xl font-bold">Marcel Bootsman</span>
+    </a>
+    <div class="inline-block relative top-2">
+        <button id="theme-toggle" title="Toggle dark/light theme">
+            <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="48" height="28" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+            </svg>
+            <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="48" height="28" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+        </button>
+    </div>
+</div>
+<!-- End: /components/_logo.antlers.html -->
+        
+<!-- /navigation/_main_desktop.antlers.html -->
+<nav class="hidden md:block" aria-label="Main navigation">
+    <ul class="flex items-center space-x-8">
+        
+        <li
+            
+            class="relative leading-none">
+            <a class="
+                        p-1 -m-1 flex items-center font-bold text-sm hover:text-primary underline focus:outline-none focus-visible:ring-2 ring-primary
+                        text-neutral
+                    "
+                
+                href="/"
+                >
+                Home
+                
+            </a>
+            
+        </li>
+        
+        <li
+            
+            class="relative leading-none">
+            <a class="
+                        p-1 -m-1 flex items-center font-bold text-sm hover:text-primary underline focus:outline-none focus-visible:ring-2 ring-primary
+                        text-neutral
+                    "
+                
+                href="/archive"
+                >
+                Archive
+                
+            </a>
+            
+        </li>
+        
+        <li
+            
+            class="relative leading-none">
+            <a class="
+                        p-1 -m-1 flex items-center font-bold text-sm hover:text-primary underline focus:outline-none focus-visible:ring-2 ring-primary
+                        text-neutral
+                    "
+                
+                href="/notes"
+                >
+                Notes
+                
+            </a>
+            
+        </li>
+        
+        <li
+            
+            class="relative leading-none">
+            <a class="
+                        p-1 -m-1 flex items-center font-bold text-sm hover:text-primary underline focus:outline-none focus-visible:ring-2 ring-primary
+                        text-primary
+                    "
+                
+                href="/categories"
+                >
+                Categories
+                
+            </a>
+            
+        </li>
+        
+    </ul>
+</nav>
+<!-- End: /navigation/_main_desktop.antlers.html -->
+
+
+<!-- /navigation/_main_mobile.antlers.html -->
+<nav
+    x-data="{ mobileNavOpen: false }"
+    class="md:hidden"
+    aria-label="Main navigation"
+    x-trap.inert.noscroll="mobileNavOpen"
+    @keyup.escape.stop.prevent="mobileNavOpen = false"
+    x-cloak
+>
+    <button
+        @click.prevent.stop="mobileNavOpen = !mobileNavOpen"
+        class="fixed top-0 right-0 z-20 flex items-center justify-center w-16 h-16 mr-8 text-xs font-bold text-white mb-safe rounded bg-primary focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2"
+        :aria-label="
+        mobileNavOpen
+            ? 'Close navigation'
+            : 'Open navigation'
+        "
+        :aria-expanded="mobileNavOpen"
+        x-text="mobileNavOpen ? 'Close' : 'Menu'"
+    ></button>
+
+    <div
+        class="fixed inset-0 z-10 pt-8 px-8 pb-12 flex flex-col justify-start bg-white"
+        x-show="mobileNavOpen"
+    >
+        <ul class="flex flex-col py-2 space-y-4 overflow-auto">
+            
+                <li
+                    
+                    class="leading-none"
+                >
+                    <a
+                        class="w-full py-2 flex items-center space-x-1 text-lg font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                        
+                            href="/"
+                        
+                    >
+                        <span>Home</span>
+                        
+                    </a>
+                    
+                </li>
+            
+                <li
+                    
+                    class="leading-none"
+                >
+                    <a
+                        class="w-full py-2 flex items-center space-x-1 text-lg font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                        
+                            href="/archive"
+                        
+                    >
+                        <span>Archive</span>
+                        
+                    </a>
+                    
+                </li>
+            
+                <li
+                    
+                    class="leading-none"
+                >
+                    <a
+                        class="w-full py-2 flex items-center space-x-1 text-lg font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                        
+                            href="/notes"
+                        
+                    >
+                        <span>Notes</span>
+                        
+                    </a>
+                    
+                </li>
+            
+                <li
+                    
+                    class="leading-none"
+                >
+                    <a
+                        class="w-full py-2 flex items-center space-x-1 text-lg font-bold hover:text-primary text-primary focus:outline-none focus-visible:ring-2 ring-primary"
+                        
+                            href="/categories"
+                        
+                    >
+                        <span>Categories</span>
+                        
+                    </a>
+                    
+                </li>
+            
+        </ul>
+    </div>
+</nav>
+<!-- End: /navigation/_main_mobile.antlers.html -->
+
+
+    </div>
+</header>
+<!-- End: /layout/_header.antlers.html -->
+
+        <!-- /categories/index.antlers.html -->
+<main class="prose fluid-container" id="content">
+    <h1>Categories</h1>
+    <p>Here are all the categories I wrote about.</p>
+    <ul class="list-none">
+        
+
+            
+
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category Audio has 1 article" href="/categories/audio">Audio<sup class="mx-1 ">(1)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category Bitcoin has 1 article" href="/categories/bitcoin">Bitcoin<sup class="mx-1 ">(1)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category Business has 1 article" href="/categories/business">Business<sup class="mx-1 ">(1)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category Crypto has 1 article" href="/categories/crypto">Crypto<sup class="mx-1 ">(1)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category Family has 2 articles" href="/categories/family">Family<sup class="mx-1 ">(2)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category General has 3 articles" href="/categories/general">General<sup class="mx-1 ">(3)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category Hiking has 2 articles" href="/categories/hiking">Hiking<sup class="mx-1 ">(2)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category Home Assistant has 1 article" href="/categories/home-assistant">Home Assistant<sup class="mx-1 ">(1)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category Laravel has 1 article" href="/categories/laravel">Laravel<sup class="mx-1 ">(1)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category Personal has 6 articles" href="/categories/personal">Personal<sup class="mx-1 ">(6)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category Privacy has 1 article" href="/categories/privacy">Privacy<sup class="mx-1 ">(1)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category Security has 1 article" href="/categories/security">Security<sup class="mx-1 ">(1)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category Statamic has 3 articles" href="/categories/statamic">Statamic<sup class="mx-1 ">(3)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category Ubuntu has 6 articles" href="/categories/ubuntu">Ubuntu<sup class="mx-1 ">(6)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category Video has 1 article" href="/categories/video">Video<sup class="mx-1 ">(1)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category WordPress has 1 article" href="/categories/wordpress">WordPress<sup class="mx-1 ">(1)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category WordPress Community has 11 articles" href="/categories/wordpress-community">WordPress Community<sup class="mx-1 ">(11)</sup></a>
+                </li>
+            
+
+        
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+                
+                    
+                
+                <li class="inline-block bg-grey rounded-md">
+                    <a class="no-underline" title="Category WordPress Tips has 6 articles" href="/categories/wordpress-tips">WordPress Tips<sup class="mx-1 ">(6)</sup></a>
+                </li>
+            
+
+        
+    </ul>
+</main>
+<!-- End: /categories/index.antlers.html -->
+        <!-- /layout/_footer.antlers.html -->
+<footer class="w-full py-4 mt-auto">
+    <div class="fluid-container flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-between md:space-x-4 md:items-center ">
+        <div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 text-xs font-bold">
+            <span>
+                &copy; 2013
+                
+                    - 2023
+                    
+                Marcel Bootsman - Powered by <a href="https://statamic.com/">Statamic</a>
+            </span>
+
+            
+            
+        </div>
+        
+            <div class="flex space-x-2">
+                
+                <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary" href="https://toot.re/@mbootsman" rel="noopener me" aria-label="marcelbootsman on Mastodon" target="_blank"><svg class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 448 512"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 01-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg></a>
+                
+                <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary" href="https://www.github.com/mbootsman" rel="noopener" aria-label="marcelbootsman on Github" target="_blank"><svg class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 140 140"><path d="M70 1.633a70 70 0 00-21.7 136.559h1.692a5.833 5.833 0 006.183-6.184v-1.225-6.358a2.917 2.917 0 00-1.167-1.925 2.917 2.917 0 00-2.45-.583C36.925 125.3 33.6 115.5 33.367 114.858a27.067 27.067 0 00-10.034-12.775 6.767 6.767 0 00-.875-.641 3.675 3.675 0 012.217-.409 8.575 8.575 0 016.708 5.134 17.5 17.5 0 0023.334 6.766 2.917 2.917 0 001.691-2.1 11.667 11.667 0 013.267-7.175 2.917 2.917 0 00-1.575-5.075c-13.825-1.575-27.942-6.416-27.942-30.275a23.333 23.333 0 016.125-16.216A2.917 2.917 0 0036.808 49a20.533 20.533 0 01.059-14 32.317 32.317 0 0114.7 6.708 2.858 2.858 0 002.45.409A61.892 61.892 0 0170 39.958a61.075 61.075 0 0116.042 2.159 2.858 2.858 0 002.391-.409 32.608 32.608 0 0114.7-6.708 20.825 20.825 0 010 13.883 2.917 2.917 0 00.525 3.092 23.333 23.333 0 016.125 16.042c0 23.858-14.175 28.641-28.058 30.216a2.917 2.917 0 00-1.575 5.134 12.833 12.833 0 013.558 10.15v18.55a6.183 6.183 0 002.1 4.841 7 7 0 006.184 1.109A70 70 0 0070 1.633z"/></svg></a>
+                
+                <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary" href="https://www.linkedin.com/in/marcelbootsman/" rel="noopener" aria-label="marcelbootsman on Linkedin" target="_blank"><svg class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 140 140"><path d="M23.4 44.59h-4.75a12.76 12.76 0 00-9.73 2.19 9.44 9.44 0 00-2.35 7.12V131a9.08 9.08 0 002.3 7 9.24 9.24 0 006.82 2c2.22 0 4.15-.21 8.24-.06a12 12 0 009.25-2 9.1 9.1 0 002.29-7V53.9a9.44 9.44 0 00-2.34-7.12 12.68 12.68 0 00-9.73-2.19zM21 0A16.19 16.19 0 005.09 15.6 16.52 16.52 0 0021 31.86 16.12 16.12 0 0037 15.6 16.18 16.18 0 0021 0zM99.74 43.63a31.09 31.09 0 00-20.93 6.3A7.25 7.25 0 0077 46.34a6.08 6.08 0 00-4.52-1.78 119.08 119.08 0 00-15 .3c-4.16.84-6.18 3.79-6.18 9V131a9.14 9.14 0 002.28 7 12.06 12.06 0 009.26 2c4.47-.17 5.74.06 8.22.06a9.26 9.26 0 006.83-2 9.12 9.12 0 002.3-7V89.88A12.48 12.48 0 0192.93 76 12.44 12.44 0 01106 89.88V131a9.1 9.1 0 002.29 7 12 12 0 009.24 2c1.83-.07 4-.07 5.8 0a12.09 12.09 0 009.26-2 9.14 9.14 0 002.28-7V78.32a33.07 33.07 0 00-35.13-34.69z"/></svg></a>
+                
+                <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary" href="mailto:marcel@bootsman.org" rel="noopener" aria-label="marcelbootsman on Email" target="_blank"><svg class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 512 512"><path d="M256 352c-16.53 0-33.06-5.422-47.16-16.41L0 173.2V400c0 26.5 21.49 48 48 48h416c26.51 0 48-21.49 48-48V173.2L303.2 335.7C289.1 346.6 272.5 352 256 352zM16.29 145.3l212.2 165.1c16.19 12.6 38.87 12.6 55.06 0l212.2-165.1C505.1 137.3 512 125 512 112c0-26.51-21.5-48-48-48H48C21.49 64 0 85.49 0 112c0 13 6.01 25.3 16.29 33.3z"/></svg></a>
+                
+                <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary" href="/feed" rel="noopener" aria-label="marcelbootsman on Rss" target="_blank"><svg class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+                
+            </div>
+        
+
+    </div>
+</footer>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+</script>
+<!-- End: /layout/_footer.antlers.html -->
+
+    </body>
+</html>
+<!-- End: /layout.antlers.html -->

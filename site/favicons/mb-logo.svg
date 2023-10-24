@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="75.419991mm"
+   height="83.461868mm"
+   viewBox="0 0 75.419991 83.461868"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="mb-logo.svg"
+   inkscape:export-filename="/media/marcel/documenten/Marcel/marcelbootsman.nl/mb-logo.png"
+   inkscape:export-xdpi="202.07001"
+   inkscape:export-ydpi="202.07001"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="0.77771465"
+     inkscape:cx="-185.15789"
+     inkscape:cy="201.23062"
+     inkscape:window-width="1551"
+     inkscape:window-height="1082"
+     inkscape:window-x="1226"
+     inkscape:window-y="542"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     width="209mm"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <sodipodi:guide
+       position="36.929904,106.08327"
+       orientation="1,0"
+       id="guide7037" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <rect
+       x="138.73421"
+       y="116.01139"
+       width="172.11636"
+       height="157.7206"
+       id="rect3867" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-61.389679,-95.425525)">
+    <path
+       sodipodi:type="star"
+       style="fill:#000000"
+       id="path43"
+       inkscape:flatsided="true"
+       sodipodi:sides="6"
+       sodipodi:cx="376.43127"
+       sodipodi:cy="521.87286"
+       sodipodi:r1="157.72617"
+       sodipodi:r2="136.59486"
+       sodipodi:arg1="0.50090981"
+       sodipodi:arg2="1.0245086"
+       inkscape:rounded="0.1"
+       inkscape:randomized="0"
+       d="m 514.78015,597.61672 c -7.57438,13.83489 -119.00198,81.58388 -134.77054,81.94171 -15.76856,0.35784 -130.1547,-62.2668 -138.34888,-75.74385 -8.19417,-13.47706 -11.15272,-143.85068 -3.57833,-157.68557 7.57438,-13.83489 119.00198,-81.58388 134.77054,-81.94172 15.76855,-0.35783 130.1547,62.2668 138.34888,75.74386 8.19417,13.47705 11.15272,143.85068 3.57833,157.68557 z"
+       transform="matrix(0.26454751,0.00435377,-0.00435377,0.26454751,1.7878328,-2.5426028)"
+       inkscape:export-filename="/media/marcel/documenten/Marcel/marcelbootsman.nl/mb-logo.png"
+       inkscape:export-xdpi="202.07001"
+       inkscape:export-ydpi="202.07001" />
+    <g
+       aria-label="MB"
+       transform="matrix(1.1955093,0,0,1.1955093,-98.223758,-30.309641)"
+       id="text3865"
+       style="font-size:40px;line-height:1.25;font-family:in;-inkscape-font-specification:in;white-space:pre;shape-inside:url(#rect3867);fill:#ffffff">
+      <path
+         d="m 141.56641,125.69922 h 2.5 l 9.6875,11.13281 9.64843,-11.13281 h 2.5 v 27.1875 h -3.90625 v -20.70313 l -1.15234,1.5625 -7.08984,8.26172 -7.08985,-8.24219 -1.1914,-1.5625 v 20.6836 h -3.90625 z"
+         style="font-family:Inder;-inkscape-font-specification:Inder"
+         id="path8176" />
+      <path
+         d="m 172.05469,125.69922 h 6.85547 q 6.73828,0 8.6914,3.88672 0.72266,1.46484 0.72266,2.91015 0,1.44532 -0.3125,2.30469 -0.29297,0.83984 -0.80078,1.54297 -0.95703,1.32812 -2.53907,2.26562 v 0.0781 q 2.92969,0.83984 4.31641,2.94922 1.05469,1.60156 1.05469,3.55469 0,1.95312 -0.78125,3.3789 -0.76172,1.42578 -2.12891,2.38281 -2.79297,1.9336 -7.46094,1.9336 h -7.61718 z m 7.59765,11.85547 q 3.14453,0 4.23828,-2.48047 0.3711,-0.87891 0.3711,-1.95313 0,-1.09375 -0.27344,-1.875 -0.27344,-0.80078 -0.87891,-1.36718 -1.28906,-1.21094 -3.88671,-1.21094 h -3.26172 v 8.88672 z m 6.32813,7.71484 q 0,-4.74609 -5.70313,-4.74609 h -4.3164 v 9.39453 h 3.71093 q 4.29688,0 5.80079,-2.59766 0.50781,-0.8789 0.50781,-2.05078 z"
+         style="font-family:Inder;-inkscape-font-specification:Inder"
+         id="path8178" />
+    </g>
+  </g>
+</svg>
