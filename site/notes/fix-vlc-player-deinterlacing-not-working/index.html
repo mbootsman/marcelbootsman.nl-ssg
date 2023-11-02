@@ -111,6 +111,47 @@
 <link rel="alternate" type="application/rss+xml" title="marcelbootsman.nl"  href="/feed" />
         
         
+<script>
+    /* Generate a share link for the user's Mastodon domain */
+    function MastodonShare(e) {
+        // Get the source text
+        src = e.getAttribute("data-src");
+
+        // Get the Mastodon domain
+        domain = prompt("Enter your Mastodon domain", "toot.re");
+
+        if (domain == "" || domain == null) {
+            return;
+        }
+
+        // Build the URL
+        url = "https://" + domain + "/share?text=" + src;
+
+        // Open a window on the share page
+        window.open(url, '_blank');
+    }
+
+    function doSomethingWhenDocumentReady(functionToExecute) {
+        /* $(document).ready() without javascript
+        */
+        if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            functionToExecute();
+        } else {
+            document.addEventListener("DOMContentLoaded", functionToExecute);
+        }
+    }
+
+    /* Call this on document.ready() */
+    function unhideMastodonShare() {
+        var button = document.getElementById('mastodonshare');
+        button.classList.remove('hidden');
+    }
+    doSomethingWhenDocumentReady(unhideMastodonShare);
+
+</script>
+
         
         
         <!-- Matomo -->
@@ -378,15 +419,24 @@
 </header>
 <!-- End: /layout/_header.antlers.html -->
 
-        <main class="prose fluid-container" id="content">
+        
+
+<main class="prose fluid-container" id="content">
     <h1 class="block">Fix VLC Player deinterlacing not working</h1>
     <span class="block text-sm text-stone-400 my-4">January 27th, 2023</span>
     
     <a href="/categories/ubuntu" class="category text-xs p-2 my-4 mr-2 rounded-md bg-stone-200 hover:bg-brightgreen">Ubuntu </a>
     
+
+    <span id="mastodonshare" class="hidden category inline-flex items-baseline float-right rounded-md bg-stone-200 hover:bg-brightgreen px-1">
+    <a class="underline" title="Share 'Fix VLC Player deinterlacing not working' on Mastodon" href="#" onclick="MastodonShare(this);" data-src="I found this blog and decided to share it with you.%0D%0A%0D%0AFix VLC Player deinterlacing not working&amp;url=https://marcelbootsman.nl/notes/fix-vlc-player-deinterlacing-not-working">
+        <img class="inline align-middle h-4 m-0 mr-1" alt="Mastodon logo" title="Share on Mastodon" src="/visuals/mastodon-logo.svg" /><span class="text-xs">Share on Mastodon</span>
+    </a>
+</span>
+
     
     
-    <img class="mb-2 rounded-md" src="/img/containers/images/vlc-player.jpg/ba553ef7ad583af27212cd09316227ea.webp" width="860" height="450" alt="Screenshot of Big Buck Bunny playing in VLC Player">
+    <img class="mt-2 mb-2 rounded-md" src="/img/containers/images/vlc-player.jpg/ba553ef7ad583af27212cd09316227ea.webp" width="860" height="450" alt="Screenshot of Big Buck Bunny playing in VLC Player">
     
 
     

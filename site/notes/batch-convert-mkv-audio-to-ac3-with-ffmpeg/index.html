@@ -111,6 +111,47 @@
 <link rel="alternate" type="application/rss+xml" title="marcelbootsman.nl"  href="/feed" />
         
         
+<script>
+    /* Generate a share link for the user's Mastodon domain */
+    function MastodonShare(e) {
+        // Get the source text
+        src = e.getAttribute("data-src");
+
+        // Get the Mastodon domain
+        domain = prompt("Enter your Mastodon domain", "toot.re");
+
+        if (domain == "" || domain == null) {
+            return;
+        }
+
+        // Build the URL
+        url = "https://" + domain + "/share?text=" + src;
+
+        // Open a window on the share page
+        window.open(url, '_blank');
+    }
+
+    function doSomethingWhenDocumentReady(functionToExecute) {
+        /* $(document).ready() without javascript
+        */
+        if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            functionToExecute();
+        } else {
+            document.addEventListener("DOMContentLoaded", functionToExecute);
+        }
+    }
+
+    /* Call this on document.ready() */
+    function unhideMastodonShare() {
+        var button = document.getElementById('mastodonshare');
+        button.classList.remove('hidden');
+    }
+    doSomethingWhenDocumentReady(unhideMastodonShare);
+
+</script>
+
         
         
         <!-- Matomo -->
@@ -378,7 +419,9 @@
 </header>
 <!-- End: /layout/_header.antlers.html -->
 
-        <main class="prose fluid-container" id="content">
+        
+
+<main class="prose fluid-container" id="content">
     <h1 class="block">Batch convert mkv audio to AC3 with ffmpeg</h1>
     <span class="block text-sm text-stone-400 my-4">January 18th, 2023</span>
     
@@ -388,9 +431,16 @@
     
     <a href="/categories/audio" class="category text-xs p-2 my-4 mr-2 rounded-md bg-stone-200 hover:bg-brightgreen">Audio </a>
     
+
+    <span id="mastodonshare" class="hidden category inline-flex items-baseline float-right rounded-md bg-stone-200 hover:bg-brightgreen px-1">
+    <a class="underline" title="Share 'Batch convert mkv audio to AC3 with ffmpeg' on Mastodon" href="#" onclick="MastodonShare(this);" data-src="I found this blog and decided to share it with you.%0D%0A%0D%0ABatch convert mkv audio to AC3 with ffmpeg&amp;url=https://marcelbootsman.nl/notes/batch-convert-mkv-audio-to-ac3-with-ffmpeg">
+        <img class="inline align-middle h-4 m-0 mr-1" alt="Mastodon logo" title="Share on Mastodon" src="/visuals/mastodon-logo.svg" /><span class="text-xs">Share on Mastodon</span>
+    </a>
+</span>
+
     
     
-    <img class="mb-2 rounded-md" src="/img/containers/images/audiomixer.jpg/7058a3d50aeef6ed37fe388b1475c4fb.webp" width="860" height="450" alt="An audiomixer seen from the front">
+    <img class="mt-2 mb-2 rounded-md" src="/img/containers/images/audiomixer.jpg/7058a3d50aeef6ed37fe388b1475c4fb.webp" width="860" height="450" alt="An audiomixer seen from the front">
     
 
     
