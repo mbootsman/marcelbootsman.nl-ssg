@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-        <link rel="preload" as="style" href="https://marcelbootsman.nl/build/assets/site-4f566f44.css" /><link rel="modulepreload" href="https://marcelbootsman.nl/build/assets/site-81e99988.js" /><link rel="stylesheet" href="https://marcelbootsman.nl/build/assets/site-4f566f44.css" /><script type="module" src="https://marcelbootsman.nl/build/assets/site-81e99988.js"></script>
+        <script type="module" src="http://marcelbootsman.test:5173/@vite/client"></script><link rel="stylesheet" href="http://marcelbootsman.test:5173/resources/css/site.css" /><script type="module" src="http://marcelbootsman.test:5173/resources/js/site.js"></script>
         <!-- statamic-peak-seo::snippets/_seo.antlers.html -->
 
 <title>
@@ -126,6 +126,48 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha512-DUC8yqWf7ez3JD1jszxCWSVB0DMP78eOyBpMa5aJki1bIRARykviOuImIczkxlj1KhVSyS16w2FSQetkD4UU2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.4/js/jquery.swipebox.min.js" integrity="sha512-RcpE0ybOapw3Pl77Nz/la9grsKWw3MQXBoeiCg1y+psaqTNcSIQ8JYn4p3wG5XakxdyEYl/r22NLp3EYsX4SXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.4/css/swipebox.css" integrity="sha512-aiphM8HYk085AcAAQwRkx5AcM9HvzCMjsaUirRoLEIdFCj6pkXgUgz73UNcG8Rr4CdvMOo7ApDDVNjpZOKx+CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        
+<script>
+    /* Generate a share link for the user's Mastodon domain */
+    function MastodonShare(e) {
+        // Get the source text
+        src = e.getAttribute("data-src");
+
+        // Get the Mastodon domain
+        domain = prompt("Enter your Mastodon domain", "toot.re");
+
+        if (domain == "" || domain == null) {
+            return;
+        }
+
+        // Build the URL
+        url = "https://" + domain + "/share?text=" + src;
+
+        // Open a window on the share page
+        window.open(url, '_blank');
+    }
+
+    function doSomethingWhenDocumentReady(functionToExecute) {
+        /* $(document).ready() without javascript
+        */
+        if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            functionToExecute();
+        } else {
+            document.addEventListener("DOMContentLoaded", functionToExecute);
+        }
+    }
+
+    /* Call this on document.ready() */
+    function unhideMastodonShare() {
+        var button = document.getElementById('mastodonshare');
+        button.classList.remove('hidden');
+    }
+    doSomethingWhenDocumentReady(unhideMastodonShare);
+
+</script>
 
         
         
@@ -394,15 +436,22 @@
 </header>
 <!-- End: /layout/_header.antlers.html -->
 
-        <main class="prose fluid-container" id="content">
+        
+<main class="prose fluid-container" id="content">
     <h1 class="block">A 46km walk - Here's what I learned</h1>
-    <span class="block text-sm my-4">January 9th, 2023 </span>
+    <span class="block text-sm my-4">January 9th, 2023</span>
     
     <a href="/categories/hiking" class="category text-xs p-2 my-4 mr-2 rounded-md bg-stone-200 hover:bg-brightgreen">Hiking</a>
     
+    <span id="mastodonshare" class="hidden category inline-flex items-baseline float-right rounded-md bg-stone-200 hover:bg-brightgreen px-1">
+        <a class="underline" title="Share 'A 46km walk - Here's what I learned' on Mastodon" href="#" onclick="MastodonShare(this);" data-src="I found this blog and decided to share it with you.%0D%0A%0D%0AA 46km walk - Here's what I learned&amp;url=https://marcelbootsman.nl/a-46km-walk-here-s-what-i-learned">
+            <img class="inline align-middle h-4 m-0 mr-1" alt="Mastodon logo" title="Share on Mastodon" src="/visuals/mastodon-logo.svg" /><span class="text-xs">Share on Mastodon</span>
+        </a>
+    </span>
+
     
     
-    <img class="mb-2 rounded-md" src="/img/containers/images/sunrise-hazerswoude.jpg/1472082045cd4494c19d96bcd4d2d310.webp" width="900" height="400" alt="Sunrise in Hazerswoude-Dorp">
+    <img class="mt-2 mb-2 rounded-md" src="/img/containers/images/sunrise-hazerswoude.jpg/1472082045cd4494c19d96bcd4d2d310.webp" width="860" height="450" alt="Sunrise in Hazerswoude-Dorp">
     
     
 

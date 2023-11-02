@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-        <link rel="preload" as="style" href="https://marcelbootsman.nl/build/assets/site-4f566f44.css" /><link rel="modulepreload" href="https://marcelbootsman.nl/build/assets/site-81e99988.js" /><link rel="stylesheet" href="https://marcelbootsman.nl/build/assets/site-4f566f44.css" /><script type="module" src="https://marcelbootsman.nl/build/assets/site-81e99988.js"></script>
+        <script type="module" src="http://marcelbootsman.test:5173/@vite/client"></script><link rel="stylesheet" href="http://marcelbootsman.test:5173/resources/css/site.css" /><script type="module" src="http://marcelbootsman.test:5173/resources/js/site.js"></script>
         <!-- statamic-peak-seo::snippets/_seo.antlers.html -->
 
 <title>
@@ -110,6 +110,48 @@
         <link rel="alternate" type="application/atom+xml" title="marcelbootsman.nl"  href="/feed/atom" />
 <link rel="alternate" type="application/rss+xml" title="marcelbootsman.nl"  href="/feed" />
         
+        
+<script>
+    /* Generate a share link for the user's Mastodon domain */
+    function MastodonShare(e) {
+        // Get the source text
+        src = e.getAttribute("data-src");
+
+        // Get the Mastodon domain
+        domain = prompt("Enter your Mastodon domain", "toot.re");
+
+        if (domain == "" || domain == null) {
+            return;
+        }
+
+        // Build the URL
+        url = "https://" + domain + "/share?text=" + src;
+
+        // Open a window on the share page
+        window.open(url, '_blank');
+    }
+
+    function doSomethingWhenDocumentReady(functionToExecute) {
+        /* $(document).ready() without javascript
+        */
+        if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            functionToExecute();
+        } else {
+            document.addEventListener("DOMContentLoaded", functionToExecute);
+        }
+    }
+
+    /* Call this on document.ready() */
+    function unhideMastodonShare() {
+        var button = document.getElementById('mastodonshare');
+        button.classList.remove('hidden');
+    }
+    doSomethingWhenDocumentReady(unhideMastodonShare);
+
+</script>
+
         
         
         <!-- Matomo -->
@@ -377,17 +419,24 @@
 </header>
 <!-- End: /layout/_header.antlers.html -->
 
-        <main class="prose fluid-container" id="content">
+        
+<main class="prose fluid-container" id="content">
     <h1 class="block">How Ubuntu Linux transformed my digital life since 2009</h1>
-    <span class="block text-sm my-4">October 10th, 2023 </span>
+    <span class="block text-sm my-4">October 10th, 2023</span>
     
     <a href="/categories/personal" class="category text-xs p-2 my-4 mr-2 rounded-md bg-stone-200 hover:bg-brightgreen">Personal</a>
     
     <a href="/categories/ubuntu" class="category text-xs p-2 my-4 mr-2 rounded-md bg-stone-200 hover:bg-brightgreen">Ubuntu</a>
     
+    <span id="mastodonshare" class="hidden category inline-flex items-baseline float-right rounded-md bg-stone-200 hover:bg-brightgreen px-1">
+        <a class="underline" title="Share 'How Ubuntu Linux transformed my digital life since 2009' on Mastodon" href="#" onclick="MastodonShare(this);" data-src="I found this blog and decided to share it with you.%0D%0A%0D%0AHow Ubuntu Linux transformed my digital life since 2009&amp;url=https://marcelbootsman.nl/how-ubuntu-linux-transformed-my-digital-life-since-2009">
+            <img class="inline align-middle h-4 m-0 mr-1" alt="Mastodon logo" title="Share on Mastodon" src="/visuals/mastodon-logo.svg" /><span class="text-xs">Share on Mastodon</span>
+        </a>
+    </span>
+
     
     
-    <img class="mb-2 rounded-md" src="/img/containers/images/cover-image-trowingstones.jpg/eb6cf1cddff5e997d265ea19fceb2a93.webp" width="860" height="450" alt="Throwing Stones - One of the official Ubuntu 9.10 wallpapers.
+    <img class="mt-2 mb-2 rounded-md" src="/img/containers/images/cover-image-trowingstones.jpg/eb6cf1cddff5e997d265ea19fceb2a93.webp" width="860" height="450" alt="Throwing Stones - One of the official Ubuntu 9.10 wallpapers.
 Showing a few stones in the air on a blurry background.">
     
     
