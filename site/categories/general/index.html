@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-        <link rel="preload" as="style" href="https://marcelbootsman.nl/build/assets/site-cbc512e3.css" /><link rel="modulepreload" href="https://marcelbootsman.nl/build/assets/site-81e99988.js" /><link rel="stylesheet" href="https://marcelbootsman.nl/build/assets/site-cbc512e3.css" /><script type="module" src="https://marcelbootsman.nl/build/assets/site-81e99988.js"></script>
+        <script type="module" src="http://marcelbootsman.test:5173/@vite/client"></script><link rel="stylesheet" href="http://marcelbootsman.test:5173/resources/css/site.css" /><script type="module" src="http://marcelbootsman.test:5173/resources/js/site.js"></script>
         <!-- statamic-peak-seo::snippets/_seo.antlers.html -->
 
 <title>
@@ -169,11 +169,11 @@
     <div class="fluid-container flex justify-between items-center">
         
         <!-- /components/_logo.antlers.html -->
-<div class="basis-96">
+<div class="basis-54 sm:basis-96">
     <a class="p-2 -m-2 focus:outline-none focus-visible:ring-2 ring-primary"
         aria-label="Logo marcelbootsman" href="/">
-        <img src="https://marcelbootsman.nl/visuals/marcelbootsman-logo.png" class="logo inline select-none " width="80" alt="marcelbootsman" />
-        <span class="border-b-4 border-brightgreen text-2xl font-bold">Marcel Bootsman</span>
+        <img src="https://marcelbootsman.nl/visuals/marcelbootsman-logo.png" class="logo inline select-none  w-10 sm:w-20" alt="marcelbootsman" />
+        <span class="border-b-4 border-brightgreen text-l sm:text-2xl font-bold">Marcel Bootsman</span>
     </a>
     <div class="inline-block relative top-2">
         <button id="theme-toggle" title="Toggle dark/light theme">
@@ -280,7 +280,7 @@
 >
     <button
         @click.prevent.stop="mobileNavOpen = !mobileNavOpen"
-        class="fixed top-4 right-0 z-20 flex items-center justify-center w-16 h-16 mr-8 text-xs font-bold text-white mb-safe rounded bg-primary focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2"
+        class="fixed top-4 right-0 z-20 flex items-center justify-center w-16 h-16 mr-4 text-xs font-bold text-white mb-safe rounded bg-primary focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2"
         :aria-label="
         mobileNavOpen
             ? 'Close navigation'
