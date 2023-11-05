@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-        <link rel="preload" as="style" href="https://marcelbootsman.nl/build/assets/site-f925225e.css" /><link rel="modulepreload" href="https://marcelbootsman.nl/build/assets/site-81e99988.js" /><link rel="stylesheet" href="https://marcelbootsman.nl/build/assets/site-f925225e.css" /><script type="module" src="https://marcelbootsman.nl/build/assets/site-81e99988.js"></script>
+        <link rel="preload" as="style" href="https://marcelbootsman.nl/build/assets/site-71a7a790.css" /><link rel="modulepreload" href="https://marcelbootsman.nl/build/assets/site-7c7e2afa.js" /><link rel="stylesheet" href="https://marcelbootsman.nl/build/assets/site-71a7a790.css" /><script type="module" src="https://marcelbootsman.nl/build/assets/site-7c7e2afa.js"></script>
         <!-- statamic-peak-seo::snippets/_seo.antlers.html -->
 
 <title>
@@ -154,6 +154,7 @@
     function unhideMastodonShare() {
         var button = document.getElementById('mastodonshare');
         button.classList.remove('hidden');
+        button.classList.add('inline-flex');
     }
     doSomethingWhenDocumentReady(unhideMastodonShare);
 
@@ -437,7 +438,7 @@
     <a href="/categories/crypto" class="category text-xs p-2 my-4 mr-2 rounded-md bg-stone-200 hover:bg-brightgreen">Crypto</a>
     
 
-    <span id="mastodonshare" class="hidden category inline-flex items-baseline float-right rounded-md bg-stone-200 hover:bg-brightgreen px-1">
+    <span id="mastodonshare" class="hidden category items-baseline float-right rounded-md bg-stone-200 hover:bg-brightgreen px-1">
     <a class="underline" title="Share 'The Bitcoin Whitepaper' on Mastodon" href="#" onclick="MastodonShare(this);" data-src="I found this blog and decided to share it with you.%0D%0A%0D%0AThe Bitcoin Whitepaper&amp;url=https://marcelbootsman.nl/the-bitcoin-whitepaper">
         <img class="inline align-middle h-4 m-0 mr-1" alt="Mastodon logo" title="Share on Mastodon" src="/visuals/mastodon-logo.svg" /><span class="text-xs">Share on Mastodon</span>
     </a>
