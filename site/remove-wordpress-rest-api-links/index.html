@@ -101,17 +101,21 @@
     
     <link rel="icon" href="/favicons/mb-logo.svg" type="image/svg+xml">
 
+    
+    
+        <link rel="icon" href="/favicons/default/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" href="/favicons/default/favicon-32x32.png" sizes="32x32">
+    
 
 
-<link rel="manifest" href="/site.webmanifest">
+
+<link rel="manifest" href="https://marcelbootsman.nl/site.webmanifest">
 
 
 
 <!-- End: /snippets/_browser_appearance.antlers.html -->
 
-        <!-- statamic-peak-tools::snippets/_live_preview.antlers.html -->
-
-<!-- End: statamic-peak-tools::snippets/_live_preview.antlers.html -->
+        
 
         
         <link rel="alternate" type="application/atom+xml" title="marcelbootsman.nl"  href="/feed/atom" />
@@ -479,7 +483,7 @@
     <!-- /components/_code_block.antlers.html -->
 <div class="p2 my-4 size-lg">
     <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color:#3A3F58; color: #e7e5e4; padding-right:0.5rem; user-select: none" class="line-number">1</span><span style="color: #676E95;">// Hide WP REST API links in page headers</span></div><div class='line'><span style="color:#3A3F58; color: #e7e5e4; padding-right:0.5rem; user-select: none" class="line-number">2</span><span style="color: #82AAFF;">remove_action</span><span style="color: #89DDFF;">(</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">wp_head</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">rest_output_link_wp_head</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">10</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color:#3A3F58; color: #e7e5e4; padding-right:0.5rem; user-select: none" class="line-number">3</span><span style="color: #82AAFF;">remove_action</span><span style="color: #89DDFF;">(</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">template_redirect</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">rest_output_link_header</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">11</span><span style="color: #89DDFF;">);</span></div></code>
+                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #676E95;">// Hide WP REST API links in page headers</span></div><div class='line'><span style="color: #82AAFF;">remove_action</span><span style="color: #89DDFF;">(</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">wp_head</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">rest_output_link_wp_head</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">10</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #82AAFF;">remove_action</span><span style="color: #89DDFF;">(</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">template_redirect</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">rest_output_link_header</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">11</span><span style="color: #89DDFF;">);</span></div></code>
                 <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>php</div></pre>
 </div>
 <!-- End: /components/_code_block.antlers.html -->
@@ -494,7 +498,7 @@
     <!-- /components/_code_block.antlers.html -->
 <div class="p2 my-4 size-lg">
     <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color:#3A3F58; color: #e7e5e4; padding-right:0.5rem; user-select: none" class="line-number">1</span><span style="color: #676E95;">// Hide WP REST API JSON index</span></div><div class='line'><span style="color:#3A3F58; color: #e7e5e4; padding-right:0.5rem; user-select: none" class="line-number">2</span><span style="color: #82AAFF;">add_filter</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">rest_index</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">nstrm_hide_wp_json_index</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color:#3A3F58; color: #e7e5e4; padding-right:0.5rem; user-select: none" class="line-number">3</span><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">nstrm_hide_wp_json_index</span><span style="color: #89DDFF;">(</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">response </span><span style="color: #89DDFF;">){</span></div><div class='line'><span style="color:#3A3F58; color: #e7e5e4; padding-right:0.5rem; user-select: none" class="line-number">4</span><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">array</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color:#3A3F58; color: #e7e5e4; padding-right:0.5rem; user-select: none" class="line-number">5</span><span style="color: #89DDFF;">}</span></div></code>
+                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #676E95;">// Hide WP REST API JSON index</span></div><div class='line'><span style="color: #82AAFF;">add_filter</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">rest_index</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">nstrm_hide_wp_json_index</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">nstrm_hide_wp_json_index</span><span style="color: #89DDFF;">(</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">response </span><span style="color: #89DDFF;">){</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">array</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">}</span></div></code>
                 <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>php</div></pre>
 </div>
 <!-- End: /components/_code_block.antlers.html -->
