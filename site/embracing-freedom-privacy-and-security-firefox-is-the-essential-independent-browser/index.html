@@ -12,13 +12,13 @@
     
     
     
-        How to use the Elgato Stream Deck with Ubuntu - marcelbootsman.nl
+        Embracing freedom, privacy and security: Firefox is the essential independent browser - marcelbootsman.nl
     
 </title>
 
 
 
-    <meta name="description" content="Learn how to install and use Stream Deck UI for Ubuntu in this detailed guide.">
+    <meta name="description" content="Read why embracing an independent browser like Firefox isn&#039;t just a choice, but a necessity in safeguarding our online freedom and security.">
 
 
 
@@ -32,7 +32,7 @@
 
 
     
-        <link rel="canonical" href="https://marcelbootsman.nl/elgato-stream-deck-ubuntu">
+        <link rel="canonical" href="https://marcelbootsman.nl/embracing-freedom-privacy-and-security-firefox-is-the-essential-independent-browser">
     
 
 
@@ -52,13 +52,11 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 
-    <meta property="og:title" content="How to use the Elgato Stream Deck with Ubuntu">
+    <meta property="og:title" content="Embracing freedom, privacy and security: Firefox is the essential independent browser">
 
 
-    <meta property="og:description" content="Learn how to install and use Stream Deck UI for Ubuntu in this detailed guide.">
+    <meta property="og:description" content="Read why embracing an independent browser like Firefox isn&#039;t just a choice, but a necessity in safeguarding our online freedom and security.">
 
-
-    <meta property="og:image" content="https://marcelbootsman.nl/img/containers/social_images/how-to-use-the-elgato-stream-deck-with-ubuntu-og-1701161496.png/bc6bd676d8966263adbd36fe5a59de79.png">
 
 
 
@@ -427,21 +425,21 @@
         
 
 <main class="prose fluid-container" id="content">
-    <h1 class="block">How to use the Elgato Stream Deck with Ubuntu</h1>
-    <span class="block text-sm my-4">November 27th, 2023</span>
+    <h1 class="block">Embracing freedom, privacy and security: Firefox is the essential independent browser</h1>
+    <span class="block text-sm my-4">December 30th, 2023</span>
     
-    <a href="/categories/ubuntu" class="category text-xs p-2 my-4 mr-2 rounded-md bg-stone-200 hover:bg-brightgreen">Ubuntu</a>
+    <a href="/categories/general" class="category text-xs p-2 my-4 mr-2 rounded-md bg-stone-200 hover:bg-brightgreen">General</a>
     
 
     <span id="mastodonshare" class="hidden category items-baseline float-right rounded-md bg-stone-200 hover:bg-brightgreen px-1">
-    <a class="underline" title="Share 'How to use the Elgato Stream Deck with Ubuntu' on Mastodon" href="#" onclick="MastodonShare(this);" data-src="I found this blog and decided to share it with you.%0D%0A%0D%0AHow to use the Elgato Stream Deck with Ubuntu&amp;url=https://marcelbootsman.nl/elgato-stream-deck-ubuntu">
+    <a class="underline" title="Share 'Embracing freedom, privacy and security: Firefox is the essential independent browser' on Mastodon" href="#" onclick="MastodonShare(this);" data-src="I found this blog and decided to share it with you.%0D%0A%0D%0AEmbracing freedom, privacy and security: Firefox is the essential independent browser&amp;url=https://marcelbootsman.nl/embracing-freedom-privacy-and-security-firefox-is-the-essential-independent-browser">
         <img class="inline align-middle h-4 m-0 mr-1" alt="Mastodon logo" title="Share on Mastodon" src="/visuals/mastodon-logo.svg" /><span class="text-xs">Share on Mastodon</span>
     </a>
 </span>
 
     
     
-    <img class="mt-2 mb-2 rounded-md" src="/img/containers/images/elgato_stream_deck.jpg/7fc5f71411643fb62fec4cc5f0be6107.webp" width="860" height="450" alt="Picture of Stream Deck device">
+    <img class="mt-2 mb-2 rounded-md" src="/img/containers/images/firefox.png/83bdc9e774cd6ab7e16cd695278a87c6.webp" width="860" height="450" alt="Firefox logo on a purple-ish background">
     
     
 
@@ -468,165 +466,7 @@
 >
     <!-- /components/_text.antlers.html -->
 <div class="size-lg">
-    <p>Using the Elgato Stream Deck with Ubuntu can (and will if you use it wisely) enhance your workflow, whether you&#039;re a content creator, programmer, or someone who loves streamlining tasks. </p><p>While Elgato primarily supports Windows and macOS for its Stream Deck software, there are workarounds to get it up and running smoothly on Ubuntu, thanks to community-driven solutions like <code>streamdeck-ui</code>. </p><p>This guide will walk you through the steps to set up and use the Elgato Stream Deck on Ubuntu using <code>streamdeck-ui</code>.</p><h2>Understanding the Elgato Stream Deck</h2><p>I’m assuming you know what the Elgato Stream Deck is, but for completeness I explain a bit what it is. </p><p>The Elgato Stream Deck is a customizable control device with programmable LCD keys, enabling users to create personalized shortcuts for various applications and tasks. Whether it&#039;s launching software, controlling streaming tools, executing commands, or integrating with popular platforms like OBS Studio or Twitch, the Stream Deck streamlines actions with the tap of a button.</p><h2>Getting started</h2><p>To begin, ensure your Elgato Stream Deck is connected to your Ubuntu machine. <code>streamdeck-ui</code> is a third-party open-source tool that acts as a bridge between the Stream Deck hardware and Linux, providing the necessary functionalities to configure and use the device.</p><h3>Installing streamdeck-ui</h3><h4>Step 1: Install dependencies an prerequisites</h4><p>Open a terminal and make sure your system is up to date by running:</p><p><code>sudo apt update &amp;&amp; sudo apt upgrade</code></p><p>Next, install some dependencies:</p><p><code>sudo apt install libhidapi-libusb0 python3-pip</code> </p><p>Now add <code>~/.local/bin</code> to your path. Be sure to add this to your <code>.bashrc</code> (or equivalent) file so it automatically sets it for you in future. This is necessary to be able to run <code>streamdeck-ui</code>.</p><p><code>PATH=$PATH:$HOME/.local/bin</code> </p><p>To make sure everything will work, you need to upgrade pip, using pip. According to the author, old versions of pip may fail to properly install some of the required Python dependencies.</p><p><code>python3 -m pip install --upgrade pip</code></p><h4>Step 2: Configure access to Elgato device(s)</h4><p>Ubuntu, or to be more precise, your user, needs to have access to the Elgato device(s). Therefore we need to add a USB rule The following will create a file called <code>/etc/udev/rules.d/70-streamdeck.rules</code> and add the following text to it: <code>SUBSYSTEM==&quot;usb&quot;, ATTRS{idVendor}==&quot;0fd9&quot;, TAG+=&quot;uaccess&quot;</code>. Creating this file adds a udev rule that provides your user with access to USB devices created by Elgato.</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">sudo</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">sh</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">-c</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">echo &quot;SUBSYSTEM==\&quot;usb\&quot;, ATTRS{idVendor}==\&quot;0fd9\&quot;, TAG+=\&quot;uaccess\&quot;&quot; &gt; /etc/udev/rules.d/70-streamdeck.rules</span><span style="color: #89DDFF;">&#39;</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>Bash</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p>For the rule to take immediate effect, run the following command:</p><p><code>sudo udevadm trigger</code></p><h4>Step 3: Install streamdeck-ui</h4><p>Installing <code>streamdeck-ui</code> is done with the Pip installer, just launch this command:</p><p><code>python3 -m pip install streamdeck-ui --user</code> </p><p>When this is done, you can launch the application with <code>streamdeck</code> </p><p>If you get an error, like I did, that says: </p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">qt.qpa.plugin: Could not load the Qt platform plugin &quot;xcb&quot; in &quot;&quot; even though it was found.</span></div><div class='line'><span style="color: #A6ACCD;">This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'></div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p>You can fix it by installing an extra package:</p><p><code>sudo apt install libxcb-xinerama0</code></p><h2>Using Stream Deck UI</h2><p>After you launch Stream Deck UI with the command <code>streamdeck</code>, you will see the following window, but empty. You can add all sorts of shortcuts to for executing commands, sending key presses and writing text. </p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_image.antlers.html -->
-<figure
-    class="not-prose
-        size-md
-    "
->
-    <!-- statamic-peak-tools::components/_picture.antlers.html -->
-
-    
-        
-        
-        
-        
-        
-
-        
-        
-
-        
-        
-
-
-        <picture>
-            
-                <source
-                    srcset="
-                        
-                            /img/containers/images/stream-deck-main-window.png/2d8fe2291245755c7987c35be9e2ebbb.webp 320w,
-                        
-                            /img/containers/images/stream-deck-main-window.png/bc36f577cf579af70c39dce711b43dff.webp 480w,
-                        
-                            /img/containers/images/stream-deck-main-window.png/6abd98708df7d63791b422a37f8e072e.webp 640w,
-                        
-                            /img/containers/images/stream-deck-main-window.png/773dc3dde149887acc14b320d73abc4c.webp 768w,
-                        
-                            /img/containers/images/stream-deck-main-window.png/b98b0352fc1942ed3a54ebc1f13ca9fa.webp 1024w,
-                        
-                            /img/containers/images/stream-deck-main-window.png/0da9549e27e42ba020cbbc03c2986aec.webp 1280w,
-                        
-                            /img/containers/images/stream-deck-main-window.png/7c2ab63ffdd9ff22cfd0ec7d01a43dae.webp 1440w,
-                        
-                            /img/containers/images/stream-deck-main-window.png/f238d1675b37ecde9c5b1c5299f0cc88.webp 1536w,
-                        
-                            /img/containers/images/stream-deck-main-window.png/b44fbceea0986c84dc313b951380a460.webp 1680w
-                        
-                    "
-                    sizes="
-            
-        "
-                    type="image/webp"
-                >
-                <source
-                    srcset="
-                        
-                            /img/containers/images/stream-deck-main-window.png/4e28ba6d8d9a8ef3171523ef6aaefb13.png
-                            320w,
-                        
-                            /img/containers/images/stream-deck-main-window.png/20dc2c36871bc0d7aedb07dbab6ced6e.png
-                            480w,
-                        
-                            /img/containers/images/stream-deck-main-window.png/278a1970e94bcd3e1f9bb42777bdb95d.png
-                            640w,
-                        
-                            /img/containers/images/stream-deck-main-window.png/4bb1f87188681a9e0e6e5c334141e1f9.png
-                            768w,
-                        
-                            /img/containers/images/stream-deck-main-window.png/01dabd2e70136d3a99dd6fdc80cc3fa3.png
-                            1024w,
-                        
-                            /img/containers/images/stream-deck-main-window.png/3908ed9f1ea48e3592161efd59602b0b.png
-                            1280w,
-                        
-                            /img/containers/images/stream-deck-main-window.png/9e3fe1ddf97b8bf12eb6ed1750898fb5.png
-                            1440w,
-                        
-                            /img/containers/images/stream-deck-main-window.png/6a9749545a4eef7d386a2a16997d6961.png
-                            1536w,
-                        
-                            /img/containers/images/stream-deck-main-window.png/8ed5b7ff4ffdc0d8e0bac22b6ccd2baf.png
-                            1680w
-                        
-                    "
-                    sizes="
-            
-        "
-                    type="image/png"
-                >
-                <img
-                    width="1039"
-                    height="478"
-                    src="/img/containers/images/stream-deck-main-window.png/df8459021675fb458f22acfcb3cbf8ed.png"
-                    alt="Streamdeck main window with some icons to operate the Stream Deck device."
-                    
-                        class="
-        h-auto
-        "
-                    
-                    
-                    
-                        loading="lazy"
-                    
-                >
-            
-        </picture>
-    
-
-<!-- End: statamic-peak-tools::components/_picture.antlers.html -->
-
-
-    <!-- /typography/_caption.antlers.html -->
-
-    <figcaption class="italic border-b border-brightgreen inline-block mt-0 text-sm text-neutral ">
-        Stream Deck UI main window 
-    </figcaption>
-
-<!-- End: /typography/_caption.antlers.html -->
-
-</figure>
-<!-- End: /components/_image.antlers.html -->
-
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p>For the icons in the screenshot above I have used icons from Anggara on <a href="https://www.flaticon.com/authors/anggara/color-lineal-color?author_id=1427&amp;type=standard">flaticon.com</a>.</p><h2>Conclusion</h2><p>While Elgato might not officially support Ubuntu for the Stream Deck, the availability of community-driven solutions like <code>streamdeck-ui</code> opens up the possibility for Ubuntu users to harness the potential of this powerful hardware. With the ability to create personalized shortcuts and workflows, the Stream Deck becomes an invaluable tool for boosting productivity and efficiency on Ubuntu systems.</p><h2>More information</h2><p><a href="https://github.com/timothycrosley/streamdeck-ui">Official </a><code>streamdeck-ui</code><a href="https://github.com/timothycrosley/streamdeck-ui"> repository on Github</a>.</p><p><a href="https://timothycrosley.github.io/streamdeck-ui/">Extended </a><code>streamdeck-ui</code><a href="https://timothycrosley.github.io/streamdeck-ui/"> documentation.</a></p>
+    <p>The choice of a web browser shapes our online experience. With the dominance of a few major players (Google’s Chrome, Apple’s Safari and Microsoft’s Edge), there’s one browser that highlights independence and user advocacy – <a href="https://www.mozilla.org/en-US/firefox/new/">Mozilla&#039;s Firefox</a>. While Chrome, Safari, and Edge have larger <a href="https://gs.statcounter.com/browser-market-share/">market shares</a>, Firefox has carved its niche by championing user privacy, fostering innovation, and promoting an open internet. Let&#039;s delve into why embracing an independent browser like Firefox isn&#039;t just a choice, but a necessity in safeguarding our online freedom and security.</p><h2>Commitment to privacy</h2><p>Privacy remains a paramount concern in the digital sphere. Firefox, in contrast to other browsers, upholds a robust stance on user privacy. Its default settings block third-party tracking cookies, protecting users from pervasive tracking by advertisers and websites. </p><p>Features like Enhanced Tracking Protection and strict anti-fingerprinting measures set it apart, ensuring a more secure browsing experience. Read more on Firefox and privacy in the <a href="https://www.mozilla.org/en-US/firefox/privacy/">Firefox Privacy Promise.</a></p><h2>Open Source foundation</h2><p>The open source nature of Firefox fosters transparency and community-driven development. This approach allows developers worldwide to audit the code, enhancing security and identifying vulnerabilities swiftly. Unlike closed source browsers, Firefox&#039;s open source foundation builds trust and invites collaboration, empowering users to have a say in their online environment. </p><p>You can find the source code of Firefox here. <a href="https://firefox-source-docs.mozilla.org/">Here you can find the documentation</a> about how to develop and contribute to Firefox.</p><h2>Embracing innovation responsibly</h2><p>The <a href="https://foundation.mozilla.org/en/">Mozilla Foundation</a>, the organization behind Firefox, is driven by a mission to ensure the internet remains a global public resource. Their commitment to innovation is not at the cost of user privacy or security. Features like <a href="https://monitor.mozilla.org/">Firefox Monitor</a>, which alerts users about potential data breaches, and <a href="https://support.mozilla.org/en-US/kb/containers">Containers</a>, allowing segregation of browsing sessions, showcase their innovative spirit grounded in user protection.</p><h2>Cross-Platform Compatibility</h2><p>Firefox extends its services beyond the desktop browser. With mobile versions for <a href="https://www.mozilla.org/en/firefox/browsers/mobile/android/">Android</a> and <a href="https://www.mozilla.org/en/firefox/browsers/mobile/ios/">iOS</a>, along with services like the Firefox ecosystem ensures a seamless and secure experience across devices.</p><h2>Why you should use Firefox</h2><p>The dominance of a single browser can lead to a monopolistic control over the internet, halting innovation and limiting user choice. Firefox&#039;s existence as an independent browser provides users with an alternative to the dominant players, offering a diverse landscape where competition drives improvement. </p><p>This competition encourages innovation, forces established browsers to evolve and prioritize user needs, and mitigates the risks associated with a single entity controlling the gateway to the internet. </p><p>Also, we do not want to see any websites that show a “This website is optimized for …., download it here” message before you can use the website right?</p><h2>Conclusion</h2><p>While Webkit based browsers like Chrome, Edge and Safari have their strengths, Firefox (based on the Gecko engine) stands out as an advocate for user privacy, independence, and an open web. Its commitment to an open source ethos, enhanced user control and robust privacy measures sets it apart from browsers heavily influenced by corporate interests.</p><p>The choice between Firefox and Webkit based alternatives often boils down to a trade-off between familiarity and independence, with Firefox emerging as the choice for those prioritizing privacy, customization, an open weband a browser built by and for the user.</p><p><strong>Footnotes</strong></p><ul><li><p>The title of this post is not a fact, it is my opinion.</p></li><li><p><a href="https://mastodon.online/@roytanck">Roy Tanck</a>, a friend, <a href="https://roytanck.com/2023/12/23/in-2024-please-switch-to-firefox/">has written a nice post</a> on why you should use Firefox too.</p></li><li><p>Featured image taken from the <a href="https://www.mozilla.org/en-US/firefox/115.3.1/releasenotes/">Mozilla website</a></p></li></ul>
 </div>
 <!-- End: /components/_text.antlers.html -->
 </article>
