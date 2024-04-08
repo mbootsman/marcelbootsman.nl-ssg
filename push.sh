@@ -1,6 +1,7 @@
 #!/bin/bash
-
-# be sure the generated static site is generated while 'npm run watch' was killed
+# #################################
+# Make sure the generated static site is generated while 'npm run watch' was killed
+# #################################
 echo Adding all files to git
 git add --all
 echo Committing files
