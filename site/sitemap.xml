@@ -40,6 +40,14 @@
         
             
                 <url>
+                    <loc>https://marcelbootsman.nl/notes/how-to-undelete-a-user-on-a-mastodon-instance</loc>
+                    <lastmod>2024-05-30</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.5</priority>
+                    
+                </url>
+            
+                <url>
                     <loc>https://marcelbootsman.nl/notes/enable-fingerprint-authentication-for-sudo-on-ubuntu</loc>
                     <lastmod>2024-05-23</lastmod>
                     <changefreq>weekly</changefreq>
@@ -498,6 +506,13 @@
                 <url>
                     <loc>https://marcelbootsman.nl/categories/laravel</loc>
                     <lastmod>2023-07-19</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.5</priority>
+                </url>
+            
+                <url>
+                    <loc>https://marcelbootsman.nl/categories/mastodon</loc>
+                    <lastmod>2024-05-30</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
