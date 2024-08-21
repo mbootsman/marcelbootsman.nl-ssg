@@ -12,7 +12,7 @@
     
     
     
-        ReadMe - marcelbootsman.nl
+        ReadMe
     
 </title>
 
@@ -114,6 +114,48 @@
 <link rel="alternate" type="application/rss+xml" title="marcelbootsman.nl"  href="/feed" />
         
         
+<script>
+    /* Generate a share link for the user's Mastodon domain */
+    function MastodonShare(e) {
+        // Get the source text
+        src = e.getAttribute("data-src");
+
+        // Get the Mastodon domain
+        domain = prompt("Enter your Mastodon domain", "toot.re");
+
+        if (domain == "" || domain == null) {
+            return;
+        }
+
+        // Build the URL
+        url = "https://" + domain + "/share?text=" + src;
+
+        // Open a window on the share page
+        window.open(url, '_blank');
+    }
+
+    function doSomethingWhenDocumentReady(functionToExecute) {
+        /* $(document).ready() without javascript
+        */
+        if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            functionToExecute();
+        } else {
+            document.addEventListener("DOMContentLoaded", functionToExecute);
+        }
+    }
+
+    /* Call this on document.ready() */
+    function unhideMastodonShare() {
+        var button = document.getElementById('mastodonshare');
+        button.classList.remove('hidden');
+        button.classList.add('inline-flex');
+    }
+    doSomethingWhenDocumentReady(unhideMastodonShare);
+
+</script>
+
         
         
         <!-- Matomo -->
@@ -413,8 +455,21 @@
 </header>
 <!-- End: /layout/_header.antlers.html -->
 
-        <!-- /default.antlers.html -->
-<main class="fluid-container outer-grid" id="content">
+        
+
+<main class="prose fluid-container" id="content">
+    <h1 class="block">ReadMe</h1>
+    <span class="block text-sm my-4"></span>
+    
+
+    <span id="mastodonshare" class="hidden category items-baseline float-right rounded-md bg-stone-200 hover:bg-brightgreen px-1">
+    <a class="underline" title="Share 'ReadMe' on Mastodon" href="#" onclick="MastodonShare(this);" data-src="I found this blog and decided to share it with you.%0D%0A%0D%0AReadMe&amp;url=https://marcelbootsman.nl/readme">
+        <img class="inline align-middle h-4 m-0 mr-1" alt="Mastodon logo" title="Share on Mastodon" src="/images/mastodon-logo.svg" /><span class="text-xs">Share on Mastodon</span>
+    </a>
+</span>
+
+    
+
     
     <!-- /page_builder/_article.antlers.html -->
 <section class="col-span-4 md:col-span-3">
@@ -447,8 +502,65 @@
 </section>
 <!-- End: /page_builder/_article.antlers.html -->
     
+
+    
+    
+    <div class="authorbox border-2 rounded-md  bg-stone-200 p-4 my-8  w-full">
+        <div class="grid grid-cols-4">
+            
+            
+            <!-- /page_builder/_avatar.antlers.html -->
+<section class="hidden md:block">
+        
+        <img src="/images/marcel-bootsman.webp" alt="Picture of Marcel Bootsman" width="200" height="200" />
+        
+</section>
+<!-- End: /page_builder/_avatar.antlers.html -->
+            
+            
+            
+            
+
+            
+            
+            
+            
+            <!-- /page_builder/_article.antlers.html -->
+<section class="col-span-4 md:col-span-3">
+    <!-- /typography/_prose.antlers.html -->
+<article
+    class="
+        prose
+        prose-a:underline
+        prose-a:decoration-primary
+        prose-a:decoration-2
+        hover:prose-a:text-primary
+        focus:prose-a:outline-none
+        focus-visible:prose-a:ring
+        focus-visible:prose-a:ring-primary
+        focus-visible:prose-a:rounded-sm
+        prose-figure:my-0
+        prose-pre:whitespace-pre-wrap
+        max-w-none
+        contents
+    "
+>
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <h2>About Marcel Bootsman</h2><p>Marcel discovered the web in 1995. Since then he has paid attention to and worked with lots of technologies and founded his own WordPress oriented business <a href="https://nostromo.nl">nostromo.nl</a> in 2009.</p><p>Currently Marcel is Business Development Manager Dutch &amp; DACH Markets at <a href="/kinsta">Kinsta</a> where he helps Kinsta&#039;s client base grow with <a href="/kinsta-managed-wordpress-hosting">Managed WordPress</a>, <a href="/kinsta-application-database-hosting">Application, Database</a> and <a href="https://kinsta.com/static-site-hosting/">Static site hosting</a>.</p><p>You can contact Marcel on a diverse range of online platforms. Please see the Connect section on the <a href="/#connect">homepage</a> for the details.</p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+</article>
+<!-- End: /typography/_prose.antlers.html -->
+
+</section>
+<!-- End: /page_builder/_article.antlers.html -->
+            
+            
+        </div>
+    </div>
+    
 </main>
-<!-- End: /default.antlers.html -->
         <!-- /layout/_footer.antlers.html -->
 <footer class="w-full py-4 mt-auto">
     <div class="fluid-container flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-between md:space-x-4 md:items-center ">
