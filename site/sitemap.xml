@@ -48,6 +48,14 @@
         
             
                 <url>
+                    <loc>https://marcelbootsman.nl/notes/how-to-run-steam-windows-games-on-ubuntu</loc>
+                    <lastmod>2024-09-05</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.5</priority>
+                    
+                </url>
+            
+                <url>
                     <loc>https://marcelbootsman.nl/notes/how-to-undelete-a-user-on-a-mastodon-instance</loc>
                     <lastmod>2024-05-30</lastmod>
                     <changefreq>weekly</changefreq>
@@ -340,7 +348,7 @@
                 </url>
             
                 <url>
-                    <loc>https://marcelbootsman.nl/wordcamps-and-sustainability</loc>
+                    <loc>https://marcelbootsman.nl/using-facetwp-with-post-to-post-relations</loc>
                     <lastmod>2023-07-21</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
@@ -348,7 +356,7 @@
                 </url>
             
                 <url>
-                    <loc>https://marcelbootsman.nl/using-facetwp-with-post-to-post-relations</loc>
+                    <loc>https://marcelbootsman.nl/wordcamps-and-sustainability</loc>
                     <lastmod>2023-07-21</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
@@ -450,140 +458,140 @@
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/audio</loc>
-                    <lastmod>2023-07-22</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/bitcoin</loc>
-                    <lastmod>2023-06-28</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/business</loc>
-                    <lastmod>2023-07-22</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/crypto</loc>
-                    <lastmod>2023-07-22</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/events</loc>
-                    <lastmod>2024-04-08</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/family</loc>
-                    <lastmod>2023-06-24</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/general</loc>
-                    <lastmod>2023-06-28</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/hiking</loc>
-                    <lastmod>2023-07-03</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/home-assistant</loc>
-                    <lastmod>2023-10-11</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/laravel</loc>
-                    <lastmod>2023-07-19</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/mastodon</loc>
-                    <lastmod>2024-05-30</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/personal</loc>
-                    <lastmod>2023-07-22</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/privacy</loc>
-                    <lastmod>2023-10-11</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/security</loc>
-                    <lastmod>2023-10-11</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/statamic</loc>
-                    <lastmod>2023-10-09</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/ubuntu</loc>
-                    <lastmod>2023-07-22</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/video</loc>
-                    <lastmod>2023-07-22</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/wordpress</loc>
-                    <lastmod>2023-07-22</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/wordpress-community</loc>
-                    <lastmod>2023-06-24</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
             
                 <url>
                     <loc>https://marcelbootsman.nl/categories/wordpress-tips</loc>
-                    <lastmod>2023-06-27</lastmod>
+                    <lastmod>2024-09-03</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
