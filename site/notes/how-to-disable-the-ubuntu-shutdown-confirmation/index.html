@@ -725,8 +725,20 @@
         <div class="grid grid-cols-4">
             
             
+            <!-- /page_builder/_avatar.antlers.html -->
+<section class="hidden md:block">
+        
+        <img src="/images/marcel-bootsman.webp" alt="Picture of Marcel Bootsman" width="200" height="200" />
+        
+</section>
+<!-- End: /page_builder/_avatar.antlers.html -->
+            
+            
+            
             
 
+            
+            
             
             
             <!-- /page_builder/_article.antlers.html -->
@@ -751,217 +763,9 @@
 >
     <!-- /components/_text.antlers.html -->
 <div class="size-lg">
-    <p>Some users, including me, find the built-in shutdown confirmation dialog a bit of an annoyance. This dialog is designed to prevent accidental shutdowns, but if you&#039;re confident in your actions and want to streamline the shutdown process, you can easily disable it. I’ll show you how to do it in two different ways, with <code>gsettings</code> or with the dconf Editor.</p><h2>Disable the shutdown confirmation with gsettings</h2><p><strong>Step 1:</strong> Open a Terminal window. You can do this by pressing <code>Ctrl + Alt + T</code> or by searching for &quot;Terminal&quot; in the Ubuntu Dash.</p><p><strong>Step 2:</strong> You can disable the Ubuntu shutdown confirmation using a <code>gsettings</code> command. Open the terminal and enter the following command:</p>
+    <h2>About Marcel Bootsman</h2><p>Marcel discovered the web in 1995. Since then he has paid attention to and worked with lots of technologies and founded his own WordPress oriented business <a href="https://nostromo.nl">nostromo.nl</a> in 2009.</p><p>Currently Marcel is Business Development Manager Dutch &amp; DACH Markets at <a href="/kinsta">Kinsta</a> where he helps Kinsta&#039;s client base grow with <a href="/kinsta-managed-wordpress-hosting">Managed WordPress</a>, <a href="/kinsta-application-database-hosting">Application, Database</a> and <a href="https://kinsta.com/static-site-hosting/">Static site hosting</a>.</p><p>You can contact Marcel on a diverse range of online platforms. Please see the Connect section on the <a href="/#connect">homepage</a> for the details.</p>
 </div>
 <!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">gsettings</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">set</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">org.gnome.SessionManager</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">logout-prompt</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">false</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>bash</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p></p><p>This command instructs the GNOME Session Manager to disable the logout prompt, which includes the shutdown confirmation.</p><p><strong>Step 3:</strong> To verify that the change has taken effect, you can use the <code>gsettings</code> command to retrieve the current setting:</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">gsettings</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">get</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">org.gnome.SessionManager</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">logout-prompt</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>bash</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p>If the output is &quot;false,&quot; it means the shutdown confirmation is now disabled.</p><p><strong>Step 4:</strong> With the shutdown confirmation disabled, your system will now shut down without asking for confirmation every time you initiate a shutdown. This also works for Hibernate.</p><h2>Disable the shutdown confirmation with dconf Editor</h2><p><strong>Step 1: </strong>To begin, open a terminal window by pressing <code>Ctrl + Alt + T</code> or searching for &quot;Terminal&quot; in the Ubuntu Dash. If you haven&#039;t already installed the dconf Editor, you can do so with the following command:</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">sudo</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">apt-get</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">install</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">dconf-editor</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>bash</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p><strong>Step 2:</strong> After installation, open the dconf Editor by searching for &quot;dconf Editor&quot; in the Ubuntu Dash or by running this command in the terminal:</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">dconf-editor</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>bash</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p><strong>Step 3:</strong> Navigate to the Shutdown Confirmation Setting In the dconf Editor, navigate to the following path:</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">org</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">gnome</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">gnome-session</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">logout-prompt</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>bash</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p><strong>Step 4:</strong> In the &quot;logout-prompt&quot; section, you&#039;ll see a switch for &quot;logout-prompt.&quot; By default, it is enabled. To disable the shutdown confirmation, toggle the switch to the &quot;off&quot; position.</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_image.antlers.html -->
-<figure
-    class="not-prose
-        size-md
-    "
->
-    <!-- statamic-peak-tools::components/_picture.antlers.html -->
-
-    
-        
-        
-        
-        
-        
-
-        
-        
-
-        
-        
-
-
-        
-        
-
-        <picture>
-            
-                
-                    <source
-                        srcset="
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/e56f2fd279fbb875d12be42ac3e0a441/dconf-editor-logout-prompt.webp 320w,
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/7240af13065a70a91d0c4e3d8ee6d60f/dconf-editor-logout-prompt.webp 480w,
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/64a7a6d1ada467fccbfbf9bb4e42c98f/dconf-editor-logout-prompt.webp 640w,
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/6df39128489d30d10bdb682713b46149/dconf-editor-logout-prompt.webp 768w,
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/cf35e9443a3bae86100bcadde0ab2b55/dconf-editor-logout-prompt.webp 1024w,
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/2c711a12aedf90f773726f8a22406b9f/dconf-editor-logout-prompt.webp 1280w,
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/ed97b8830b3e6a5371d721f95ec680c6/dconf-editor-logout-prompt.webp 1440w,
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/42ef3e391caf32f6108e7e062360ae38/dconf-editor-logout-prompt.webp 1536w,
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/78f2b0e30f50db351a2b2eda97bad1be/dconf-editor-logout-prompt.webp 1680w
-                            
-                        "
-                        sizes="
-            
-        "
-                        type="image/webp"
-                    >
-                
-                    <source
-                        srcset="
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/47766bea94918571b64536533c7e8e1a/dconf-editor-logout-prompt.jpg 320w,
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/d366dc0c52958fcc1207126190e6c5e7/dconf-editor-logout-prompt.jpg 480w,
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/1311a17c25a333540542956b99413f66/dconf-editor-logout-prompt.jpg 640w,
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/06f2cd61b3f8a84064d0162cffe53e19/dconf-editor-logout-prompt.jpg 768w,
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/da7c5161e12e7a39e8cdbe36e233659c/dconf-editor-logout-prompt.jpg 1024w,
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/18e32e67102aa9c447eabead3ff81c7c/dconf-editor-logout-prompt.jpg 1280w,
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/0b67e572a8716d10e24c72a17208fe0a/dconf-editor-logout-prompt.jpg 1440w,
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/47c9493638c2a19faa554378dbf1ba33/dconf-editor-logout-prompt.jpg 1536w,
-                            
-                                /img/containers/images/dconf-editor-logout-prompt.jpg/d732cd400645e0cd6454cdb7065707b8/dconf-editor-logout-prompt.jpg 1680w
-                            
-                        "
-                        sizes="
-            
-        "
-                        type="image/jpeg"
-                    >
-                
-                <img
-                    width="1070"
-                    height="531"
-                    src="/img/containers/images/dconf-editor-logout-prompt.jpg/5617ee35d068d66897d1492c10d6e18a/dconf-editor-logout-prompt.jpg"
-                    alt="Image of the dconf Editor, showing the Logout prompt key."
-                    
-                        class="
-        h-auto
-        "
-                    
-                    
-                    
-                        loading="lazy"
-                    
-                >
-            
-        </picture>
-    
-
-<!-- End: statamic-peak-tools::components/_picture.antlers.html -->
-
-
-    <!-- /typography/_caption.antlers.html -->
-
-    <figcaption class="italic border-b border-brightgreen inline-block mt-0 text-sm text-neutral ">
-        Image of the dconf Editor, showing the Logout prompt key 
-    </figcaption>
-
-<!-- End: /typography/_caption.antlers.html -->
-
-</figure>
-<!-- End: /components/_image.antlers.html -->
-
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p></p><p>While the Ubuntu shutdown confirmation is there to prevent accidental shutdowns, it can be inconvenient for some users. Disabling it using the <code>gsettings</code> command or the dconf Editor is a straightforward process, as demonstrated in this small guide. Remember that with great power comes great responsibility, and disabling this confirmation means you need to be more cautious when shutting down your system. </p><p>Enjoy your streamlined shutdown process!</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_notice_block.antlers.html -->
-<div class="notice rounded-md p-4 my-4 w-full bg-brightgreen">
-    <p>Photo by <a href="https://unsplash.com/@john_smit">John Smit</a></p>
-    
-</div>
-<!-- End: /components/_notice_block.antlers.html -->
 </article>
 <!-- End: /typography/_prose.antlers.html -->
 

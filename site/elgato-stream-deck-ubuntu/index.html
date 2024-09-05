@@ -672,8 +672,20 @@
         <div class="grid grid-cols-4">
             
             
+            <!-- /page_builder/_avatar.antlers.html -->
+<section class="hidden md:block">
+        
+        <img src="/images/marcel-bootsman.webp" alt="Picture of Marcel Bootsman" width="200" height="200" />
+        
+</section>
+<!-- End: /page_builder/_avatar.antlers.html -->
+            
+            
+            
             
 
+            
+            
             
             
             <!-- /page_builder/_article.antlers.html -->
@@ -698,162 +710,7 @@
 >
     <!-- /components/_text.antlers.html -->
 <div class="size-lg">
-    <p>Using the Elgato Stream Deck with Ubuntu can (and will if you use it wisely) enhance your workflow, whether you&#039;re a content creator, programmer, or someone who loves streamlining tasks. </p><p>While Elgato primarily supports Windows and macOS for its Stream Deck software, there are workarounds to get it up and running smoothly on Ubuntu, thanks to community-driven solutions like <code>streamdeck-ui</code>. </p><p>This guide will walk you through the steps to set up and use the Elgato Stream Deck on Ubuntu using <code>streamdeck-ui</code>.</p><h2>Understanding the Elgato Stream Deck</h2><p>I’m assuming you know what the Elgato Stream Deck is, but for completeness I explain a bit what it is. </p><p>The Elgato Stream Deck is a customizable control device with programmable LCD keys, enabling users to create personalized shortcuts for various applications and tasks. Whether it&#039;s launching software, controlling streaming tools, executing commands, or integrating with popular platforms like OBS Studio or Twitch, the Stream Deck streamlines actions with the tap of a button.</p><h2>Getting started</h2><p>To begin, ensure your Elgato Stream Deck is connected to your Ubuntu machine. <code>streamdeck-ui</code> is a third-party open-source tool that acts as a bridge between the Stream Deck hardware and Linux, providing the necessary functionalities to configure and use the device.</p><h3>Installing streamdeck-ui</h3><h4>Step 1: Install dependencies an prerequisites</h4><p>Open a terminal and make sure your system is up to date by running:</p><p><code>sudo apt update &amp;&amp; sudo apt upgrade</code></p><p>Next, install some dependencies:</p><p><code>sudo apt install libhidapi-libusb0 python3-pip</code> </p><p>Now add <code>~/.local/bin</code> to your path. Be sure to add this to your <code>.bashrc</code> (or equivalent) file so it automatically sets it for you in future. This is necessary to be able to run <code>streamdeck-ui</code>.</p><p><code>PATH=$PATH:$HOME/.local/bin</code> </p><p>To make sure everything will work, you need to upgrade pip, using pip. According to the author, old versions of pip may fail to properly install some of the required Python dependencies.</p><p><code>python3 -m pip install --upgrade pip</code></p><h4>Step 2: Configure access to Elgato device(s)</h4><p>Ubuntu, or to be more precise, your user, needs to have access to the Elgato device(s). Therefore we need to add a USB rule The following will create a file called <code>/etc/udev/rules.d/70-streamdeck.rules</code> and add the following text to it: <code>SUBSYSTEM==&quot;usb&quot;, ATTRS{idVendor}==&quot;0fd9&quot;, TAG+=&quot;uaccess&quot;</code>. Creating this file adds a udev rule that provides your user with access to USB devices created by Elgato.</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">sudo</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">sh</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">-c</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">echo &quot;SUBSYSTEM==\&quot;usb\&quot;, ATTRS{idVendor}==\&quot;0fd9\&quot;, TAG+=\&quot;uaccess\&quot;&quot; &gt; /etc/udev/rules.d/70-streamdeck.rules</span><span style="color: #89DDFF;">&#39;</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>Bash</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p>For the rule to take immediate effect, run the following command:</p><p><code>sudo udevadm trigger</code></p><h4>Step 3: Install streamdeck-ui</h4><p>Installing <code>streamdeck-ui</code> is done with the Pip installer, just launch this command:</p><p><code>python3 -m pip install streamdeck-ui --user</code> </p><p>When this is done, you can launch the application with <code>streamdeck</code> </p><p>If you get an error, like I did, that says: </p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">qt.qpa.plugin: Could not load the Qt platform plugin &quot;xcb&quot; in &quot;&quot; even though it was found.</span></div><div class='line'><span style="color: #A6ACCD;">This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'></div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p>You can fix it by installing an extra package:</p><p><code>sudo apt install libxcb-xinerama0</code></p><h2>Using Stream Deck UI</h2><p>After you launch Stream Deck UI with the command <code>streamdeck</code>, you will see the following window, but empty. You can add all sorts of shortcuts to for executing commands, sending key presses and writing text. </p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_image.antlers.html -->
-<figure
-    class="not-prose
-        size-md
-    "
->
-    <!-- statamic-peak-tools::components/_picture.antlers.html -->
-
-    
-        
-        
-        
-        
-        
-
-        
-        
-
-        
-        
-
-
-        
-        
-
-        <picture>
-            
-                
-                    <source
-                        srcset="
-                            
-                                /img/containers/images/stream-deck-main-window.png/2d8fe2291245755c7987c35be9e2ebbb/stream-deck-main-window.webp 320w,
-                            
-                                /img/containers/images/stream-deck-main-window.png/bc36f577cf579af70c39dce711b43dff/stream-deck-main-window.webp 480w,
-                            
-                                /img/containers/images/stream-deck-main-window.png/6abd98708df7d63791b422a37f8e072e/stream-deck-main-window.webp 640w,
-                            
-                                /img/containers/images/stream-deck-main-window.png/773dc3dde149887acc14b320d73abc4c/stream-deck-main-window.webp 768w,
-                            
-                                /img/containers/images/stream-deck-main-window.png/b98b0352fc1942ed3a54ebc1f13ca9fa/stream-deck-main-window.webp 1024w,
-                            
-                                /img/containers/images/stream-deck-main-window.png/0da9549e27e42ba020cbbc03c2986aec/stream-deck-main-window.webp 1280w,
-                            
-                                /img/containers/images/stream-deck-main-window.png/7c2ab63ffdd9ff22cfd0ec7d01a43dae/stream-deck-main-window.webp 1440w,
-                            
-                                /img/containers/images/stream-deck-main-window.png/f238d1675b37ecde9c5b1c5299f0cc88/stream-deck-main-window.webp 1536w,
-                            
-                                /img/containers/images/stream-deck-main-window.png/b44fbceea0986c84dc313b951380a460/stream-deck-main-window.webp 1680w
-                            
-                        "
-                        sizes="
-            
-        "
-                        type="image/webp"
-                    >
-                
-                    <source
-                        srcset="
-                            
-                                /img/containers/images/stream-deck-main-window.png/66538b6cda4fbdf7c14e341c78f72c31/stream-deck-main-window.jpg 320w,
-                            
-                                /img/containers/images/stream-deck-main-window.png/20f402cca00477552b46a9d55d21f237/stream-deck-main-window.jpg 480w,
-                            
-                                /img/containers/images/stream-deck-main-window.png/308e594915891e0ab9524e0d7eda3a87/stream-deck-main-window.jpg 640w,
-                            
-                                /img/containers/images/stream-deck-main-window.png/b90a719a5dae14abe8cbfbffb5db1019/stream-deck-main-window.jpg 768w,
-                            
-                                /img/containers/images/stream-deck-main-window.png/0be9705e12a1f09513f4f4f009720b41/stream-deck-main-window.jpg 1024w,
-                            
-                                /img/containers/images/stream-deck-main-window.png/b580142b8a1444c7b6ef105d7f543d17/stream-deck-main-window.jpg 1280w,
-                            
-                                /img/containers/images/stream-deck-main-window.png/e7d52476ecf99e0b22e669e354e10892/stream-deck-main-window.jpg 1440w,
-                            
-                                /img/containers/images/stream-deck-main-window.png/4166ebf92c48565025ea8640f6f0a7fc/stream-deck-main-window.jpg 1536w,
-                            
-                                /img/containers/images/stream-deck-main-window.png/8dbbc7c73e582d500fb2f57b8145bf0a/stream-deck-main-window.jpg 1680w
-                            
-                        "
-                        sizes="
-            
-        "
-                        type="image/jpeg"
-                    >
-                
-                <img
-                    width="1039"
-                    height="478"
-                    src="/img/containers/images/stream-deck-main-window.png/df8459021675fb458f22acfcb3cbf8ed/stream-deck-main-window.png"
-                    alt="Streamdeck main window with some icons to operate the Stream Deck device."
-                    
-                        class="
-        h-auto
-        "
-                    
-                    
-                    
-                        loading="lazy"
-                    
-                >
-            
-        </picture>
-    
-
-<!-- End: statamic-peak-tools::components/_picture.antlers.html -->
-
-
-    <!-- /typography/_caption.antlers.html -->
-
-    <figcaption class="italic border-b border-brightgreen inline-block mt-0 text-sm text-neutral ">
-        Stream Deck UI main window 
-    </figcaption>
-
-<!-- End: /typography/_caption.antlers.html -->
-
-</figure>
-<!-- End: /components/_image.antlers.html -->
-
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p>For the icons in the screenshot above I have used icons from Anggara on <a href="https://www.flaticon.com/authors/anggara/color-lineal-color?author_id=1427&amp;type=standard">flaticon.com</a>.</p><h2>Conclusion</h2><p>While Elgato might not officially support Ubuntu for the Stream Deck, the availability of community-driven solutions like <code>streamdeck-ui</code> opens up the possibility for Ubuntu users to harness the potential of this powerful hardware. With the ability to create personalized shortcuts and workflows, the Stream Deck becomes an invaluable tool for boosting productivity and efficiency on Ubuntu systems.</p><h2>More information</h2><p><a href="https://github.com/timothycrosley/streamdeck-ui">Official </a><code>streamdeck-ui</code><a href="https://github.com/timothycrosley/streamdeck-ui"> repository on Github</a>.</p><p><a href="https://timothycrosley.github.io/streamdeck-ui/">Extended </a><code>streamdeck-ui</code><a href="https://timothycrosley.github.io/streamdeck-ui/"> documentation.</a></p>
+    <h2>About Marcel Bootsman</h2><p>Marcel discovered the web in 1995. Since then he has paid attention to and worked with lots of technologies and founded his own WordPress oriented business <a href="https://nostromo.nl">nostromo.nl</a> in 2009.</p><p>Currently Marcel is Business Development Manager Dutch &amp; DACH Markets at <a href="/kinsta">Kinsta</a> where he helps Kinsta&#039;s client base grow with <a href="/kinsta-managed-wordpress-hosting">Managed WordPress</a>, <a href="/kinsta-application-database-hosting">Application, Database</a> and <a href="https://kinsta.com/static-site-hosting/">Static site hosting</a>.</p><p>You can contact Marcel on a diverse range of online platforms. Please see the Connect section on the <a href="/#connect">homepage</a> for the details.</p>
 </div>
 <!-- End: /components/_text.antlers.html -->
 </article>

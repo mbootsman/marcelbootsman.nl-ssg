@@ -615,8 +615,20 @@
         <div class="grid grid-cols-4">
             
             
+            <!-- /page_builder/_avatar.antlers.html -->
+<section class="hidden md:block">
+        
+        <img src="/images/marcel-bootsman.webp" alt="Picture of Marcel Bootsman" width="200" height="200" />
+        
+</section>
+<!-- End: /page_builder/_avatar.antlers.html -->
+            
+            
+            
             
 
+            
+            
             
             
             <!-- /page_builder/_article.antlers.html -->
@@ -641,107 +653,9 @@
 >
     <!-- /components/_text.antlers.html -->
 <div class="size-lg">
-    <p>Tired of typing the same phrases, email addresses, or code snippets repeatedly?</p><p>I know I was and I started looking for way to automate typing of recurring pieces of text. A text expander like <a href="https://espanso.org/">Espanso</a> can be a time-saving tool for you. </p><p>Espanso is an open-source, cross-platform text expander that allows you to create custom text snippets, macros, and shortcuts to quickly insert text in any application. In this tutorial, I&#039;ll guide you through the process of installing and using Espanso on Ubuntu. </p><h2>Prerequisites</h2><p>Before we dive into the installation and usage of Espanso, make sure you have the following prerequisites:</p><ol start="1"><li><p>A machine running Ubuntu (this guide is based on Ubuntu 23.10, but the process should be similar for other versions).</p></li><li><p>Access to the terminal and administrative privileges (sudo access).</p></li></ol><h2>Choosing the right install method</h2><p>Espanso comes in two flavours, one for the X11 desktop environment and one for Wayland. First you need to check which one you are using. Check you desktop environment by typing the following in a terminal:</p>
+    <h2>About Marcel Bootsman</h2><p>Marcel discovered the web in 1995. Since then he has paid attention to and worked with lots of technologies and founded his own WordPress oriented business <a href="https://nostromo.nl">nostromo.nl</a> in 2009.</p><p>Currently Marcel is Business Development Manager Dutch &amp; DACH Markets at <a href="/kinsta">Kinsta</a> where he helps Kinsta&#039;s client base grow with <a href="/kinsta-managed-wordpress-hosting">Managed WordPress</a>, <a href="/kinsta-application-database-hosting">Application, Database</a> and <a href="https://kinsta.com/static-site-hosting/">Static site hosting</a>.</p><p>You can contact Marcel on a diverse range of online platforms. Please see the Connect section on the <a href="/#connect">homepage</a> for the details.</p>
 </div>
 <!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #82AAFF;">echo</span><span style="color: #A6ACCD;"> $XDG_SESSION_TYPE</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>bash</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p>For  Ubuntu, there are four installation options, this note will only use the Snap package installation and assume you are running on X11. If you are running on Wayland, you can only install with a <a href="https://espanso.org/docs/install/linux#deb-wayland">DEB package</a>. Let’s install it!</p><p><strong>1. Open your terminal</strong>: You can do this by pressing <code>Ctrl + Alt + T</code> or searching for &quot;Terminal&quot; in the application menu.</p><p><strong>2. Update your package list</strong>: Before installing Espanso, it&#039;s a good practice to ensure your package list is up to date. Run the following command:</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">sudo</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">apt</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">update</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>bash</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p><strong>3. Install Espanso</strong>: Once your package list is updated, you can install Espanso using Snap with the following command:</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">sudo</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">snap</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">install</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">espanso</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--classic</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--channel=latest/edge</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>bash</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p>The Snap package manager will download and install Espanso on your system. When this command finishes, you can test if it worked, by checking the version of Espanso with <code>espanso --version</code> .</p><p><strong>4. Install Espanso as a systemd service</strong>: After the installation is complete, regsiter Espanso as a systemd service  with the following command:</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">espanso</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">service</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">register</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>bash</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p>And then start Espanso with:</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">espanso</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">start</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>bash</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p>Espanso will run in the background, ready to assist you with text expansion.</p><h2>Configuration and usage</h2><p>Now that Espanso is installed and running, let&#039;s explore how to configure it and create text snippets for text expansion.</p><p>Before we start using or configuring Espanso, let’s first introduce a few concepts that Espanso uses:</p><ul><li><p><strong>Trigger:</strong> This is the keyword that Espanso tries to find a match for in its configuration file. When Espanso finds a trigger it will replace the trigger with its longer equivalent (replacement text).</p></li><li><p><strong>Replacement Text:</strong> This is the longer text that replaces its equivalent trigger when you type it.</p></li><li><p><strong>Match:</strong> A match is a key-value pair that associates a trigger with its replacement text.</p></li></ul><p>Espanso can have static and dynamic matches. Static matches replace a trigger with a set replacement text, while <a href="https://espanso.org/docs/matches/basics/#dynamic-matches">dynamic matches</a> can replace a trigger with a variable, for instance a date or time.</p><h3>Configuration File</h3><p>The configuration file for Espanso is located at <code>~/.config/espanso/default.yml</code>. You can edit this file to define your custom text expansion rules. You can use your preferred text editor to open and edit this file.</p><h3>Create Snippets</h3><p>To create a text snippet, add an entry in the configuration file in the following format:</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">-</span><span style="color: #A6ACCD;"> </span><span style="color: #F07178;">trigger</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">:shrug</span><span style="color: #89DDFF;">&quot;</span></div><div class='line'><span style="color: #A6ACCD;">  </span><span style="color: #F07178;">replace</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">¯</span><span style="color: #A6ACCD;">\\</span><span style="color: #C3E88D;">_(ツ)_/¯</span><span style="color: #89DDFF;">&quot;</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>yaml</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p>In this example, typing <code>:shrug</code> will automatically replace it with the famous shrug emoticon. Whenever you edit file sin the config directory Espanso will automatically reload all the config files, so changes are usable immediately.</p><h2>Conclusion</h2><p>Espanso is a versatile text expander that can significantly boost your productivity by reducing repetitive typing tasks. By following this guide, you should now have Espanso up and running on your Ubuntu system and be well on your way to creating and using your own custom text expansions. Explore its <a href="https://espanso.org/docs/get-started/">extensive documentation</a> and get creative with your snippets to streamline your workflow and save time.</p><p></p><p></p><p></p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_notice_block.antlers.html -->
-<div class="notice rounded-md p-4 my-4 w-full bg-brightgreen">
-    <p>Photo by <a href="https://unsplash.com/@adityareds">Aditya Rathod</a></p>
-    
-</div>
-<!-- End: /components/_notice_block.antlers.html -->
 </article>
 <!-- End: /typography/_prose.antlers.html -->
 
