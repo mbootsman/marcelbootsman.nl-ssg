@@ -48,6 +48,14 @@
         
             
                 <url>
+                    <loc>https://marcelbootsman.nl/notes/change-user-folder-locations-ubuntu</loc>
+                    <lastmod>2024-11-01</lastmod>
+                    <changefreq>monthly</changefreq>
+                    <priority>0.5</priority>
+                    
+                </url>
+            
+                <url>
                     <loc>https://marcelbootsman.nl/notes/how-to-run-steam-windows-games-on-ubuntu</loc>
                     <lastmod>2024-09-05</lastmod>
                     <changefreq>weekly</changefreq>
