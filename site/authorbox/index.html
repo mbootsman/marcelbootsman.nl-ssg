@@ -207,21 +207,58 @@
         
         <li
             
+            x-data="{ subnavOpen: false }"
+            @keyup.escape.stop.prevent="subnavOpen = false"
+            @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+            
             class="relative leading-none">
             <a class="
                         p-1 -m-1 flex items-center font-bold text-sm hover:text-primary underline focus:outline-none focus-visible:ring-2 ring-primary
                         text-neutral
                     "
                 
-                href="/"
+                href="#"
+                @click.prevent="subnavOpen = !subnavOpen"
+                :aria-label="subnavOpen
+                            ? 'Close sub navigation'
+                            : 'Open sub navigation'"
+                :aria-expanded="subnavOpen"
                 >
                 Home
                 
+                <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                    <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                </div>
+                
             </a>
+            
+            <ul
+                x-show="subnavOpen"
+                x-ref="subnav"
+                class="absolute right-0 mt-2 -ml-3 py-2 px-3 bg-white border border-neutral/10 rounded shadow"
+                @click.outside="subnavOpen = false"
+                x-transition
+                x-cloak>
+                
+                <li class="">
+                    <a
+                        class="whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        text-neutral
+                                    "
+                        href="/readme">
+                        ReadMe
+                    </a>
+                </li>
+                
+            </ul>
             
         </li>
         
         <li
+            
+            x-data="{ subnavOpen: false }"
+            @keyup.escape.stop.prevent="subnavOpen = false"
+            @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
             
             class="relative leading-none">
             <a class="
@@ -229,15 +266,68 @@
                         text-neutral
                     "
                 
-                href="/readme"
+                href="#"
+                @click.prevent="subnavOpen = !subnavOpen"
+                :aria-label="subnavOpen
+                            ? 'Close sub navigation'
+                            : 'Open sub navigation'"
+                :aria-expanded="subnavOpen"
                 >
-                ReadMe
+                Archives
+                
+                <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                    <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                </div>
                 
             </a>
+            
+            <ul
+                x-show="subnavOpen"
+                x-ref="subnav"
+                class="absolute right-0 mt-2 -ml-3 py-2 px-3 bg-white border border-neutral/10 rounded shadow"
+                @click.outside="subnavOpen = false"
+                x-transition
+                x-cloak>
+                
+                <li class="">
+                    <a
+                        class="whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        text-neutral
+                                    "
+                        href="/archive">
+                        Blog
+                    </a>
+                </li>
+                
+                <li class="">
+                    <a
+                        class="whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        text-neutral
+                                    "
+                        href="/notes">
+                        Notes
+                    </a>
+                </li>
+                
+                <li class="">
+                    <a
+                        class="whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        text-neutral
+                                    "
+                        href="/categories">
+                        Categories
+                    </a>
+                </li>
+                
+            </ul>
             
         </li>
         
         <li
+            
+            x-data="{ subnavOpen: false }"
+            @keyup.escape.stop.prevent="subnavOpen = false"
+            @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
             
             class="relative leading-none">
             <a class="
@@ -245,43 +335,50 @@
                         text-neutral
                     "
                 
-                href="/archive"
+                href="#"
+                @click.prevent="subnavOpen = !subnavOpen"
+                :aria-label="subnavOpen
+                            ? 'Close sub navigation'
+                            : 'Open sub navigation'"
+                :aria-expanded="subnavOpen"
                 >
-                Archive
+                WordPress plugins
+                
+                <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                    <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                </div>
                 
             </a>
             
-        </li>
-        
-        <li
-            
-            class="relative leading-none">
-            <a class="
-                        p-1 -m-1 flex items-center font-bold text-sm hover:text-primary underline focus:outline-none focus-visible:ring-2 ring-primary
-                        text-neutral
-                    "
+            <ul
+                x-show="subnavOpen"
+                x-ref="subnav"
+                class="absolute right-0 mt-2 -ml-3 py-2 px-3 bg-white border border-neutral/10 rounded shadow"
+                @click.outside="subnavOpen = false"
+                x-transition
+                x-cloak>
                 
-                href="/notes"
-                >
-                Notes
+                <li class="">
+                    <a
+                        class="whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        text-neutral
+                                    "
+                        href="/wordpress-plugins/auto-hide-admin-bar">
+                        Auto Hide Admin Bar
+                    </a>
+                </li>
                 
-            </a>
-            
-        </li>
-        
-        <li
-            
-            class="relative leading-none">
-            <a class="
-                        p-1 -m-1 flex items-center font-bold text-sm hover:text-primary underline focus:outline-none focus-visible:ring-2 ring-primary
-                        text-neutral
-                    "
+                <li class="">
+                    <a
+                        class="whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        text-neutral
+                                    "
+                        href="/wordpress-plugins/search-engines-blocked-in-header">
+                        Search Engines Blocked in Header
+                    </a>
+                </li>
                 
-                href="/categories"
-                >
-                Categories
-                
-            </a>
+            </ul>
             
         </li>
         
@@ -319,81 +416,163 @@
             
                 <li
                     
+                        x-data="{ subnavOpen: false }"
+                        @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+                    
                     class="leading-none"
                 >
                     <a
                         class="w-full py-2 flex items-center space-x-1 text-lg font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
                         
-                            href="/"
+                            href="#"
+                            @click.prevent="subnavOpen = !subnavOpen"
+                            @click.outside="subnavOpen = false"
+                            :aria-label="subnavOpen
+                                ? 'Close sub navigation'
+                                : 'Open sub navigation'"
+                            :aria-expanded="subnavOpen"
                         
                     >
                         <span>Home</span>
                         
+                            <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                                <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                            </div>
+                        
                     </a>
+                    
+                        <ul
+                            x-show="subnavOpen"
+                            x-ref="subnav"
+                            class="flex flex-col items-stretch space-y-2"
+                            x-collapse
+                        >
+                            
+                                <li class="mt-2">
+                                    <a
+                                        class="block py-2 whitespace-nowrap font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                                        href="/readme">
+                                        ReadMe
+                                    </a>
+                                </li>
+                            
+                        </ul>
                     
                 </li>
             
                 <li
+                    
+                        x-data="{ subnavOpen: false }"
+                        @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
                     
                     class="leading-none"
                 >
                     <a
                         class="w-full py-2 flex items-center space-x-1 text-lg font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
                         
-                            href="/readme"
+                            href="#"
+                            @click.prevent="subnavOpen = !subnavOpen"
+                            @click.outside="subnavOpen = false"
+                            :aria-label="subnavOpen
+                                ? 'Close sub navigation'
+                                : 'Open sub navigation'"
+                            :aria-expanded="subnavOpen"
                         
                     >
-                        <span>ReadMe</span>
+                        <span>Archives</span>
+                        
+                            <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                                <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                            </div>
                         
                     </a>
+                    
+                        <ul
+                            x-show="subnavOpen"
+                            x-ref="subnav"
+                            class="flex flex-col items-stretch space-y-2"
+                            x-collapse
+                        >
+                            
+                                <li class="mt-2">
+                                    <a
+                                        class="block py-2 whitespace-nowrap font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                                        href="/archive">
+                                        Blog
+                                    </a>
+                                </li>
+                            
+                                <li class="">
+                                    <a
+                                        class="block py-2 whitespace-nowrap font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                                        href="/notes">
+                                        Notes
+                                    </a>
+                                </li>
+                            
+                                <li class="">
+                                    <a
+                                        class="block py-2 whitespace-nowrap font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                                        href="/categories">
+                                        Categories
+                                    </a>
+                                </li>
+                            
+                        </ul>
                     
                 </li>
             
                 <li
+                    
+                        x-data="{ subnavOpen: false }"
+                        @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
                     
                     class="leading-none"
                 >
                     <a
                         class="w-full py-2 flex items-center space-x-1 text-lg font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
                         
-                            href="/archive"
+                            href="#"
+                            @click.prevent="subnavOpen = !subnavOpen"
+                            @click.outside="subnavOpen = false"
+                            :aria-label="subnavOpen
+                                ? 'Close sub navigation'
+                                : 'Open sub navigation'"
+                            :aria-expanded="subnavOpen"
                         
                     >
-                        <span>Archive</span>
+                        <span>WordPress plugins</span>
+                        
+                            <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                                <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                            </div>
                         
                     </a>
                     
-                </li>
-            
-                <li
-                    
-                    class="leading-none"
-                >
-                    <a
-                        class="w-full py-2 flex items-center space-x-1 text-lg font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
-                        
-                            href="/notes"
-                        
-                    >
-                        <span>Notes</span>
-                        
-                    </a>
-                    
-                </li>
-            
-                <li
-                    
-                    class="leading-none"
-                >
-                    <a
-                        class="w-full py-2 flex items-center space-x-1 text-lg font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
-                        
-                            href="/categories"
-                        
-                    >
-                        <span>Categories</span>
-                        
-                    </a>
+                        <ul
+                            x-show="subnavOpen"
+                            x-ref="subnav"
+                            class="flex flex-col items-stretch space-y-2"
+                            x-collapse
+                        >
+                            
+                                <li class="mt-2">
+                                    <a
+                                        class="block py-2 whitespace-nowrap font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                                        href="/wordpress-plugins/auto-hide-admin-bar">
+                                        Auto Hide Admin Bar
+                                    </a>
+                                </li>
+                            
+                                <li class="">
+                                    <a
+                                        class="block py-2 whitespace-nowrap font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                                        href="/wordpress-plugins/search-engines-blocked-in-header">
+                                        Search Engines Blocked in Header
+                                    </a>
+                                </li>
+                            
+                        </ul>
                     
                 </li>
             
