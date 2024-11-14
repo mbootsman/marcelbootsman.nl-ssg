@@ -44,8 +44,16 @@
                 </url>
             
                 <url>
+                    <loc>https://marcelbootsman.nl/wordpress-plugins</loc>
+                    <lastmod>2024-11-05</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.5</priority>
+                    
+                </url>
+            
+                <url>
                     <loc>https://marcelbootsman.nl/wordpress-plugins/auto-hide-admin-bar</loc>
-                    <lastmod>2024-11-08</lastmod>
+                    <lastmod>2024-11-11</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                     
