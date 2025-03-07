@@ -64,6 +64,14 @@
         
             
                 <url>
+                    <loc>https://marcelbootsman.nl/notes/devices-stuck-in-adopting-using-docker-unifi-controller-on-synology-diskstation</loc>
+                    <lastmod>2025-03-07</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.5</priority>
+                    
+                </url>
+            
+                <url>
                     <loc>https://marcelbootsman.nl/notes/change-user-folder-locations-ubuntu</loc>
                     <lastmod>2024-11-01</lastmod>
                     <changefreq>monthly</changefreq>
@@ -589,6 +597,13 @@
                 <url>
                     <loc>https://marcelbootsman.nl/categories/statamic</loc>
                     <lastmod>2024-09-03</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.5</priority>
+                </url>
+            
+                <url>
+                    <loc>https://marcelbootsman.nl/categories/tech</loc>
+                    <lastmod>2025-03-07</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                 </url>
