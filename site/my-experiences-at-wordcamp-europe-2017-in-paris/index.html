@@ -1,0 +1,1543 @@
+<!-- /layout.antlers.html -->
+<!doctype html>
+<html lang="en" class="antialiased">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <link rel="preload" as="style" href="https://marcelbootsman.nl/build/assets/site-95bd6363.css" /><link rel="modulepreload" href="https://marcelbootsman.nl/build/assets/site-ee590dd4.js" /><link rel="stylesheet" href="https://marcelbootsman.nl/build/assets/site-95bd6363.css" /><script type="module" src="https://marcelbootsman.nl/build/assets/site-ee590dd4.js"></script>
+        <!-- statamic-peak-seo::snippets/_seo.antlers.html -->
+
+<title>
+    
+    
+    
+        My experiences at WordCamp Europe 2017 in Paris - marcelbootsman.nl
+    
+</title>
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+    
+        <link rel="canonical" href="https://marcelbootsman.nl/my-experiences-at-wordcamp-europe-2017-in-paris">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:site_name" content="marcelbootsman.nl">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+    <meta property="og:title" content="My experiences at WordCamp Europe 2017 in Paris">
+
+
+
+    <meta property="og:image" content="https://marcelbootsman.nl/img/containers/social_images/my-experiences-at-wordcamp-europe-2017-in-paris-og-1687876392.png/0d32cd7f5a220b3c70a44a6e518563e8/my-experiences-at-wordcamp-europe-2017-in-paris-og-1687876392.png">
+
+
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="">
+    
+        <meta name="twitter:title" content="My experiences at WordCamp Europe 2017 in Paris">
+   
+   
+   
+        <meta name="twitter:image" content="">
+        
+   
+
+
+
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+<!-- End: statamic-peak-seo::snippets/_seo.antlers.html -->
+
+        <!-- /snippets/_browser_appearance.antlers.html -->
+
+
+
+
+
+
+
+    
+    <link rel="icon" href="/favicons/mb-logo.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicons/default/favicon.ico" type="image/x-icon">
+
+    
+    
+        <link rel="icon" href="/favicons/default/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" href="/favicons/default/favicon-32x32.png" sizes="32x32">
+    
+
+
+
+<link rel="manifest" href="https://marcelbootsman.nl/site.webmanifest">
+
+
+
+<!-- End: /snippets/_browser_appearance.antlers.html -->
+
+        
+
+        
+        <link rel="alternate" type="application/atom+xml" title="marcelbootsman.nl"  href="/feed/atom" />
+<link rel="alternate" type="application/rss+xml" title="marcelbootsman.nl"  href="/feed" />
+        
+        
+<script>
+    /* Generate a share link for the user's Mastodon domain */
+    function MastodonShare(e) {
+        // Get the source text
+        src = e.getAttribute("data-src");
+
+        // Get the Mastodon domain
+        domain = prompt("Enter your Mastodon domain", "toot.re");
+
+        if (domain == "" || domain == null) {
+            return;
+        }
+
+        // Build the URL
+        url = "https://" + domain + "/share?text=" + src;
+
+        // Open a window on the share page
+        window.open(url, '_blank');
+    }
+
+    function doSomethingWhenDocumentReady(functionToExecute) {
+        /* $(document).ready() without javascript
+        */
+        if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            functionToExecute();
+        } else {
+            document.addEventListener("DOMContentLoaded", functionToExecute);
+        }
+    }
+
+    /* Call this on document.ready() */
+    function unhideMastodonShare() {
+        var button = document.getElementById('mastodonshare');
+        button.classList.remove('hidden');
+        button.classList.add('inline-flex');
+    }
+    doSomethingWhenDocumentReady(unhideMastodonShare);
+
+</script>
+
+        
+        
+        <!-- Matomo -->
+        <script>
+            var _paq = window._paq = window._paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function () {
+                var u = "//stats.marcelbootsman.nl/";
+                _paq.push(['setTrackerUrl', u + 'matomo.php']);
+                _paq.push(['setSiteId', '1']);
+                var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+                g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+            })();
+        </script>
+        <noscript>
+            <p><img src="//stats.marcelbootsman.nl/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p>
+        </noscript>
+        <!-- End Matomo Code -->
+
+        
+    </head>
+ 
+    <body class="flex flex-col min-h-screen bg-stone-100 selection:bg-primary selection:text-white">
+        <script>
+            if (localStorage.getItem("pref-theme") === "dark") {
+                document.body.classList.add('dark');
+            } else if (localStorage.getItem("pref-theme") === "light") {
+                document.body.classList.remove('dark')
+            } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.add('dark');
+            }
+        </script>
+        <!-- statamic-peak-tools::snippets/_noscript.antlers.html -->
+
+    <noscript>
+        <p class="relative z-50 py-3 px-4 bg-gray-100 border-b border-gray-200 text-center font-bold text-xs text-gray-600">This website requires Javascript for some parts to function properly. Your experience may vary.</p>
+    </noscript>
+
+    
+
+<!-- End: statamic-peak-tools::snippets/_noscript.antlers.html -->
+
+        <!-- statamic-peak-tools::navigation/_skip_links.antlers.html -->
+<div class="z-50 text-sm font-bold text-white [&_a]:fixed [&_a]:px-4 [&_a]:py-2 [&_a]:-translate-y-24 [&_a]:opacity-0 [&_a]:top-4 [&_a]:left-8 [&_a]:bg-primary [&_a]:focus-visible:translate-y-0 [&_a]:focus-visible:opacity-100 [&_a]:outline-primary [&_a]:motion-safe:transition-transform ">
+    
+        <a href="#content">Skip to content</a>
+    
+    
+</div>
+<!-- End: statamic-peak-tools::navigation/_skip_links.antlers.html -->
+
+        <!-- statamic-peak-tools::components/_toolbar.antlers.html -->
+
+<!-- End: statamic-peak-tools::components/_toolbar.antlers.html -->
+
+        
+
+        <!-- /layout/_header.antlers.html -->
+<header class="w-full py-4">
+    <div class="fluid-container flex justify-between items-center">
+        
+        <!-- /components/_logo.antlers.html -->
+<div class="basis-54 sm:basis-96">
+    <a class="p-2 -m-2 focus:outline-none focus-visible:ring-2 ring-primary"
+        aria-label="Logo marcelbootsman" href="/">
+        <img src="/images/marcelbootsman-logo.png" class="logo inline select-none  w-10 sm:w-20" alt="marcelbootsman" />
+        <span class="border-b-4 border-brightgreen text-l sm:text-2xl font-bold">Marcel Bootsman</span>
+    </a>
+    <div class="inline-block relative top-2">
+        <button id="theme-toggle" title="Toggle dark/light theme">
+            <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="48" height="28" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+            </svg>
+            <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="48" height="28" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+        </button>
+    </div>
+</div>
+<!-- End: /components/_logo.antlers.html -->
+        
+<!-- /navigation/_main_desktop.antlers.html -->
+<nav class="hidden md:block" aria-label="Main navigation">
+    <ul class="flex items-center space-x-8">
+        
+        <li
+            
+            x-data="{ subnavOpen: false }"
+            @keyup.escape.stop.prevent="subnavOpen = false"
+            @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+            
+            class="relative leading-none">
+            <a class="
+                        p-1 -m-1 flex items-center font-bold text-sm hover:text-primary underline focus:outline-none focus-visible:ring-2 ring-primary
+                        text-neutral
+                    "
+                
+                href="#"
+                @click.prevent="subnavOpen = !subnavOpen"
+                :aria-label="subnavOpen
+                            ? 'Close sub navigation'
+                            : 'Open sub navigation'"
+                :aria-expanded="subnavOpen"
+                >
+                Home
+                
+                <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                    <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                </div>
+                
+            </a>
+            
+            <ul
+                x-show="subnavOpen"
+                x-ref="subnav"
+                class="absolute right-0 mt-2 -ml-3 py-2 px-3 bg-white border border-neutral/10 rounded shadow"
+                @click.outside="subnavOpen = false"
+                x-transition
+                x-cloak>
+                
+                <li class="">
+                    <a
+                        class="whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        text-neutral
+                                    "
+                        href="/readme">
+                        ReadMe
+                    </a>
+                </li>
+                
+            </ul>
+            
+        </li>
+        
+        <li
+            
+            x-data="{ subnavOpen: false }"
+            @keyup.escape.stop.prevent="subnavOpen = false"
+            @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+            
+            class="relative leading-none">
+            <a class="
+                        p-1 -m-1 flex items-center font-bold text-sm hover:text-primary underline focus:outline-none focus-visible:ring-2 ring-primary
+                        text-neutral
+                    "
+                
+                href="#"
+                @click.prevent="subnavOpen = !subnavOpen"
+                :aria-label="subnavOpen
+                            ? 'Close sub navigation'
+                            : 'Open sub navigation'"
+                :aria-expanded="subnavOpen"
+                >
+                Archives
+                
+                <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                    <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                </div>
+                
+            </a>
+            
+            <ul
+                x-show="subnavOpen"
+                x-ref="subnav"
+                class="absolute right-0 mt-2 -ml-3 py-2 px-3 bg-white border border-neutral/10 rounded shadow"
+                @click.outside="subnavOpen = false"
+                x-transition
+                x-cloak>
+                
+                <li class="">
+                    <a
+                        class="whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        text-neutral
+                                    "
+                        href="/archive">
+                        Blog
+                    </a>
+                </li>
+                
+                <li class="">
+                    <a
+                        class="whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        text-neutral
+                                    "
+                        href="/notes">
+                        Notes
+                    </a>
+                </li>
+                
+                <li class="">
+                    <a
+                        class="whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        text-neutral
+                                    "
+                        href="/categories">
+                        Categories
+                    </a>
+                </li>
+                
+            </ul>
+            
+        </li>
+        
+        <li
+            
+            x-data="{ subnavOpen: false }"
+            @keyup.escape.stop.prevent="subnavOpen = false"
+            @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+            
+            class="relative leading-none">
+            <a class="
+                        p-1 -m-1 flex items-center font-bold text-sm hover:text-primary underline focus:outline-none focus-visible:ring-2 ring-primary
+                        text-neutral
+                    "
+                
+                href="#"
+                @click.prevent="subnavOpen = !subnavOpen"
+                :aria-label="subnavOpen
+                            ? 'Close sub navigation'
+                            : 'Open sub navigation'"
+                :aria-expanded="subnavOpen"
+                >
+                WordPress plugins
+                
+                <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                    <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                </div>
+                
+            </a>
+            
+            <ul
+                x-show="subnavOpen"
+                x-ref="subnav"
+                class="absolute right-0 mt-2 -ml-3 py-2 px-3 bg-white border border-neutral/10 rounded shadow"
+                @click.outside="subnavOpen = false"
+                x-transition
+                x-cloak>
+                
+                <li class="">
+                    <a
+                        class="whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        text-neutral
+                                    "
+                        href="/wordpress-plugins/auto-hide-admin-bar">
+                        Auto Hide Admin Bar
+                    </a>
+                </li>
+                
+            </ul>
+            
+        </li>
+        
+    </ul>
+</nav>
+<!-- End: /navigation/_main_desktop.antlers.html -->
+
+
+<!-- /navigation/_main_mobile.antlers.html -->
+<nav
+    x-data="{ mobileNavOpen: false }"
+    class="md:hidden"
+    aria-label="Main navigation"
+    x-trap.inert.noscroll="mobileNavOpen"
+    @keyup.escape.stop.prevent="mobileNavOpen = false"
+    x-cloak
+>
+    <button
+        @click.prevent.stop="mobileNavOpen = !mobileNavOpen"
+        class="fixed top-4 right-0 z-20 flex items-center justify-center w-16 h-16 mr-4 text-xs font-bold text-white mb-safe rounded bg-primary focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2"
+        :aria-label="
+        mobileNavOpen
+            ? 'Close navigation'
+            : 'Open navigation'
+        "
+        :aria-expanded="mobileNavOpen"
+        x-text="mobileNavOpen ? 'Close' : 'Menu'"
+    ></button>
+
+    <div
+        class="fixed inset-0 z-10 pt-8 px-8 pb-12 flex flex-col justify-start bg-white"
+        x-show="mobileNavOpen"
+    >
+        <ul class="flex flex-col py-2 space-y-4 overflow-auto">
+            
+                <li
+                    
+                        x-data="{ subnavOpen: false }"
+                        @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+                    
+                    class="leading-none"
+                >
+                    <a
+                        class="w-full py-2 flex items-center space-x-1 text-lg font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                        
+                            href="#"
+                            @click.prevent="subnavOpen = !subnavOpen"
+                            @click.outside="subnavOpen = false"
+                            :aria-label="subnavOpen
+                                ? 'Close sub navigation'
+                                : 'Open sub navigation'"
+                            :aria-expanded="subnavOpen"
+                        
+                    >
+                        <span>Home</span>
+                        
+                            <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                                <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                            </div>
+                        
+                    </a>
+                    
+                        <ul
+                            x-show="subnavOpen"
+                            x-ref="subnav"
+                            class="flex flex-col items-stretch space-y-2"
+                            x-collapse
+                        >
+                            
+                                <li class="mt-2">
+                                    <a
+                                        class="block py-2 whitespace-nowrap font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                                        href="/readme">
+                                        ReadMe
+                                    </a>
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li
+                    
+                        x-data="{ subnavOpen: false }"
+                        @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+                    
+                    class="leading-none"
+                >
+                    <a
+                        class="w-full py-2 flex items-center space-x-1 text-lg font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                        
+                            href="#"
+                            @click.prevent="subnavOpen = !subnavOpen"
+                            @click.outside="subnavOpen = false"
+                            :aria-label="subnavOpen
+                                ? 'Close sub navigation'
+                                : 'Open sub navigation'"
+                            :aria-expanded="subnavOpen"
+                        
+                    >
+                        <span>Archives</span>
+                        
+                            <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                                <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                            </div>
+                        
+                    </a>
+                    
+                        <ul
+                            x-show="subnavOpen"
+                            x-ref="subnav"
+                            class="flex flex-col items-stretch space-y-2"
+                            x-collapse
+                        >
+                            
+                                <li class="mt-2">
+                                    <a
+                                        class="block py-2 whitespace-nowrap font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                                        href="/archive">
+                                        Blog
+                                    </a>
+                                </li>
+                            
+                                <li class="">
+                                    <a
+                                        class="block py-2 whitespace-nowrap font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                                        href="/notes">
+                                        Notes
+                                    </a>
+                                </li>
+                            
+                                <li class="">
+                                    <a
+                                        class="block py-2 whitespace-nowrap font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                                        href="/categories">
+                                        Categories
+                                    </a>
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li
+                    
+                        x-data="{ subnavOpen: false }"
+                        @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+                    
+                    class="leading-none"
+                >
+                    <a
+                        class="w-full py-2 flex items-center space-x-1 text-lg font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                        
+                            href="#"
+                            @click.prevent="subnavOpen = !subnavOpen"
+                            @click.outside="subnavOpen = false"
+                            :aria-label="subnavOpen
+                                ? 'Close sub navigation'
+                                : 'Open sub navigation'"
+                            :aria-expanded="subnavOpen"
+                        
+                    >
+                        <span>WordPress plugins</span>
+                        
+                            <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                                <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                            </div>
+                        
+                    </a>
+                    
+                        <ul
+                            x-show="subnavOpen"
+                            x-ref="subnav"
+                            class="flex flex-col items-stretch space-y-2"
+                            x-collapse
+                        >
+                            
+                                <li class="mt-2">
+                                    <a
+                                        class="block py-2 whitespace-nowrap font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                                        href="/wordpress-plugins/auto-hide-admin-bar">
+                                        Auto Hide Admin Bar
+                                    </a>
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        </ul>
+    </div>
+</nav>
+<!-- End: /navigation/_main_mobile.antlers.html -->
+
+
+    </div>
+</header>
+<!-- End: /layout/_header.antlers.html -->
+
+        
+<main class="prose fluid-container" id="content">
+    <h1 class="block">My experiences at WordCamp Europe 2017 in Paris</h1>
+    <span class="block text-sm text-stone-400 my-4">
+    
+        Published: June 30th, 2017
+        
+            | Updated: July 21st, 2023
+        
+    
+</span>
+    
+        <a href="/categories/wordpress-community"
+            class="category text-xs p-2 my-4 mr-2 rounded-md bg-stone-200 hover:bg-brightgreen">WordPress Community</a>
+    
+
+    <span id="mastodonshare" class="hidden category items-baseline float-right rounded-md bg-stone-200 hover:bg-brightgreen px-1">
+    <a class="underline" title="Share 'My experiences at WordCamp Europe 2017 in Paris' on Mastodon" href="#" onclick="MastodonShare(this);" data-src="I found this blog and decided to share it with you.%0D%0A%0D%0AMy experiences at WordCamp Europe 2017 in Paris&amp;url=https://marcelbootsman.nl/my-experiences-at-wordcamp-europe-2017-in-paris">
+        <img class="inline align-middle h-4 m-0 mr-1" alt="Mastodon logo" title="Share on Mastodon" src="/images/mastodon-logo.svg" /><span class="text-xs">Share on Mastodon</span>
+    </a>
+</span>
+    
+        
+            <img class="mt-2 mb-2 rounded-md" src="/img/containers/images/opening-of-wceu-2017.jpg/191da7b68a2ca91b8f2d266db5c1aaa0/opening-of-wceu-2017.webp" width="860" height="450"
+                alt="Picture of the opening remarks at WordCamp Europe 2017">
+        
+    
+    
+        <!-- /page_builder/_article.antlers.html -->
+<section class="col-span-4 md:col-span-3">
+    <!-- /typography/_prose.antlers.html -->
+<article
+    class="
+        prose
+        prose-a:underline
+        prose-a:decoration-primary
+        prose-a:decoration-2
+        hover:prose-a:text-primary
+        focus:prose-a:outline-none
+        focus-visible:prose-a:ring
+        focus-visible:prose-a:ring-primary
+        focus-visible:prose-a:rounded-sm
+        prose-figure:my-0
+        prose-pre:whitespace-pre-wrap
+        max-w-none
+        contents
+    "
+>
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>WordCamp Europe 2017 has ended. The Jetpack swag bag is still lying next to me on my desk as a reminder to store it. I don’t want to. In this post I will tell you about my WCEU experiences.</p><h2>Day 1: Travel &amp; sightseeing</h2>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_image.antlers.html -->
+<figure
+    class="not-prose
+        size-xl
+    "
+>
+    <!-- statamic-peak-tools::components/_picture.antlers.html -->
+
+    
+        
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+
+        
+        
+
+        <picture>
+            
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/ca190f2cd9b016e553acaf602023b3ec/rotterdam-paris-nord.webp 320w,
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/48b71032869cee0631b9d7d04af624fe/rotterdam-paris-nord.webp 480w,
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/2d3d4e242dccf9c103639358013a4935/rotterdam-paris-nord.webp 640w,
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/24e903491a38affc733a1dd958bdffac/rotterdam-paris-nord.webp 768w,
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/8165d4ad883aa8709f4ba8e691b25414/rotterdam-paris-nord.webp 1024w,
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/738d35598b26060785d9be4de3fa881c/rotterdam-paris-nord.webp 1280w,
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/e478f274a51f21cded5f39fe75dbffd2/rotterdam-paris-nord.webp 1440w,
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/1cafe2b613d684a61158e52bf91deff2/rotterdam-paris-nord.webp 1536w,
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/2d11e12ee936edd07b06d42bb95e6400/rotterdam-paris-nord.webp 1680w
+                            
+                        "
+                        sizes="
+            (min-width: 1280px) 1150px, 90vw
+        "
+                        type="image/webp"
+                    >
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/6b94cb20b8208f64fa2459c059b1dda8/rotterdam-paris-nord.jpg 320w,
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/d85ccfdc50fd47c7358de6f824e550f1/rotterdam-paris-nord.jpg 480w,
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/e0e3452af40dde38d59fffe4e9b693a2/rotterdam-paris-nord.jpg 640w,
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/4358dcb617502f0fad7bbbf0cf397da3/rotterdam-paris-nord.jpg 768w,
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/98c83b2f14168f3fbf002d1ffd18eba3/rotterdam-paris-nord.jpg 1024w,
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/8d2aaa0c90c9eff2cc8f0b5d1f803e4f/rotterdam-paris-nord.jpg 1280w,
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/6afddf173b92a0161763421593ef8235/rotterdam-paris-nord.jpg 1440w,
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/e1d3db140ae3659c8ee7c89af4bf638a/rotterdam-paris-nord.jpg 1536w,
+                            
+                                /img/containers/images/rotterdam-paris-nord.jpg/908182334cdd6aacb30b9de1d25be527/rotterdam-paris-nord.jpg 1680w
+                            
+                        "
+                        sizes="
+            (min-width: 1280px) 1150px, 90vw
+        "
+                        type="image/jpeg"
+                    >
+                
+                <img
+                    width="1400"
+                    height="470"
+                    src="/img/containers/images/rotterdam-paris-nord.jpg/ce359bafda0767ce37a7d24e0b174f4c/rotterdam-paris-nord.jpg"
+                    alt="Sign of train to Paris Nord at Rotterdam Central station."
+                    
+                        class="
+        w-full
+        "
+                    
+                    
+                    
+                        loading="lazy"
+                    
+                >
+            
+        </picture>
+    
+
+<!-- End: statamic-peak-tools::components/_picture.antlers.html -->
+
+
+    <!-- /typography/_caption.antlers.html -->
+
+    <figcaption class="italic border-b border-brightgreen inline-block mt-0 text-sm text-neutral ">
+        Sign of train to Paris Nord at Rotterdam Central station 
+    </figcaption>
+
+<!-- End: /typography/_caption.antlers.html -->
+
+</figure>
+<!-- End: /components/_image.antlers.html -->
+
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>After skipping WordCamp Europe 2016 in Vienna, my wife and I decided to come to Paris. We headed to Paris on Wednesday June 14th. We were going at a speed of about 300km/h somehere in the north of France in the Thalys train from Rotterdam (yes the city of <a href="https://www.meetup.com/Rotterdam-WordPress-Meetup/">WP Meetup Rotterdam</a>) to Paris Nord, when I closed my laptop and decided getting the wifi to work was not going to happen. We got a snack and a drink and soon we arrived at Paris Nord. What we noticed at first was a lot of heavily armed police / army personnel. Which felt a bit weird and not at all comforting.</p><p>After leaving the train station, we walked to our hotel and dropped our luggage. It was time to go to the barbershop. You didn’t expect that one did ya? A few days before our journey I wanted to get a haircut, but all shops were fully booked. So, I thought, let’s go to Paris and do it here. But where do I go? I posted <a href="/tweets/874717776660885504/">this tweet</a>:</p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_image.antlers.html -->
+<figure
+    class="not-prose
+        size-md
+    "
+>
+    <!-- statamic-peak-tools::components/_picture.antlers.html -->
+
+    
+        
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+
+        
+        
+
+        <picture>
+            
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/874717776660885504.png/28021371c6ad335bb2919a0d1b6f4caa/874717776660885504.webp 320w,
+                            
+                                /img/containers/images/874717776660885504.png/dd3ee0378835ed7ee2a75b675c7194d0/874717776660885504.webp 480w,
+                            
+                                /img/containers/images/874717776660885504.png/2db1fb80c3c090f0d8289ade3ddeba0e/874717776660885504.webp 640w,
+                            
+                                /img/containers/images/874717776660885504.png/58038606ab8bf089e51a43f8d6efa018/874717776660885504.webp 768w,
+                            
+                                /img/containers/images/874717776660885504.png/17ccd0b1fe7919e8ac44aebefdc0db44/874717776660885504.webp 1024w,
+                            
+                                /img/containers/images/874717776660885504.png/a5cb591b42608143f82ccfa79e80ed38/874717776660885504.webp 1280w,
+                            
+                                /img/containers/images/874717776660885504.png/86c199295f6abfce8402bac4117cbc43/874717776660885504.webp 1440w,
+                            
+                                /img/containers/images/874717776660885504.png/bd963a714ed5b19e71ffefc49b386c73/874717776660885504.webp 1536w,
+                            
+                                /img/containers/images/874717776660885504.png/f8896aebd02e7cc4071a7de6c25579f7/874717776660885504.webp 1680w
+                            
+                        "
+                        sizes="
+            
+        "
+                        type="image/webp"
+                    >
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/874717776660885504.png/9b7d328b1ee88a62f325135a06540a52/874717776660885504.jpg 320w,
+                            
+                                /img/containers/images/874717776660885504.png/bdeb358b325c1538ab2aedc4771bd25b/874717776660885504.jpg 480w,
+                            
+                                /img/containers/images/874717776660885504.png/a7a8e6fd1863c1b464572067ff85a0d5/874717776660885504.jpg 640w,
+                            
+                                /img/containers/images/874717776660885504.png/edf3d117e2b7624a7760e805f226d7ff/874717776660885504.jpg 768w,
+                            
+                                /img/containers/images/874717776660885504.png/ce6f687a26d74aae84581b19efd6dbf6/874717776660885504.jpg 1024w,
+                            
+                                /img/containers/images/874717776660885504.png/d61e984d7410265a3ffa5c1a845663b7/874717776660885504.jpg 1280w,
+                            
+                                /img/containers/images/874717776660885504.png/57e4bcb67507d6ff5e5550286dfc0f5a/874717776660885504.jpg 1440w,
+                            
+                                /img/containers/images/874717776660885504.png/439736a1719828bb0a21a7451bb3d9a8/874717776660885504.jpg 1536w,
+                            
+                                /img/containers/images/874717776660885504.png/cb3883b2fa486ee8f9abd865b442fd68/874717776660885504.jpg 1680w
+                            
+                        "
+                        sizes="
+            
+        "
+                        type="image/jpeg"
+                    >
+                
+                <img
+                    width="571"
+                    height="267"
+                    src="/img/containers/images/874717776660885504.png/a3b04ae56b5c839617371fa181270e16/874717776660885504.png"
+                    alt="Screenshot of tweet 874717776660885504."
+                    
+                        class="
+        h-auto
+        "
+                    
+                    
+                    
+                        loading="lazy"
+                    
+                >
+            
+        </picture>
+    
+
+<!-- End: statamic-peak-tools::components/_picture.antlers.html -->
+
+
+    <!-- /typography/_caption.antlers.html -->
+
+    <figcaption class="italic border-b border-brightgreen inline-block mt-0 text-sm text-neutral ">
+        Screenshot of tweet 874717776660885504 
+    </figcaption>
+
+<!-- End: /typography/_caption.antlers.html -->
+
+</figure>
+<!-- End: /components/_image.antlers.html -->
+
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>And just ten minutes later, I received an <a href="https://twitter.com/benjaminlupu/status/874720637062967297">answer</a> from <a href="https://twitter.com/benjaminlupu">Benjamin Lupu</a> in which he said I had to go to <a href="https://www.tripadvisor.com/Attraction_Review-g187147-d4938757-Reviews-Les_Thermes_de_Lutece-Paris_Ile_de_France.html">Les Thermes de Lutèce</a>. Well that was some very good advice. I got a great haircut and a relaxing experience.</p><p>After lunch we walked to the Notre Dame, the Louvre, the Jardin des Tuileries and Place de la Concorde. Followed by the Champs Élysées, Place Charles de Gaulle and of course L’Arc de Triomphe. Yes, that was a nice long walk, and after that we took the metro to our hotel. Time to fresh up an get some dinner. We are used to have dinner around 6-7pm, now it was 9pm, and we just ordered our food. We are getting along fine with the new schedule.</p><p>This was one fine day!</p><h2>Day 2: Contributor Day &amp; Sightseeing</h2>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_image.antlers.html -->
+<figure
+    class="not-prose
+        size-xl
+    "
+>
+    <!-- statamic-peak-tools::components/_picture.antlers.html -->
+
+    
+        
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+
+        
+        
+
+        <picture>
+            
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/9d479d17c7c4fec718d76d5e022bed58/wceu2017-contributor-day.webp 320w,
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/fba6aa9f8acc6ef53394759d2cd838e5/wceu2017-contributor-day.webp 480w,
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/2e99f1ff824229082fdd0ea9e43c0f1a/wceu2017-contributor-day.webp 640w,
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/2c456c07bddfc0e3ef4d21c55b02c621/wceu2017-contributor-day.webp 768w,
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/b121c71aa53dec24b1d039a8d772402b/wceu2017-contributor-day.webp 1024w,
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/e7da355b68cdeeb6d8074b291a05e602/wceu2017-contributor-day.webp 1280w,
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/02c2487030d82514c1777fffae9e516d/wceu2017-contributor-day.webp 1440w,
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/771fa2ca6b76bc1d8133f93adb0529be/wceu2017-contributor-day.webp 1536w,
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/8be3af180ae22e1c2c3de5665b33823c/wceu2017-contributor-day.webp 1680w
+                            
+                        "
+                        sizes="
+            (min-width: 1280px) 1150px, 90vw
+        "
+                        type="image/webp"
+                    >
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/a9dfac96f60a712dd9cc48ba2c470aa1/wceu2017-contributor-day.jpg 320w,
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/94ab31ece2e2d78ee1eac0e6cb46eb91/wceu2017-contributor-day.jpg 480w,
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/0ac98912d7e5c812bd2b7aa808b0f9fe/wceu2017-contributor-day.jpg 640w,
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/8c4b8eda33ee31c08186750e6f176c9c/wceu2017-contributor-day.jpg 768w,
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/f1504af3b38d00e923523051c096553e/wceu2017-contributor-day.jpg 1024w,
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/339cd1b30d37c7709f704d71e167ef74/wceu2017-contributor-day.jpg 1280w,
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/feb3dd6988b0e843b3de2d26387e9da9/wceu2017-contributor-day.jpg 1440w,
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/ffff5438c59d697f675200b75ab9283b/wceu2017-contributor-day.jpg 1536w,
+                            
+                                /img/containers/images/wceu2017-contributor-day.jpg/b27d74774cf5ac315e5d0d6e07796e97/wceu2017-contributor-day.jpg 1680w
+                            
+                        "
+                        sizes="
+            (min-width: 1280px) 1150px, 90vw
+        "
+                        type="image/jpeg"
+                    >
+                
+                <img
+                    width="1400"
+                    height="467"
+                    src="/img/containers/images/wceu2017-contributor-day.jpg/ff59220ff54abbb0d12c9dfe2c8c5032/wceu2017-contributor-day.jpg"
+                    alt="Opening of Contributor Day by Roc&iacute;o Valdivia."
+                    
+                        class="
+        w-full
+        "
+                    
+                    
+                    
+                        loading="lazy"
+                    
+                >
+            
+        </picture>
+    
+
+<!-- End: statamic-peak-tools::components/_picture.antlers.html -->
+
+
+    <!-- /typography/_caption.antlers.html -->
+
+    <figcaption class="italic border-b border-brightgreen inline-block mt-0 text-sm text-neutral ">
+        Opening of Contributor Day by Rocío Valdivia 
+    </figcaption>
+
+<!-- End: /typography/_caption.antlers.html -->
+
+</figure>
+<!-- End: /components/_image.antlers.html -->
+
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>On Contributor Day I was welcomed on the street near the venue by <a href="http://www.wendiehuisintveld.nl/">Wendie Huis in ‘t Veld</a>. You probably know her of her MC role in Track 2 – Eiffel. This was cool. Wendie is a dedicated volunteer on WordCamps (Netherlands and Europe) and it was cool to see she had joined the 2017 WCEU volunteer team. There was small queue in front of the registration desk and I was pulled out by <a href="https://luca.blog/">Luca Sartoni</a>. He said he had a crew badge for me. I was positively surprised. Let me explain this.</p><p>I joined the organizing team in august 2016 to help with the volunteer team. After 2 months, I could not allocate enough time to be a good organizer. And so I stepped down and decided I would be ‘regular’ attendee in Paris.</p><p>Getting the crew badge was a challenge since a few organizers had seen it, but no one knew where it was. I had a deja vu, being a WordCamp organizer I knew there’s always something going wrong with badges. Thanks for looking <a href="https://tacoverdo.com/">Taco</a> and <a href="https://sonjaleix.com/">Sonja</a> :). Having the crew badge did not give me any privileges. It’s a gentle reminder I tried to be part of this amazing event but couldn’t, because of not being able to combine volunteering/organizing and work related to my own <a href="https://nostromo.nl/">company</a>.</p><p>Then I joined the rest of the Contributor Day attendees and listened to the opening remarks by <a href="https://rocio.blog/">Rocío</a> and all the <a href="https://2017.europe.wordcamp.org/2017/05/17/everything-you-need-to-know-about-wceu-contributor-day/">Contributor Day teamleads</a>. What a great introduction for this important day. I saw lots of hands in the air after the question “Who has never been to a Contributor Day before?” was asked. The more contributors are helping out, the better.</p><p>I took a spot in the polyglots room, and talked to a lot of friends. To be honest I only translated about 50 strings…Then I had the idea to go to the Community room, to have a chat with <a href="https://andreamiddleton.blog/">Andrea Middleton</a> about the current status of WordCamp The Netherlands. (<a href="https://wptavern.com/wordpress-community-support-shuts-down-wordcamp-netherlands-in-favor-of-city-based-wordcamps">you might have read this</a>). The conversation was good and constructive and resulted in some good news. We were allowed to organize a WordCamp The Netherlands again if we have three city-based WordCamps in The Netherlands. Well, consider it done! In a chat with <a href="https://josepha.blog/">Josepha</a> and Taco we talked through all the details, so we could post this on our <a href="https://nl.wordpress.org/2017/06/15/toch-toekomst-voor-wordcamp-nederland/">team blog</a>.</p><p>After all these talks, lunch was needed and since it was in a handy bag so I brought it with me to the metro for an afternoon and evening of sightseeing with my wife. To be complete, we went to the Place de la Bastille, Place des Vosges, Port de l’Arsenal and had dinner in Montmartre.</p><h2>Day 3: Conference day &amp; WordPint meetup</h2>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_image.antlers.html -->
+<figure
+    class="not-prose
+        size-xl
+    "
+>
+    <!-- statamic-peak-tools::components/_picture.antlers.html -->
+
+    
+        
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+
+        
+        
+
+        <picture>
+            
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/3265ef8061bffee2eaa6f32528bcc6d3/opening-of-wceu-paolo-jenny-2017.webp 320w,
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/5c38380158b792d91d862530c451edfc/opening-of-wceu-paolo-jenny-2017.webp 480w,
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/45fad72796d629033b1b277dd4b0b5d4/opening-of-wceu-paolo-jenny-2017.webp 640w,
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/96b13eb02309ae9bd494c12c4d97062b/opening-of-wceu-paolo-jenny-2017.webp 768w,
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/acd1819dbf30222e627dd9c0b48cce7d/opening-of-wceu-paolo-jenny-2017.webp 1024w,
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/99a0cec5ccd3f2f5405dec9656333715/opening-of-wceu-paolo-jenny-2017.webp 1280w,
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/dadb0e9f397134e99abb487b0db59059/opening-of-wceu-paolo-jenny-2017.webp 1440w,
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/11955164411654cd13dea74f9d207240/opening-of-wceu-paolo-jenny-2017.webp 1536w,
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/26eee9443e65229b45eab70b4dc6e69c/opening-of-wceu-paolo-jenny-2017.webp 1680w
+                            
+                        "
+                        sizes="
+            (min-width: 1280px) 1150px, 90vw
+        "
+                        type="image/webp"
+                    >
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/cad588cb21a206e439c208aa48eca469/opening-of-wceu-paolo-jenny-2017.jpg 320w,
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/16c51b2c27741f10d5ab0f8d92b63226/opening-of-wceu-paolo-jenny-2017.jpg 480w,
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/fb443ed238a8643cb11c9682c005872d/opening-of-wceu-paolo-jenny-2017.jpg 640w,
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/a2a941b1e19cb2a1b2da027e4e7836c7/opening-of-wceu-paolo-jenny-2017.jpg 768w,
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/ad14da451b0bdf85d9e7de0a41970724/opening-of-wceu-paolo-jenny-2017.jpg 1024w,
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/79cb5e4299df409d89f54190864137c7/opening-of-wceu-paolo-jenny-2017.jpg 1280w,
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/a467030882b705eebaddff6aeb36c1b4/opening-of-wceu-paolo-jenny-2017.jpg 1440w,
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/2adfcf49053b547d19d94078fa9d8962/opening-of-wceu-paolo-jenny-2017.jpg 1536w,
+                            
+                                /img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/82e2fcceb003422a64753b6216c87c56/opening-of-wceu-paolo-jenny-2017.jpg 1680w
+                            
+                        "
+                        sizes="
+            (min-width: 1280px) 1150px, 90vw
+        "
+                        type="image/jpeg"
+                    >
+                
+                <img
+                    width="1400"
+                    height="467"
+                    src="/img/containers/images/opening-of-wceu-paolo-jenny-2017.jpg/928d23fe8cea2f8e233ce6c234cafb9d/opening-of-wceu-paolo-jenny-2017.jpg"
+                    alt="The opening of WCEU 2017 by Paolo Belcastro and Jenny Beaumont."
+                    
+                        class="
+        w-full
+        "
+                    
+                    
+                    
+                        loading="lazy"
+                    
+                >
+            
+        </picture>
+    
+
+<!-- End: statamic-peak-tools::components/_picture.antlers.html -->
+
+
+    <!-- /typography/_caption.antlers.html -->
+
+    <figcaption class="italic border-b border-brightgreen inline-block mt-0 text-sm text-neutral ">
+        The opening of WCEU 2017 by Paolo Belcastro and Jenny Beaumont 
+    </figcaption>
+
+<!-- End: /typography/_caption.antlers.html -->
+
+</figure>
+<!-- End: /components/_image.antlers.html -->
+
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>After a simple but good breakfast in the hotel I took the metro (absolutely love these in Paris) to the venue. After the opening remarks, I went to the Eiffel track and listened to <a href="http://www.alainschlesser.com/">Alain Schlesser</a> talking about <a href="https://wordpress.tv/2017/06/22/alain-schlesser-demystifying-the-wordpress-bootstrap-process/">Demystifying the WordPress Bootstrap Process</a>. Alain managed to make a very technical subject accessible to a broad public. He talked about how WordPress loads, what API, theme and plugin parts are loaded, how the sunrise process for multisite works and how to implement your own caching logic.</p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_image.antlers.html -->
+<figure
+    class="not-prose
+        size-md
+    "
+>
+    <!-- statamic-peak-tools::components/_picture.antlers.html -->
+
+    
+        
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+
+        
+        
+
+        <picture>
+            
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/875615185695686657.png/e498dbe37633e990d793c3895be4f546/875615185695686657.webp 320w,
+                            
+                                /img/containers/images/875615185695686657.png/d79d50163f317816f4e03fdc1a933348/875615185695686657.webp 480w,
+                            
+                                /img/containers/images/875615185695686657.png/157fd6ec4db884acaf8c47382ac7de70/875615185695686657.webp 640w,
+                            
+                                /img/containers/images/875615185695686657.png/37668f48c7967d7902f0169a0442684d/875615185695686657.webp 768w,
+                            
+                                /img/containers/images/875615185695686657.png/9421128e6b7a2f3540906395d3fc4c3b/875615185695686657.webp 1024w,
+                            
+                                /img/containers/images/875615185695686657.png/7dc93811782e27866786e996a271129e/875615185695686657.webp 1280w,
+                            
+                                /img/containers/images/875615185695686657.png/eadba9595fa3b8f037289c737586e6dd/875615185695686657.webp 1440w,
+                            
+                                /img/containers/images/875615185695686657.png/bb6db68301da767039ae365d80e4725e/875615185695686657.webp 1536w,
+                            
+                                /img/containers/images/875615185695686657.png/a31e3fe98cd27775385342e13aa9c09b/875615185695686657.webp 1680w
+                            
+                        "
+                        sizes="
+            
+        "
+                        type="image/webp"
+                    >
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/875615185695686657.png/958c2372930b8badc54dbb55153b13c6/875615185695686657.jpg 320w,
+                            
+                                /img/containers/images/875615185695686657.png/7cccb7370489d48cc9129f5ce5b05b51/875615185695686657.jpg 480w,
+                            
+                                /img/containers/images/875615185695686657.png/d07e80f0f5f8ad20ba3bd544e5960e90/875615185695686657.jpg 640w,
+                            
+                                /img/containers/images/875615185695686657.png/90beefe3d9aac7bf4b4c97433ac243bb/875615185695686657.jpg 768w,
+                            
+                                /img/containers/images/875615185695686657.png/93c5ae7fe7025ad24872062c7f54d808/875615185695686657.jpg 1024w,
+                            
+                                /img/containers/images/875615185695686657.png/864c6b12ba8da72e564e9a7ef5419f6f/875615185695686657.jpg 1280w,
+                            
+                                /img/containers/images/875615185695686657.png/24aa61468ae99c2a3b55b9841b5de455/875615185695686657.jpg 1440w,
+                            
+                                /img/containers/images/875615185695686657.png/a137f901fb634fcc1bf624f86cbbcb32/875615185695686657.jpg 1536w,
+                            
+                                /img/containers/images/875615185695686657.png/0732b0c0fc34084faf818d378209f168/875615185695686657.jpg 1680w
+                            
+                        "
+                        sizes="
+            
+        "
+                        type="image/jpeg"
+                    >
+                
+                <img
+                    width="562"
+                    height="661"
+                    src="/img/containers/images/875615185695686657.png/f91f9a37061ecd468c8ee9ab55f4a2a7/875615185695686657.png"
+                    alt="Screenshot of tweet 875615185695686657."
+                    
+                        class="
+        h-auto
+        "
+                    
+                    
+                    
+                        loading="lazy"
+                    
+                >
+            
+        </picture>
+    
+
+<!-- End: statamic-peak-tools::components/_picture.antlers.html -->
+
+
+    <!-- /typography/_caption.antlers.html -->
+
+    <figcaption class="italic border-b border-brightgreen inline-block mt-0 text-sm text-neutral ">
+        Screenshot of tweet 875615185695686657 
+    </figcaption>
+
+<!-- End: /typography/_caption.antlers.html -->
+
+</figure>
+<!-- End: /components/_image.antlers.html -->
+
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>The second talk I attended that day was <a href="https://wordpress.tv/2017/06/21/heather-burns-making-your-voice-heard-how-to-win-friends-and-influence-policy/">Making Your Voice Heard: How to Win Friends and Influence Policy</a> by <a href="https://webdevlaw.uk/">Heather Burns</a>. Heather did a very good job in telling the attendees how you can achieve certain goals. If you want something changed, find peers and go reach that goal together. Don’t sit back and send emails, make appointments with influencers / decisionmakers and make your voice heard. I want to share this quote with you:</p><blockquote><p>It is time for the WordPress community to find its voice, fulfill its potential and lead the way as a force for good across the web.</p><p>Heather Burns</p></blockquote><p>Between the talks there was plenty of time to talk to friends and make new friends. The latter is very easy, we all have something in common; WordPress. Just step up to someone and start talking.</p><p>After lunch there were some very interesting Lightning Talks about Content. I missed them all because of the hallway track which I have attended during the afternoon. How do I know they were interesting? Because I <a href="http://wordpress.tv/2017/06/22/syed-balkhi-how-to-repurpose-your-content-to-boost-your-traffic/">watched</a> <a href="http://wordpress.tv/2017/06/21/dario-jazbec-hrvatin-how-to-write-to-achieve-your-goals-writing-tips-for-everyone/">them</a> <a href="http://wordpress.tv/2017/06/22/jen-miller-local-seo-creating-website-content-that-matters-regionally-2/">all</a> <a href="http://wordpress.tv/2017/06/22/monique-dubbelman-the-importance-of-information-architecture-organise-content-to-improve-user-experience/">on</a> <a href="http://wordpress.tv/event/wordcamp-europe-2017/">WordPress.tv</a>. In the evening my wife and I had dinner in the Montmartre district and attended WordPint. A very nice event organised by Savvii.</p><h2>Day 4: Conference day &amp; After party</h2>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_image.antlers.html -->
+<figure
+    class="not-prose
+        size-xl
+    "
+>
+    <!-- statamic-peak-tools::components/_picture.antlers.html -->
+
+    
+        
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+
+        
+        
+
+        <picture>
+            
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/66cf9e89aaaa6cca42f7e565aee092c9/wceu-2017-in-numbers.webp 320w,
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/99cc702b2056b9c5f88f4c726e1d60f0/wceu-2017-in-numbers.webp 480w,
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/a79b697fc49fa3c38ba4bf62641382b7/wceu-2017-in-numbers.webp 640w,
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/ddaefd5dba5d997308f2f9560c6d72d0/wceu-2017-in-numbers.webp 768w,
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/f61bead86de1dbbc3a5c3c5232e5f054/wceu-2017-in-numbers.webp 1024w,
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/ac17565469ae343c865605f15c3369ad/wceu-2017-in-numbers.webp 1280w,
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/d655184cf97b4762fd48e75dab881f40/wceu-2017-in-numbers.webp 1440w,
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/82c53e52d698bbf11029794279c527d4/wceu-2017-in-numbers.webp 1536w,
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/bac9f0ebcdf40893697c40ad3035698f/wceu-2017-in-numbers.webp 1680w
+                            
+                        "
+                        sizes="
+            (min-width: 1280px) 1150px, 90vw
+        "
+                        type="image/webp"
+                    >
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/303e34ca2a7daf30c2d5cf006ec43ad1/wceu-2017-in-numbers.jpg 320w,
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/3f5d7ddcb3307a3017e763e3d7548c03/wceu-2017-in-numbers.jpg 480w,
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/ee88856c58be2e4f5935bbbc1cd5e5f2/wceu-2017-in-numbers.jpg 640w,
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/88a45379f1ae4968846dd7a484bd6c48/wceu-2017-in-numbers.jpg 768w,
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/33ce82530a7f262d350621429522b5bd/wceu-2017-in-numbers.jpg 1024w,
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/69b5d03b804522d0124b591d1d2a2b65/wceu-2017-in-numbers.jpg 1280w,
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/6680375b0cc20a7621e086a938e46ca2/wceu-2017-in-numbers.jpg 1440w,
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/01f1fb28ac4c5c19090f60b04cc9f8a3/wceu-2017-in-numbers.jpg 1536w,
+                            
+                                /img/containers/images/wceu-2017-in-numbers.jpg/0a38359a8754b1dcc25d4b7349e6058b/wceu-2017-in-numbers.jpg 1680w
+                            
+                        "
+                        sizes="
+            (min-width: 1280px) 1150px, 90vw
+        "
+                        type="image/jpeg"
+                    >
+                
+                <img
+                    width="1400"
+                    height="471"
+                    src="/img/containers/images/wceu-2017-in-numbers.jpg/3b9e52664868aaf421d0ef033344c322/wceu-2017-in-numbers.jpg"
+                    alt="WCEU 2017 in numbers."
+                    
+                        class="
+        w-full
+        "
+                    
+                    
+                    
+                        loading="lazy"
+                    
+                >
+            
+        </picture>
+    
+
+<!-- End: statamic-peak-tools::components/_picture.antlers.html -->
+
+
+    <!-- /typography/_caption.antlers.html -->
+
+    <figcaption class="italic border-b border-brightgreen inline-block mt-0 text-sm text-neutral ">
+        WCEU 2017 in numbers 
+    </figcaption>
+
+<!-- End: /typography/_caption.antlers.html -->
+
+</figure>
+<!-- End: /components/_image.antlers.html -->
+
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>The second day of the conference was, as we are used to by now, packed with good presentations. For the morning part, I’d like to emphasize are the talks of <a href="http://wordpress.tv/2017/06/21/andrew-nacin-people-over-code/">Andrew Nacin</a>, <a href="http://wordpress.tv/?s=CSS+Grid+Changes+Everything">Morten Rand-Hendriksen</a>, <a href="http://wordpress.tv/2017/06/21/boone-gorges-the-pernicious-myth-of-the-code-poet/">Boone Gorges</a>, <a href="http://wordpress.tv/2017/06/22/rian-rietveld-accessibility-in-the-age-of-the-headless-cms/">Rian Rietveld</a>, and <a href="http://wordpress.tv/2017/06/21/andrea-middleton-how-wordpress-communities-are-built/">Andrea Middleton</a>. After lunch, <a href="https://ma.tt/">Matt</a> was <a href="http://wordpress.tv/2017/06/27/interview-and-qanda-with-matt-mullenweg/">interviewed</a> by <a href="https://om.co/">Om Malik</a> and presented the possible new WordPress editor ‘<a href="https://wordpress.org/plugins/gutenberg/">Gutenberg</a>‘ to the public. Go and try this plugin and report any issues you have <a href="https://github.com/WordPress/gutenberg/issues">here</a>, since it looks like this is where the WordPress editor is going to.</p><p>As a follow up on the post on WPTavern, I contacted <a href="https://twitter.com/pollyplummer">Sarah</a> to tell her about the recent developments. Sarah indicated she wanted to do a video-interview with Andrea, Josepha, <a href="https://lucp.nl/">Luc</a> and me. During the interview Matt walked in, took a peek and gave us a positive nod. You might see our reactions in the resulting video that can be seen <a href="https://wptavern.com/wordcamp-netherlands-reinstated-for-2018">here</a>.</p><p>By then, it was time for the closure by Paolo and Jenny. Amazingly dedicated organizers and volunteers resulted in amazing numbers for this edition of WordCamp Europe.</p><p>After going to the hotel to get some rest and fresh up, my wife and I went to the party. Again by metro. All attendees were instructed not to have dinner before the event, since food was arranged. Well let me say it was, but it could have been done a bit more efficient. This not at all influenced the party, it was good, very good. After three days of conferencing, it’s good to see people partying and relaxing.</p><p>Being an attendee this time, I felt a bit more relaxed and ‘free’. I could attend talks, got some extra time in the morning and before the event and had no responsibilities. It felt good. But I think having been an WordCamp (Europe and The Netherlands) organizer infected me, in a positive way, with an organizer-virus. It is so rewarding to see people have fun and connect on an event that you helped co-organize. I am already looking forward to the next challenge.</p><h2>My tips for you:</h2><ul><li><p>Add some me-time (or us-time if traveling with your partner/family) to get to know and explore the city.</p></li><li><p>Do not only communicate through apps/tools. Meet people and talk to them.</p></li><li><p>Check out the hallway track and talk to random people.</p></li><li><p>Go to social events outside of the WCEU party, you get the chance to talk to interesting people.</p></li><li><p>Give back when using Open Source Software. Contribute.</p></li><li><p>Go and watch missed talks on <a href="https://wordpress.tv/event/wordcamp-europe-2017/">WordPress.tv</a>.</p></li><li><p><a href="https://2018.europe.wordcamp.org/">Subscribe</a> to the WordCamp Europe 2018 website, so you know when ticket sales start.</p></li><li><p>Oh, and disable your VPN client DNS servers while connecting to the Thalys wifi. That way it will work (so I learned on the way back home) 😉</p></li></ul>
+</div>
+<!-- End: /components/_text.antlers.html -->
+</article>
+<!-- End: /typography/_prose.antlers.html -->
+
+</section>
+<!-- End: /page_builder/_article.antlers.html -->
+    
+
+    
+    
+        <div class="authorbox border-2 rounded-md  bg-stone-200 p-4 my-8  w-full">
+            <div class="grid grid-cols-4">
+                
+                    
+                        <!-- /page_builder/_avatar.antlers.html -->
+<section class="hidden md:block">
+        
+        <img src="/images/marcel-bootsman.webp" alt="Picture of Marcel Bootsman" width="200" height="200" />
+        
+</section>
+<!-- End: /page_builder/_avatar.antlers.html -->
+                    
+                
+                    
+                
+
+                
+                    
+                
+                    
+                        <!-- /page_builder/_article.antlers.html -->
+<section class="col-span-4 md:col-span-3">
+    <!-- /typography/_prose.antlers.html -->
+<article
+    class="
+        prose
+        prose-a:underline
+        prose-a:decoration-primary
+        prose-a:decoration-2
+        hover:prose-a:text-primary
+        focus:prose-a:outline-none
+        focus-visible:prose-a:ring
+        focus-visible:prose-a:ring-primary
+        focus-visible:prose-a:rounded-sm
+        prose-figure:my-0
+        prose-pre:whitespace-pre-wrap
+        max-w-none
+        contents
+    "
+>
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <h2>About Marcel Bootsman</h2><p>Marcel discovered the web in 1995. Since then he has paid attention to and worked with lots of technologies and founded his own WordPress oriented business <a href="https://nostromo.nl">nostromo.nl</a> in 2009.</p><p>Currently Marcel is Business Development Manager Dutch &amp; DACH Markets at <a href="/kinsta">Kinsta</a> where he helps Kinsta&#039;s client base grow with <a href="/kinsta-managed-wordpress-hosting">Managed WordPress</a>, <a href="/kinsta-application-database-hosting">Application, Database</a> and <a href="https://kinsta.com/static-site-hosting/">Static site hosting</a>.</p><p>You can contact Marcel on a diverse range of online platforms. Please see the Connect section on the <a href="/#connect">homepage</a> for the details.</p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+</article>
+<!-- End: /typography/_prose.antlers.html -->
+
+</section>
+<!-- End: /page_builder/_article.antlers.html -->
+                    
+                
+            </div>
+        </div>
+    
+</main>
+        <!-- /layout/_footer.antlers.html -->
+<footer class="w-full py-4 mt-auto">
+    <div class="fluid-container flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-between md:space-x-4 md:items-center ">
+        <div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 text-xs font-bold">
+            <span>
+                &copy; 2013
+                
+                    - 2025
+                    
+                Marcel Bootsman - Powered by <a class="underline" href="https://statamic.com/">Statamic</a>
+                - Hosted on <a class="underline" href="/kinsta-static-site-hosting">Kinsta Static Site Hosting</a>
+            </span>
+
+            
+            
+        </div>
+        
+            <div class="flex space-x-2">
+                
+                <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary" href="https://toot.re/@mbootsman" rel="noopener me" aria-label="marcelbootsman on Mastodon" target="_blank"><svg class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 448 512"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 01-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg></a>
+                
+                <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary" href="https://www.github.com/mbootsman" rel="noopener" aria-label="marcelbootsman on Github" target="_blank"><svg class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 140 140"><path d="M70 1.633a70 70 0 00-21.7 136.559h1.692a5.833 5.833 0 006.183-6.184v-1.225-6.358a2.917 2.917 0 00-1.167-1.925 2.917 2.917 0 00-2.45-.583C36.925 125.3 33.6 115.5 33.367 114.858a27.067 27.067 0 00-10.034-12.775 6.767 6.767 0 00-.875-.641 3.675 3.675 0 012.217-.409 8.575 8.575 0 016.708 5.134 17.5 17.5 0 0023.334 6.766 2.917 2.917 0 001.691-2.1 11.667 11.667 0 013.267-7.175 2.917 2.917 0 00-1.575-5.075c-13.825-1.575-27.942-6.416-27.942-30.275a23.333 23.333 0 016.125-16.216A2.917 2.917 0 0036.808 49a20.533 20.533 0 01.059-14 32.317 32.317 0 0114.7 6.708 2.858 2.858 0 002.45.409A61.892 61.892 0 0170 39.958a61.075 61.075 0 0116.042 2.159 2.858 2.858 0 002.391-.409 32.608 32.608 0 0114.7-6.708 20.825 20.825 0 010 13.883 2.917 2.917 0 00.525 3.092 23.333 23.333 0 016.125 16.042c0 23.858-14.175 28.641-28.058 30.216a2.917 2.917 0 00-1.575 5.134 12.833 12.833 0 013.558 10.15v18.55a6.183 6.183 0 002.1 4.841 7 7 0 006.184 1.109A70 70 0 0070 1.633z"/></svg></a>
+                
+                <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary" href="https://www.linkedin.com/in/marcelbootsman/" rel="noopener" aria-label="marcelbootsman on Linkedin" target="_blank"><svg class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 140 140"><path d="M23.4 44.59h-4.75a12.76 12.76 0 00-9.73 2.19 9.44 9.44 0 00-2.35 7.12V131a9.08 9.08 0 002.3 7 9.24 9.24 0 006.82 2c2.22 0 4.15-.21 8.24-.06a12 12 0 009.25-2 9.1 9.1 0 002.29-7V53.9a9.44 9.44 0 00-2.34-7.12 12.68 12.68 0 00-9.73-2.19zM21 0A16.19 16.19 0 005.09 15.6 16.52 16.52 0 0021 31.86 16.12 16.12 0 0037 15.6 16.18 16.18 0 0021 0zM99.74 43.63a31.09 31.09 0 00-20.93 6.3A7.25 7.25 0 0077 46.34a6.08 6.08 0 00-4.52-1.78 119.08 119.08 0 00-15 .3c-4.16.84-6.18 3.79-6.18 9V131a9.14 9.14 0 002.28 7 12.06 12.06 0 009.26 2c4.47-.17 5.74.06 8.22.06a9.26 9.26 0 006.83-2 9.12 9.12 0 002.3-7V89.88A12.48 12.48 0 0192.93 76 12.44 12.44 0 01106 89.88V131a9.1 9.1 0 002.29 7 12 12 0 009.24 2c1.83-.07 4-.07 5.8 0a12.09 12.09 0 009.26-2 9.14 9.14 0 002.28-7V78.32a33.07 33.07 0 00-35.13-34.69z"/></svg></a>
+                
+                <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary" href="mailto:marcel@bootsman.org" rel="noopener" aria-label="marcelbootsman on Email" target="_blank"><svg class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 512 512"><path d="M256 352c-16.53 0-33.06-5.422-47.16-16.41L0 173.2V400c0 26.5 21.49 48 48 48h416c26.51 0 48-21.49 48-48V173.2L303.2 335.7C289.1 346.6 272.5 352 256 352zM16.29 145.3l212.2 165.1c16.19 12.6 38.87 12.6 55.06 0l212.2-165.1C505.1 137.3 512 125 512 112c0-26.51-21.5-48-48-48H48C21.49 64 0 85.49 0 112c0 13 6.01 25.3 16.29 33.3z"/></svg></a>
+                
+                <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary" href="/feed" rel="noopener" aria-label="marcelbootsman on Rss" target="_blank"><svg class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+                
+            </div>
+        
+
+    </div>
+</footer>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+</script>
+<!-- End: /layout/_footer.antlers.html -->
+
+    </body>
+</html>
+<!-- End: /layout.antlers.html -->

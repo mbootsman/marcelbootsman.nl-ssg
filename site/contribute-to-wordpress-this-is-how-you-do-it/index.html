@@ -1,0 +1,802 @@
+<!-- /layout.antlers.html -->
+<!doctype html>
+<html lang="en" class="antialiased">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <link rel="preload" as="style" href="https://marcelbootsman.nl/build/assets/site-95bd6363.css" /><link rel="modulepreload" href="https://marcelbootsman.nl/build/assets/site-ee590dd4.js" /><link rel="stylesheet" href="https://marcelbootsman.nl/build/assets/site-95bd6363.css" /><script type="module" src="https://marcelbootsman.nl/build/assets/site-ee590dd4.js"></script>
+        <!-- statamic-peak-seo::snippets/_seo.antlers.html -->
+
+<title>
+    
+    
+    
+        Contribute to WordPress - This is how you do it - marcelbootsman.nl
+    
+</title>
+
+
+
+    <meta name="description" content="You can contribute to WordPress in many ways. The various contributor groups are explained here so that you can easily choose what you contribute to.">
+
+
+
+
+   
+
+
+
+
+
+
+
+    
+        <link rel="canonical" href="https://marcelbootsman.nl/contribute-to-wordpress-this-is-how-you-do-it">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:site_name" content="marcelbootsman.nl">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+    <meta property="og:title" content="Contribute to WordPress - This is how you do it">
+
+
+    <meta property="og:description" content="You can contribute to WordPress in many ways. The various contributor groups are explained here so that you can easily choose what you contribute to.">
+
+
+    <meta property="og:image" content="https://marcelbootsman.nl/img/containers/social_images/contribute-to-wordpress-this-is-how-you-do-it-og-1689609862.png/305e706239696bd35207e076ace22b00/contribute-to-wordpress-this-is-how-you-do-it-og-1689609862.png">
+
+
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="">
+    
+        <meta name="twitter:title" content="Contribute to WordPress - This is how you do it">
+   
+   
+        <meta name="twitter:description" content="You can contribute to WordPress in many ways. The various contributor groups are explained here so that you can easily choose what you contribute to.">
+   
+   
+        <meta name="twitter:image" content="">
+        
+   
+
+
+
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+<!-- End: statamic-peak-seo::snippets/_seo.antlers.html -->
+
+        <!-- /snippets/_browser_appearance.antlers.html -->
+
+
+
+
+
+
+
+    
+    <link rel="icon" href="/favicons/mb-logo.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicons/default/favicon.ico" type="image/x-icon">
+
+    
+    
+        <link rel="icon" href="/favicons/default/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" href="/favicons/default/favicon-32x32.png" sizes="32x32">
+    
+
+
+
+<link rel="manifest" href="https://marcelbootsman.nl/site.webmanifest">
+
+
+
+<!-- End: /snippets/_browser_appearance.antlers.html -->
+
+        
+
+        
+        <link rel="alternate" type="application/atom+xml" title="marcelbootsman.nl"  href="/feed/atom" />
+<link rel="alternate" type="application/rss+xml" title="marcelbootsman.nl"  href="/feed" />
+        
+        
+<script>
+    /* Generate a share link for the user's Mastodon domain */
+    function MastodonShare(e) {
+        // Get the source text
+        src = e.getAttribute("data-src");
+
+        // Get the Mastodon domain
+        domain = prompt("Enter your Mastodon domain", "toot.re");
+
+        if (domain == "" || domain == null) {
+            return;
+        }
+
+        // Build the URL
+        url = "https://" + domain + "/share?text=" + src;
+
+        // Open a window on the share page
+        window.open(url, '_blank');
+    }
+
+    function doSomethingWhenDocumentReady(functionToExecute) {
+        /* $(document).ready() without javascript
+        */
+        if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            functionToExecute();
+        } else {
+            document.addEventListener("DOMContentLoaded", functionToExecute);
+        }
+    }
+
+    /* Call this on document.ready() */
+    function unhideMastodonShare() {
+        var button = document.getElementById('mastodonshare');
+        button.classList.remove('hidden');
+        button.classList.add('inline-flex');
+    }
+    doSomethingWhenDocumentReady(unhideMastodonShare);
+
+</script>
+
+        
+        
+        <!-- Matomo -->
+        <script>
+            var _paq = window._paq = window._paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function () {
+                var u = "//stats.marcelbootsman.nl/";
+                _paq.push(['setTrackerUrl', u + 'matomo.php']);
+                _paq.push(['setSiteId', '1']);
+                var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+                g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+            })();
+        </script>
+        <noscript>
+            <p><img src="//stats.marcelbootsman.nl/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p>
+        </noscript>
+        <!-- End Matomo Code -->
+
+        
+    </head>
+ 
+    <body class="flex flex-col min-h-screen bg-stone-100 selection:bg-primary selection:text-white">
+        <script>
+            if (localStorage.getItem("pref-theme") === "dark") {
+                document.body.classList.add('dark');
+            } else if (localStorage.getItem("pref-theme") === "light") {
+                document.body.classList.remove('dark')
+            } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.add('dark');
+            }
+        </script>
+        <!-- statamic-peak-tools::snippets/_noscript.antlers.html -->
+
+    <noscript>
+        <p class="relative z-50 py-3 px-4 bg-gray-100 border-b border-gray-200 text-center font-bold text-xs text-gray-600">This website requires Javascript for some parts to function properly. Your experience may vary.</p>
+    </noscript>
+
+    
+
+<!-- End: statamic-peak-tools::snippets/_noscript.antlers.html -->
+
+        <!-- statamic-peak-tools::navigation/_skip_links.antlers.html -->
+<div class="z-50 text-sm font-bold text-white [&_a]:fixed [&_a]:px-4 [&_a]:py-2 [&_a]:-translate-y-24 [&_a]:opacity-0 [&_a]:top-4 [&_a]:left-8 [&_a]:bg-primary [&_a]:focus-visible:translate-y-0 [&_a]:focus-visible:opacity-100 [&_a]:outline-primary [&_a]:motion-safe:transition-transform ">
+    
+        <a href="#content">Skip to content</a>
+    
+    
+</div>
+<!-- End: statamic-peak-tools::navigation/_skip_links.antlers.html -->
+
+        <!-- statamic-peak-tools::components/_toolbar.antlers.html -->
+
+<!-- End: statamic-peak-tools::components/_toolbar.antlers.html -->
+
+        
+
+        <!-- /layout/_header.antlers.html -->
+<header class="w-full py-4">
+    <div class="fluid-container flex justify-between items-center">
+        
+        <!-- /components/_logo.antlers.html -->
+<div class="basis-54 sm:basis-96">
+    <a class="p-2 -m-2 focus:outline-none focus-visible:ring-2 ring-primary"
+        aria-label="Logo marcelbootsman" href="/">
+        <img src="/images/marcelbootsman-logo.png" class="logo inline select-none  w-10 sm:w-20" alt="marcelbootsman" />
+        <span class="border-b-4 border-brightgreen text-l sm:text-2xl font-bold">Marcel Bootsman</span>
+    </a>
+    <div class="inline-block relative top-2">
+        <button id="theme-toggle" title="Toggle dark/light theme">
+            <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="48" height="28" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+            </svg>
+            <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="48" height="28" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+        </button>
+    </div>
+</div>
+<!-- End: /components/_logo.antlers.html -->
+        
+<!-- /navigation/_main_desktop.antlers.html -->
+<nav class="hidden md:block" aria-label="Main navigation">
+    <ul class="flex items-center space-x-8">
+        
+        <li
+            
+            x-data="{ subnavOpen: false }"
+            @keyup.escape.stop.prevent="subnavOpen = false"
+            @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+            
+            class="relative leading-none">
+            <a class="
+                        p-1 -m-1 flex items-center font-bold text-sm hover:text-primary underline focus:outline-none focus-visible:ring-2 ring-primary
+                        text-neutral
+                    "
+                
+                href="#"
+                @click.prevent="subnavOpen = !subnavOpen"
+                :aria-label="subnavOpen
+                            ? 'Close sub navigation'
+                            : 'Open sub navigation'"
+                :aria-expanded="subnavOpen"
+                >
+                Home
+                
+                <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                    <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                </div>
+                
+            </a>
+            
+            <ul
+                x-show="subnavOpen"
+                x-ref="subnav"
+                class="absolute right-0 mt-2 -ml-3 py-2 px-3 bg-white border border-neutral/10 rounded shadow"
+                @click.outside="subnavOpen = false"
+                x-transition
+                x-cloak>
+                
+                <li class="">
+                    <a
+                        class="whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        text-neutral
+                                    "
+                        href="/readme">
+                        ReadMe
+                    </a>
+                </li>
+                
+            </ul>
+            
+        </li>
+        
+        <li
+            
+            x-data="{ subnavOpen: false }"
+            @keyup.escape.stop.prevent="subnavOpen = false"
+            @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+            
+            class="relative leading-none">
+            <a class="
+                        p-1 -m-1 flex items-center font-bold text-sm hover:text-primary underline focus:outline-none focus-visible:ring-2 ring-primary
+                        text-neutral
+                    "
+                
+                href="#"
+                @click.prevent="subnavOpen = !subnavOpen"
+                :aria-label="subnavOpen
+                            ? 'Close sub navigation'
+                            : 'Open sub navigation'"
+                :aria-expanded="subnavOpen"
+                >
+                Archives
+                
+                <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                    <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                </div>
+                
+            </a>
+            
+            <ul
+                x-show="subnavOpen"
+                x-ref="subnav"
+                class="absolute right-0 mt-2 -ml-3 py-2 px-3 bg-white border border-neutral/10 rounded shadow"
+                @click.outside="subnavOpen = false"
+                x-transition
+                x-cloak>
+                
+                <li class="">
+                    <a
+                        class="whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        text-neutral
+                                    "
+                        href="/archive">
+                        Blog
+                    </a>
+                </li>
+                
+                <li class="">
+                    <a
+                        class="whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        text-neutral
+                                    "
+                        href="/notes">
+                        Notes
+                    </a>
+                </li>
+                
+                <li class="">
+                    <a
+                        class="whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        text-neutral
+                                    "
+                        href="/categories">
+                        Categories
+                    </a>
+                </li>
+                
+            </ul>
+            
+        </li>
+        
+        <li
+            
+            x-data="{ subnavOpen: false }"
+            @keyup.escape.stop.prevent="subnavOpen = false"
+            @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+            
+            class="relative leading-none">
+            <a class="
+                        p-1 -m-1 flex items-center font-bold text-sm hover:text-primary underline focus:outline-none focus-visible:ring-2 ring-primary
+                        text-neutral
+                    "
+                
+                href="#"
+                @click.prevent="subnavOpen = !subnavOpen"
+                :aria-label="subnavOpen
+                            ? 'Close sub navigation'
+                            : 'Open sub navigation'"
+                :aria-expanded="subnavOpen"
+                >
+                WordPress plugins
+                
+                <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                    <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                </div>
+                
+            </a>
+            
+            <ul
+                x-show="subnavOpen"
+                x-ref="subnav"
+                class="absolute right-0 mt-2 -ml-3 py-2 px-3 bg-white border border-neutral/10 rounded shadow"
+                @click.outside="subnavOpen = false"
+                x-transition
+                x-cloak>
+                
+                <li class="">
+                    <a
+                        class="whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        text-neutral
+                                    "
+                        href="/wordpress-plugins/auto-hide-admin-bar">
+                        Auto Hide Admin Bar
+                    </a>
+                </li>
+                
+            </ul>
+            
+        </li>
+        
+    </ul>
+</nav>
+<!-- End: /navigation/_main_desktop.antlers.html -->
+
+
+<!-- /navigation/_main_mobile.antlers.html -->
+<nav
+    x-data="{ mobileNavOpen: false }"
+    class="md:hidden"
+    aria-label="Main navigation"
+    x-trap.inert.noscroll="mobileNavOpen"
+    @keyup.escape.stop.prevent="mobileNavOpen = false"
+    x-cloak
+>
+    <button
+        @click.prevent.stop="mobileNavOpen = !mobileNavOpen"
+        class="fixed top-4 right-0 z-20 flex items-center justify-center w-16 h-16 mr-4 text-xs font-bold text-white mb-safe rounded bg-primary focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2"
+        :aria-label="
+        mobileNavOpen
+            ? 'Close navigation'
+            : 'Open navigation'
+        "
+        :aria-expanded="mobileNavOpen"
+        x-text="mobileNavOpen ? 'Close' : 'Menu'"
+    ></button>
+
+    <div
+        class="fixed inset-0 z-10 pt-8 px-8 pb-12 flex flex-col justify-start bg-white"
+        x-show="mobileNavOpen"
+    >
+        <ul class="flex flex-col py-2 space-y-4 overflow-auto">
+            
+                <li
+                    
+                        x-data="{ subnavOpen: false }"
+                        @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+                    
+                    class="leading-none"
+                >
+                    <a
+                        class="w-full py-2 flex items-center space-x-1 text-lg font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                        
+                            href="#"
+                            @click.prevent="subnavOpen = !subnavOpen"
+                            @click.outside="subnavOpen = false"
+                            :aria-label="subnavOpen
+                                ? 'Close sub navigation'
+                                : 'Open sub navigation'"
+                            :aria-expanded="subnavOpen"
+                        
+                    >
+                        <span>Home</span>
+                        
+                            <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                                <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                            </div>
+                        
+                    </a>
+                    
+                        <ul
+                            x-show="subnavOpen"
+                            x-ref="subnav"
+                            class="flex flex-col items-stretch space-y-2"
+                            x-collapse
+                        >
+                            
+                                <li class="mt-2">
+                                    <a
+                                        class="block py-2 whitespace-nowrap font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                                        href="/readme">
+                                        ReadMe
+                                    </a>
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li
+                    
+                        x-data="{ subnavOpen: false }"
+                        @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+                    
+                    class="leading-none"
+                >
+                    <a
+                        class="w-full py-2 flex items-center space-x-1 text-lg font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                        
+                            href="#"
+                            @click.prevent="subnavOpen = !subnavOpen"
+                            @click.outside="subnavOpen = false"
+                            :aria-label="subnavOpen
+                                ? 'Close sub navigation'
+                                : 'Open sub navigation'"
+                            :aria-expanded="subnavOpen"
+                        
+                    >
+                        <span>Archives</span>
+                        
+                            <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                                <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                            </div>
+                        
+                    </a>
+                    
+                        <ul
+                            x-show="subnavOpen"
+                            x-ref="subnav"
+                            class="flex flex-col items-stretch space-y-2"
+                            x-collapse
+                        >
+                            
+                                <li class="mt-2">
+                                    <a
+                                        class="block py-2 whitespace-nowrap font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                                        href="/archive">
+                                        Blog
+                                    </a>
+                                </li>
+                            
+                                <li class="">
+                                    <a
+                                        class="block py-2 whitespace-nowrap font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                                        href="/notes">
+                                        Notes
+                                    </a>
+                                </li>
+                            
+                                <li class="">
+                                    <a
+                                        class="block py-2 whitespace-nowrap font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                                        href="/categories">
+                                        Categories
+                                    </a>
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li
+                    
+                        x-data="{ subnavOpen: false }"
+                        @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+                    
+                    class="leading-none"
+                >
+                    <a
+                        class="w-full py-2 flex items-center space-x-1 text-lg font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                        
+                            href="#"
+                            @click.prevent="subnavOpen = !subnavOpen"
+                            @click.outside="subnavOpen = false"
+                            :aria-label="subnavOpen
+                                ? 'Close sub navigation'
+                                : 'Open sub navigation'"
+                            :aria-expanded="subnavOpen"
+                        
+                    >
+                        <span>WordPress plugins</span>
+                        
+                            <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
+                                <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" stroke-width="24" viewBox="0 0 140 140"><path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"/></svg>
+                            </div>
+                        
+                    </a>
+                    
+                        <ul
+                            x-show="subnavOpen"
+                            x-ref="subnav"
+                            class="flex flex-col items-stretch space-y-2"
+                            x-collapse
+                        >
+                            
+                                <li class="mt-2">
+                                    <a
+                                        class="block py-2 whitespace-nowrap font-bold hover:text-primary text-neutral focus:outline-none focus-visible:ring-2 ring-primary"
+                                        href="/wordpress-plugins/auto-hide-admin-bar">
+                                        Auto Hide Admin Bar
+                                    </a>
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        </ul>
+    </div>
+</nav>
+<!-- End: /navigation/_main_mobile.antlers.html -->
+
+
+    </div>
+</header>
+<!-- End: /layout/_header.antlers.html -->
+
+        
+<main class="prose fluid-container" id="content">
+    <h1 class="block">Contribute to WordPress - This is how you do it</h1>
+    <span class="block text-sm text-stone-400 my-4">
+    
+        Published: January 16th, 2023
+        
+            | Updated: July 22nd, 2023
+        
+    
+</span>
+    
+        <a href="/categories/wordpress-community"
+            class="category text-xs p-2 my-4 mr-2 rounded-md bg-stone-200 hover:bg-brightgreen">WordPress Community</a>
+    
+        <a href="/categories/wordpress"
+            class="category text-xs p-2 my-4 mr-2 rounded-md bg-stone-200 hover:bg-brightgreen">WordPress</a>
+    
+
+    <span id="mastodonshare" class="hidden category items-baseline float-right rounded-md bg-stone-200 hover:bg-brightgreen px-1">
+    <a class="underline" title="Share 'Contribute to WordPress - This is how you do it' on Mastodon" href="#" onclick="MastodonShare(this);" data-src="I found this blog and decided to share it with you.%0D%0A%0D%0AContribute to WordPress - This is how you do it&amp;url=https://marcelbootsman.nl/contribute-to-wordpress-this-is-how-you-do-it">
+        <img class="inline align-middle h-4 m-0 mr-1" alt="Mastodon logo" title="Share on Mastodon" src="/images/mastodon-logo.svg" /><span class="text-xs">Share on Mastodon</span>
+    </a>
+</span>
+    
+        
+            <img class="mt-2 mb-2 rounded-md" src="/img/containers/images/cover-image-wordpress-community.jpg/b59dac8a4ebf24cbfdcc0e558e7d91f7/cover-image-wordpress-community.webp" width="860" height="450"
+                alt="WordPress.org contributor pins on a table">
+        
+    
+    
+        <!-- /page_builder/_article.antlers.html -->
+<section class="col-span-4 md:col-span-3">
+    <!-- /typography/_prose.antlers.html -->
+<article
+    class="
+        prose
+        prose-a:underline
+        prose-a:decoration-primary
+        prose-a:decoration-2
+        hover:prose-a:text-primary
+        focus:prose-a:outline-none
+        focus-visible:prose-a:ring
+        focus-visible:prose-a:ring-primary
+        focus-visible:prose-a:rounded-sm
+        prose-figure:my-0
+        prose-pre:whitespace-pre-wrap
+        max-w-none
+        contents
+    "
+>
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>Without the contributions of all the volunteers who work on WordPress, WordPress would never have become what it is today. But how do you start, what do you start with, and is WordPress waiting for your contribution? This blog explains all areas of interest, so that you can decide for yourself how you want to contribute to WordPress.</p><p>Spoiler: It’s fun!</p><h2>Why should you contribute to WordPress?</h2><p>The great success of WordPress is due to the thousands of volunteers. Think of developers, designers, UX specialists, copywriters, translators, accessibility specialists, users, all people who invest part of their time and knowledge in the WordPress project. People reserve time themselves to contribute or receive time from their employer to do so.</p><p>Contributing to WordPress gives you new knowledge and you help others (and yourself) with easier and more independent publishing on the internet. You will meet new people and have the opportunity to become part of a community of WordPress enthusiasts. Plus the fact that you help with software that runs 43% (<a href="https://w3techs.com/technologies/overview/content_management">source</a>) of all websites.</p><h2>Where do you start?</h2><p>To see what you can contribute to, all 21 focus areas are explained below. And that’s how you find out what you can contribute to.</p><h2>Contributor groups</h2><p>There are many different ways for you to get involved with WordPress. That’s exactly what the make.wordpress.org page says. One other way is to visit a WordCamp, talk to people, and get more knowledge about how contributing to WordPress works. There are even WordCamps with dedicated Contributor days, so you can started immediately.</p><h3>Core</h3><p>The team that deals with Core is the team that makes WordPress. If you want to learn more about PHP, or if you are an experienced developer, the team is happy with your contribution. Think of developing code, solving errors, talking about decisions.</p><p>Here you can find out more about <a href="https://make.wordpress.org/core/">Core</a>.</p><h3>Design</h3><p>The Design team is engaged in designing and developing the user interface. Designers and UX experts enjoy themselves in this team. Sketches, design, user testing, etc. are regularly discussed.</p><p>Here you can find out more about <a href="https://make.wordpress.org/design/">Design</a>.</p><h3>Mobile</h3><p>The Mobile team builds the iOS and Android apps. Do you have experience with, or do you want to develop yourself based on Objective-C, Java or Swift, then you are very welcome in this team. Also welcome are designers, UX experts and testers.</p><p>Here you can find out more about <a href="https://make.wordpress.org/mobile/">Mobile</a>.</p><h3>Accessibility</h3><p>The a11y ( explanation: a + 11 letters + y ) group provides accessibility expertise related to the entire WordPress project. They make sure that all WordPress information and code is accessible to everyone.</p><p>Here you can find more about <a href="https://make.wordpress.org/accessibility/">Accessibility</a>.</p><h3>Polyglots</h3><p>WordPress is used all over the world in many different languages. As a polyglot (someone who speaks many languages), you help translate WordPress and develop tools that translators use.</p><p>Here you can find out more about <a href="https://make.wordpress.org/polyglots/">Polyglots</a>.</p><h3>Support</h3><p>Answering a question on the WordPress forum, or IRC (<a href="https://make.wordpress.org/support/handbook/appendix/other-support-locations/introduction-to-irc/">yes, it still exists</a>) is the easiest way to contribute to WordPress. There is bound to be something you can help someone with.</p><p>Here you can find out more about <a href="https://make.wordpress.org/support/">Support</a>.</p><h3>Documentation</h3><p>Documentation helps people find how to do something. The documentation team is responsible for creating and maintaining documentation and is always looking for good writers.</p><p>Here you can find out more about <a href="https://make.wordpress.org/docs/">Documentation</a>.</p><h3>Themes</h3><p>Every theme found in the <a href="https://wordpress.org/themes/">WordPress Theme repository</a> has been reviewed by the Theme Review team. If you want to further develop your theme skills, sign up for this team.</p><p>Here you can find out more about <a href="https://make.wordpress.org/themes/">Themes</a>.</p><h3>Plugins</h3><p>The plugin team consists of people who review plugins before they enter the <a href="https://wordpress.org/plugins/">WordPress plugin repository</a>. If you want to stay up to date of developments because you develop plugins, this is the place for you!</p><p>Here you can find out more about <a href="https://make.wordpress.org/plugins/">Plugins</a>.</p><h3>Community</h3><p>Do you want to help organize a WP Meetup or a WordCamp? Then the community blog is the place to start. Here you will find people who can help and support you in organizing.</p><p>Here you can find out more about <a href="https://make.wordpress.org/community/">Community</a>.</p><h3>Meta</h3><p>The meta team creates WordPress.org and maintains and supports all tools used by contributors. Do you want to improve WordPress.org? Then register with this team and start contributing.</p><p>Here you can find out more about <a href="https://make.wordpress.org/meta/">Meta</a>.</p><h3>Training</h3><p>The training team creates courses and related documentation that can be used in a live workshop environment. If you absolutely love explaining WordPress, join this team.</p><p>Here you can find out more about <a href="https://make.wordpress.org/training/">Training</a>.</p><h3>Test</h3><p>The test team monitors and tests the use of WordPress. If you are familiar with or want to learn about user testing, user research, manual testing, observing and QA, this team is for you.</p><p>Here you can find out more about <a href="https://make.wordpress.org/test/">Test</a>.</p><h3>TV</h3><p>WordPress.tv is the platform where videos from WordCamps, an WP Meetups, can be found. The TV team watches each video and uploads it to the site. They also help WordCamp teams with subtitling and post production. Reviewing videos is a great way to learn more about the WordPress community. You don’t need any experience to help.</p><p>Here you can find out more about <a href="https://make.wordpress.org/tv/">TV</a>.</p><h3>Marketing</h3><p>The marketing team provides materials to support the marketing and sale of WordPress software and promote the WordPress community.</p><p>Here you can find out more about <a href="https://make.wordpress.org/marketing/">Marketing</a>.</p><h3>CLI</h3><p>WP CLI is the official command line tool for interacting and managing WordPress sites. You can contribute to the WP CLI team can with code, give a demo at a Meetup, help others with support or update documentation.</p><p>Here you can find out more about <a href="https://make.wordpress.org/cli/">CLI</a>.</p><h3>Hosting</h3><p>This team discusses matters related to hosting WordPress. Best practices, tools and experiences are exchanged here.</p><p>Here you can find out more about <a href="https://make.wordpress.org/hosting/">Hosting</a>.</p><h3>Tide</h3><p>Tide is a series of automated tests run against every plugin and theme in the directory and then displays PHP compatibility and test errors/warnings in the directory. If you are in to testing plugins and themes, or want to find out how to have your theme or plugin test, join this team.</p><p>Here you can find out more about <a href="https://make.wordpress.org/tide/">Tide</a>.</p><h3>Openverse</h3><p>Openverse is a search engine for openly-licensed media. The Openverse team implements new features and new media types; maintains the public API and front-end search engine; and develops WordPress integrations to share Openverse with the entire WordPress community.</p><p>Here you can find out more about <a href="https://make.wordpress.org/openverse/">Openverse</a>.</p><h3>Photos</h3><p>The Photo Directory team moderates every photo submitted to the WordPress Photo Directory, maintains and improves the directory site itself, and provides resources and documentation to educate, encourage, and facilitate photo contributors. (Remark: the cover image on this posts is taken from the Photo Directory.)</p><p>Here you can find out more about <a href="https://make.wordpress.org/photos/">Photos</a>.</p><h3>Core Performance</h3><p>The core performance team is dedicated to monitoring, enhancing, and promoting performance in WordPress core and its surrounding ecosystem.</p><p>Here you can find out more about <a href="https://make.wordpress.org/performance/">Core Performance</a>.</p><h2>How do you stay informed?</h2><p>With so many areas of interest, it is almost impossible to keep track of everything. If you know which area(s) you want to contribute to, start by reading the respective make.wordpress.org blogs, and possibly the accompanying Slack channel.</p><p>Also sign up for email updates on the blog, so you are always up to date and can participate in various discussions.</p><h2>Start together</h2><p>If you don’t feel like starting yourself, or if you really don’t know what you can contribute to, come to a <a href="https://central.wordcamp.org/">WordCamp</a> or <a href="https://www.meetup.com/pro/wordpress/">WP Meetup</a> in your area. A Contributor Day is often also held at these meetings. On this day you will be working on WordPress with a large number of attendees and there are always experienced contributors who can help you get started and tell you about their experiences.</p><h2>Conclusion</h2><p>As you have seen, there are countless ways to contribute to WordPress. You don’t have to be experienced, and you can contribute to various areas of interest. Are you enthusiastic and do you know what you want to do? Good luck and most of all have fun!</p><p>If you have any questions, ask them on the team page you want to contribute to or join the channel on the <a href="https://make.wordpress.org/chat/">WordPress.org Slack</a>.</p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+</article>
+<!-- End: /typography/_prose.antlers.html -->
+
+</section>
+<!-- End: /page_builder/_article.antlers.html -->
+    
+
+    
+    
+        <div class="authorbox border-2 rounded-md  bg-stone-200 p-4 my-8  w-full">
+            <div class="grid grid-cols-4">
+                
+                    
+                        <!-- /page_builder/_avatar.antlers.html -->
+<section class="hidden md:block">
+        
+        <img src="/images/marcel-bootsman.webp" alt="Picture of Marcel Bootsman" width="200" height="200" />
+        
+</section>
+<!-- End: /page_builder/_avatar.antlers.html -->
+                    
+                
+                    
+                
+
+                
+                    
+                
+                    
+                        <!-- /page_builder/_article.antlers.html -->
+<section class="col-span-4 md:col-span-3">
+    <!-- /typography/_prose.antlers.html -->
+<article
+    class="
+        prose
+        prose-a:underline
+        prose-a:decoration-primary
+        prose-a:decoration-2
+        hover:prose-a:text-primary
+        focus:prose-a:outline-none
+        focus-visible:prose-a:ring
+        focus-visible:prose-a:ring-primary
+        focus-visible:prose-a:rounded-sm
+        prose-figure:my-0
+        prose-pre:whitespace-pre-wrap
+        max-w-none
+        contents
+    "
+>
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <h2>About Marcel Bootsman</h2><p>Marcel discovered the web in 1995. Since then he has paid attention to and worked with lots of technologies and founded his own WordPress oriented business <a href="https://nostromo.nl">nostromo.nl</a> in 2009.</p><p>Currently Marcel is Business Development Manager Dutch &amp; DACH Markets at <a href="/kinsta">Kinsta</a> where he helps Kinsta&#039;s client base grow with <a href="/kinsta-managed-wordpress-hosting">Managed WordPress</a>, <a href="/kinsta-application-database-hosting">Application, Database</a> and <a href="https://kinsta.com/static-site-hosting/">Static site hosting</a>.</p><p>You can contact Marcel on a diverse range of online platforms. Please see the Connect section on the <a href="/#connect">homepage</a> for the details.</p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+</article>
+<!-- End: /typography/_prose.antlers.html -->
+
+</section>
+<!-- End: /page_builder/_article.antlers.html -->
+                    
+                
+            </div>
+        </div>
+    
+</main>
+        <!-- /layout/_footer.antlers.html -->
+<footer class="w-full py-4 mt-auto">
+    <div class="fluid-container flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-between md:space-x-4 md:items-center ">
+        <div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 text-xs font-bold">
+            <span>
+                &copy; 2013
+                
+                    - 2025
+                    
+                Marcel Bootsman - Powered by <a class="underline" href="https://statamic.com/">Statamic</a>
+                - Hosted on <a class="underline" href="/kinsta-static-site-hosting">Kinsta Static Site Hosting</a>
+            </span>
+
+            
+            
+        </div>
+        
+            <div class="flex space-x-2">
+                
+                <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary" href="https://toot.re/@mbootsman" rel="noopener me" aria-label="marcelbootsman on Mastodon" target="_blank"><svg class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 448 512"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 01-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg></a>
+                
+                <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary" href="https://www.github.com/mbootsman" rel="noopener" aria-label="marcelbootsman on Github" target="_blank"><svg class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 140 140"><path d="M70 1.633a70 70 0 00-21.7 136.559h1.692a5.833 5.833 0 006.183-6.184v-1.225-6.358a2.917 2.917 0 00-1.167-1.925 2.917 2.917 0 00-2.45-.583C36.925 125.3 33.6 115.5 33.367 114.858a27.067 27.067 0 00-10.034-12.775 6.767 6.767 0 00-.875-.641 3.675 3.675 0 012.217-.409 8.575 8.575 0 016.708 5.134 17.5 17.5 0 0023.334 6.766 2.917 2.917 0 001.691-2.1 11.667 11.667 0 013.267-7.175 2.917 2.917 0 00-1.575-5.075c-13.825-1.575-27.942-6.416-27.942-30.275a23.333 23.333 0 016.125-16.216A2.917 2.917 0 0036.808 49a20.533 20.533 0 01.059-14 32.317 32.317 0 0114.7 6.708 2.858 2.858 0 002.45.409A61.892 61.892 0 0170 39.958a61.075 61.075 0 0116.042 2.159 2.858 2.858 0 002.391-.409 32.608 32.608 0 0114.7-6.708 20.825 20.825 0 010 13.883 2.917 2.917 0 00.525 3.092 23.333 23.333 0 016.125 16.042c0 23.858-14.175 28.641-28.058 30.216a2.917 2.917 0 00-1.575 5.134 12.833 12.833 0 013.558 10.15v18.55a6.183 6.183 0 002.1 4.841 7 7 0 006.184 1.109A70 70 0 0070 1.633z"/></svg></a>
+                
+                <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary" href="https://www.linkedin.com/in/marcelbootsman/" rel="noopener" aria-label="marcelbootsman on Linkedin" target="_blank"><svg class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 140 140"><path d="M23.4 44.59h-4.75a12.76 12.76 0 00-9.73 2.19 9.44 9.44 0 00-2.35 7.12V131a9.08 9.08 0 002.3 7 9.24 9.24 0 006.82 2c2.22 0 4.15-.21 8.24-.06a12 12 0 009.25-2 9.1 9.1 0 002.29-7V53.9a9.44 9.44 0 00-2.34-7.12 12.68 12.68 0 00-9.73-2.19zM21 0A16.19 16.19 0 005.09 15.6 16.52 16.52 0 0021 31.86 16.12 16.12 0 0037 15.6 16.18 16.18 0 0021 0zM99.74 43.63a31.09 31.09 0 00-20.93 6.3A7.25 7.25 0 0077 46.34a6.08 6.08 0 00-4.52-1.78 119.08 119.08 0 00-15 .3c-4.16.84-6.18 3.79-6.18 9V131a9.14 9.14 0 002.28 7 12.06 12.06 0 009.26 2c4.47-.17 5.74.06 8.22.06a9.26 9.26 0 006.83-2 9.12 9.12 0 002.3-7V89.88A12.48 12.48 0 0192.93 76 12.44 12.44 0 01106 89.88V131a9.1 9.1 0 002.29 7 12 12 0 009.24 2c1.83-.07 4-.07 5.8 0a12.09 12.09 0 009.26-2 9.14 9.14 0 002.28-7V78.32a33.07 33.07 0 00-35.13-34.69z"/></svg></a>
+                
+                <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary" href="mailto:marcel@bootsman.org" rel="noopener" aria-label="marcelbootsman on Email" target="_blank"><svg class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" viewBox="0 0 512 512"><path d="M256 352c-16.53 0-33.06-5.422-47.16-16.41L0 173.2V400c0 26.5 21.49 48 48 48h416c26.51 0 48-21.49 48-48V173.2L303.2 335.7C289.1 346.6 272.5 352 256 352zM16.29 145.3l212.2 165.1c16.19 12.6 38.87 12.6 55.06 0l212.2-165.1C505.1 137.3 512 125 512 112c0-26.51-21.5-48-48-48H48C21.49 64 0 85.49 0 112c0 13 6.01 25.3 16.29 33.3z"/></svg></a>
+                
+                <a class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary" href="/feed" rel="noopener" aria-label="marcelbootsman on Rss" target="_blank"><svg class="w-3 h-3 overflow-visible fill-current" alt="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+                
+            </div>
+        
+
+    </div>
+</footer>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+</script>
+<!-- End: /layout/_footer.antlers.html -->
+
+    </body>
+</html>
+<!-- End: /layout.antlers.html -->
