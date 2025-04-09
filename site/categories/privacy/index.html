@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-        <link rel="preload" as="style" href="https://marcelbootsman.nl/build/assets/site-24f70135.css" /><link rel="modulepreload" href="https://marcelbootsman.nl/build/assets/site-b52e8fb3.js" /><link rel="stylesheet" href="https://marcelbootsman.nl/build/assets/site-24f70135.css" /><script type="module" src="https://marcelbootsman.nl/build/assets/site-b52e8fb3.js"></script>
+        <link rel="preload" as="style" href="https://marcelbootsman.nl/build/assets/site-9483bc33.css" /><link rel="modulepreload" href="https://marcelbootsman.nl/build/assets/site-b52e8fb3.js" /><link rel="stylesheet" href="https://marcelbootsman.nl/build/assets/site-9483bc33.css" /><script type="module" src="https://marcelbootsman.nl/build/assets/site-b52e8fb3.js"></script>
         <!-- statamic-peak-seo::snippets/_seo.antlers.html -->
 
 <title>
@@ -108,48 +108,6 @@
 <link rel="alternate" type="application/rss+xml" title="marcelbootsman.nl"  href="/feed" />
         
         
-<script>
-    /* Generate a share link for the user's Mastodon domain */
-    function MastodonShare(e) {
-        // Get the source text
-        src = e.getAttribute("data-src");
-
-        // Get the Mastodon domain
-        domain = prompt("Enter your Mastodon domain", "toot.re");
-
-        if (domain == "" || domain == null) {
-            return;
-        }
-
-        // Build the URL
-        url = "https://" + domain + "/share?text=" + src;
-
-        // Open a window on the share page
-        window.open(url, '_blank');
-    }
-
-    function doSomethingWhenDocumentReady(functionToExecute) {
-        /* $(document).ready() without javascript
-        */
-        if (document.readyState === "complete" ||
-            (document.readyState !== "loading" && !document.documentElement.doScroll)
-        ) {
-            functionToExecute();
-        } else {
-            document.addEventListener("DOMContentLoaded", functionToExecute);
-        }
-    }
-
-    /* Call this on document.ready() */
-    function unhideMastodonShare() {
-        var button = document.getElementById('mastodonshare');
-        button.classList.remove('hidden');
-        button.classList.add('inline-flex');
-    }
-    doSomethingWhenDocumentReady(unhideMastodonShare);
-
-</script>
-
         
         
         <!-- Matomo -->
@@ -668,6 +626,21 @@
             localStorage.setItem("pref-theme", 'dark');
         }
     })
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="mbootsman/marcelbootsman-statamic"
+        data-repo-id="R_kgDOJxdbgA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOJxdbgM4ComZv"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
 </script>
 <!-- End: /layout/_footer.antlers.html -->
 
