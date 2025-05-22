@@ -158,6 +158,48 @@
 
 </script>
 
+<script>
+    /* Generate a share link for the user's Mastodon domain */
+    function MastodonShare(e) {
+        // Get the source text
+        src = e.getAttribute("data-src");
+
+        // Get the Mastodon domain
+        domain = prompt("Enter your Mastodon domain", "toot.re");
+
+        if (domain == "" || domain == null) {
+            return;
+        }
+
+        // Build the URL
+        url = "https://" + domain + "/share?text=" + src;
+
+        // Open a window on the share page
+        window.open(url, '_blank');
+    }
+
+    function doSomethingWhenDocumentReady(functionToExecute) {
+        /* $(document).ready() without javascript
+        */
+        if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            functionToExecute();
+        } else {
+            document.addEventListener("DOMContentLoaded", functionToExecute);
+        }
+    }
+
+    /* Call this on document.ready() */
+    function unhideMastodonShare() {
+        var button = document.getElementById('mastodonshare');
+        button.classList.remove('hidden');
+        button.classList.add('inline-flex');
+    }
+    doSomethingWhenDocumentReady(unhideMastodonShare);
+
+</script>
+
         
         
         <!-- Matomo -->
@@ -1027,20 +1069,8 @@ r2.toot.re	Active  Active."
             <div class="grid grid-cols-4">
                 
                     
-                        <!-- /page_builder/_avatar.antlers.html -->
-<section class="hidden md:block">
-        
-        <img src="/images/marcel-bootsman.webp" alt="Picture of Marcel Bootsman" width="200" height="200" />
-        
-</section>
-<!-- End: /page_builder/_avatar.antlers.html -->
-                    
-                
-                    
                 
 
-                
-                    
                 
                     
                         <!-- /page_builder/_article.antlers.html -->
@@ -1065,9 +1095,353 @@ r2.toot.re	Active  Active."
 >
     <!-- /components/_text.antlers.html -->
 <div class="size-lg">
-    <h2>About Marcel Bootsman</h2><p>Marcel discovered the web in 1995. Since then he has paid attention to and worked with lots of technologies and founded his own WordPress oriented business <a href="https://nostromo.nl">nostromo.nl</a> in 2009.</p><p>Currently Marcel is Partnerships & Community Manager EMEA at <a href="/kinsta">Kinsta</a>. where he helps Kinsta&#039;s client base grow with <a href="/kinsta-managed-wordpress-hosting">Managed WordPress</a>, <a href="/kinsta-application-database-hosting">Application, Database</a> and <a href="https://kinsta.com/static-site-hosting/">Static site hosting</a>.</p><p>You can contact Marcel on a diverse range of online platforms. Please see the Connect section on the <a href="/#connect">homepage</a> for the details.</p>
+    <p>Self-hosting a Mastodon server is an excellent way to take control of your social networking experience, but managing storage for media files can quickly become a challenge. As your server grows, so does the demand for scalable, cost-effective, and reliable storage. Local storage can be limiting and expensive to expand, making it less ideal for long-term hosting.</p><p>That’s where <a href="https://www.cloudflare.com/developer-platform/products/r2/">Cloudflare R2</a> comes in (or any other preferred remote storage solution). With no egress fees and seamless integration via the S3 API, Cloudflare R2 offers a modern solution to store and serve your Mastodon media files efficiently. By moving your storage to the cloud, you can free up local resources while ensuring your server is ready to handle increasing traffic and media uploads.</p><p>In this guide, I’ll walk you through the entire process of how I migrated the <a href="https://toot.re">toot.re</a> media storage to Cloudflare R2 with the help of <code>rclone</code>, a powerful tool for syncing and managing files between local and cloud storage. </p><p>Whether you’re looking to reduce costs or future-proof your server, this guide has you covered and also let you learn of a things I can do better next time.</p><h2>Prerequisites</h2><p>You need the following to start doing the migration:</p><ul><li><p>A running Mastodon instance on Linux</p></li><li><p>SSH access to the Mastodon server and its configuration files</p></li><li><p>A Cloudflare account with an R2 storage enabled</p></li><li><p><code>rclone</code> on the server (used to sync files between local storage and R2).</p></li></ul><h2>Preparing Cloudflare R2</h2><p>Let’s start with setting up a Cloudflare R2 bucket.</p><ul><li><p>Log in to Cloudflare dashboard</p></li><li><p>Navigate to R2 Object Storage</p></li><li><p>Create a new bucket (e.g., mastodon-media)</p></li></ul><p>When the bucket is created, you need to generate R2 API Tokens, so your Mastodon instance, and <code>rclone</code>, can access the bucket with the right permissions.</p><p>To generate R2 API Tokens go to the R2 Object Storage page and click on “Manage R2 API Tokens”. Then, follow these steps:</p><ul><li><p>Click on “Create API Token”</p></li><li><p>Give the token a smart name, e.g. “R2 token for Mastodon server &lt;url&gt;”</p></li><li><p>Set the permissions to Object Read &amp; Write</p></li><li><p>Specify the bucket if you want to limit this API token to a certain bucket</p></li><li><p>Specify how long you want to keep the token alive with the TTL. <br><em>Be aware that if you do not choose “Forever” here, you might lose access to your bucket if you do not recreate a token and add that to your Mastodon </em><code>.env.production</code><em> config file.</em></p></li><li><p>If you want to limit access to this API token by IP address, you can either limit, or deny access per IP address.</p></li><li><p>Now click “Create API Token”</p></li><li><p>When the API Token creation was successful, record the Access Key ID and Secret Access Key, since you will not see these again when you navigate to another screen.</p></li></ul>
 </div>
 <!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_image.antlers.html -->
+<figure
+    class="not-prose
+        size-md
+    "
+>
+    <!-- statamic-peak-tools::components/_picture.antlers.html -->
+
+    
+        
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+
+        
+        
+
+        <picture>
+            
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/362db7fdc4ee44a17f37fc73fc9dc9a7/cloudflare-r2-api-token-created.webp 320w,
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/d52c79fb37de1bdd8f116c58fcc5bb18/cloudflare-r2-api-token-created.webp 480w,
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/6e0bd6e9373b0c56d02508cb1dd412dc/cloudflare-r2-api-token-created.webp 640w,
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/81a82f01b14c92afe8cf44736d883f5f/cloudflare-r2-api-token-created.webp 768w,
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/2618fff8bb266c419439f1503ba19c16/cloudflare-r2-api-token-created.webp 1024w,
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/0b799d609182b03abf718b4e50872b08/cloudflare-r2-api-token-created.webp 1280w,
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/b535d90eef7e82074a7fffa5bbe9de15/cloudflare-r2-api-token-created.webp 1440w,
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/82e4b001bd50992e40f92b54402d72bf/cloudflare-r2-api-token-created.webp 1536w,
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/a3f94b95d8ac22ec9b5b248a22ec9059/cloudflare-r2-api-token-created.webp 1680w
+                            
+                        "
+                        sizes="
+            
+        "
+                        type="image/webp"
+                    >
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/15b2ac81d8aac8c2cc551e8edefb9a8a/cloudflare-r2-api-token-created.jpg 320w,
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/a9c7d25db53c67c27093033042e56e71/cloudflare-r2-api-token-created.jpg 480w,
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/e615a51c40dde4b267709f1762bdc3e9/cloudflare-r2-api-token-created.jpg 640w,
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/550b003f7962d107419ab1598cffbbba/cloudflare-r2-api-token-created.jpg 768w,
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/6879e3d33f0c8e65b0c45e1b7bf5623d/cloudflare-r2-api-token-created.jpg 1024w,
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/17afafcd69a8d48f75e36a2da2c0d08c/cloudflare-r2-api-token-created.jpg 1280w,
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/8d1619e22aec81e82e5c4ff97f709703/cloudflare-r2-api-token-created.jpg 1440w,
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/712dc298c6566217607bb27b4bac4af2/cloudflare-r2-api-token-created.jpg 1536w,
+                            
+                                /img/containers/images/cloudflare-r2-api-token-created.png/7de125c90242f25e818a44e5a9484dfe/cloudflare-r2-api-token-created.jpg 1680w
+                            
+                        "
+                        sizes="
+            
+        "
+                        type="image/jpeg"
+                    >
+                
+                <img
+                    width="1096"
+                    height="309"
+                    src="/img/containers/images/cloudflare-r2-api-token-created.png/a9e0b99b6b5c8acb435b50a48afbad57/cloudflare-r2-api-token-created.png"
+                    alt="Screenshot with text:
+Create API Token
+Test token was successfully created
+Summary:
+Permissions: Allows the ability to read, write, and list objects in specific buckets.
+Buckets: tootre."
+                    
+                        class="
+        h-auto
+        "
+                    
+                    
+                    
+                        loading="lazy"
+                    
+                >
+            
+        </picture>
+    
+
+<!-- End: statamic-peak-tools::components/_picture.antlers.html -->
+
+
+    <!-- /typography/_caption.antlers.html -->
+
+    <figcaption class="italic border-b border-brightgreen inline-block mt-0 text-sm text-neutral ">
+        The Cloudflare R2 API Token has been created 
+    </figcaption>
+
+<!-- End: /typography/_caption.antlers.html -->
+
+</figure>
+<!-- End: /components/_image.antlers.html -->
+
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>Since we now have created a way to access our R2 bucket on Cloudflare, it’s time to start using it. Before we hook up Mastodon with the bucket, let’s first install and/or configure <code>rclone</code>.</p><h2>Installing and configuring <code>rclone</code> </h2><p>When migrating from local storage to an R2 bucket, you need to be sure to move all local files to the R2 bucket. To do this, we cannot just simple copy/move files, we need a nice tool for this. Meet <a href="https://rclone.org/">rclone</a>.</p><p>To install <code>rclone</code> on Linux systems, run:</p><p><code>sudo -v ; curl https://rclone.org/install.sh | sudo bash</code></p><p>This script installs the latest stable release of <code>rclone</code>, after it checks if <code>rclone</code> is installed. It won&#039;t re-download if not needed.</p><p>Test if rclone is installed by running <code>rclone --version</code> and compare that to the latest stable version in the <code>rclone</code> website.</p><p>Now that <code>rclone</code> is installed, let’s move on and configure <code>rclone</code> to make use of the R2 API token we created.</p><p>To configure <code>rclone</code> we need to edit the config file which we can find by running <code>rclone config file</code>. This will output a path like <code>/home/mastodon/.config/rclone/rclone.conf</code>, which we can use to create/edit that file.</p><p>Open the file with your favorite CLI text editor (mine is nano) and make sure all info below is in that file before saving it. Make sure you use your rclone API token keys.</p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_code_block.antlers.html -->
+<div class="p2 my-4 size-lg">
+    <pre class='relative'><code class='torchlight' 
+                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">[r2]</span></div><div class='line'><span style="color: #A6ACCD;">type = s3</span></div><div class='line'><span style="color: #A6ACCD;">provider = Cloudflare</span></div><div class='line'><span style="color: #A6ACCD;">access_key_id = your_r2_api_access_id</span></div><div class='line'><span style="color: #A6ACCD;">secret_access_key = your_r2_api_secret_access_id</span></div><div class='line'><span style="color: #A6ACCD;">endpoint = your_cloudflare_api_endpoint</span></div><div class='line'><span style="color: #A6ACCD;">bucket_acl = private</span></div><div class='line'><span style="color: #A6ACCD;">region = auto</span></div><div class='line'><span style="color: #A6ACCD;">no_check_bucket = true</span></div></code>
+                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'></div></pre>
+</div>
+<!-- End: /components/_code_block.antlers.html -->
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>Your endpoint URL can be found in the Cloudflare R2 page. Open the bucket, click “Settings” and copy the S3 API URL in “Bucket Details”.</p><p>The <code>no_check_bucket</code> needs to be added if you are using Objectl-level Permissions as I have advised when creating the R2 API Token. <a href="https://developers.cloudflare.com/r2/examples/rclone/">Cloudflare rclone docs</a> mention this.</p><p>Now that we have configure <code>rclone</code>, let’s continue using it.</p><h2>Backup and sync Mastodon media files</h2><p>Before doing anything with the local Mastodon media files, make a backup. </p><p>For a standard install, the storage is located at <code>/home/mastodon/live/public/system/</code>, please check this before continuing with making a backup. You want to be sure to backup the right data.</p><p>Now execute this command to create a compressed tar file with all of the Mastodon media files of your instance: <code>tar -czvf mastodon_media.tar.gz /home/mastodon/live/public/system/</code>. </p><p>This might take a long time depending on the amount of files stored locally.</p><p>If you need to free up some space, <a href="https://ricard.dev/improving-mastodons-disk-usage/">read this post</a> on how to clean the cache.  </p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_notice_block.antlers.html -->
+<div class="notice rounded-md p-4 my-4 w-full bg-brightgreen">
+    <p>Again, before doing anything with the local Mastodon media files, make a backup.</p>
+    
+</div>
+<!-- End: /components/_notice_block.antlers.html -->
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>When the backup has completed, it’s time to sync the local files with the R2 bucket. To start this, execute: <code>rclone sync /home/mastodon/live/public/system/ r2:mastodon-media -P</code><br>where <code>r2</code> is the name of the configuration for <code>rclone</code>, <code>mastodon-media</code> is the name of the bucket, and <code>-P</code> let’s you see the progress.</p><p>Take some time for a break, because this can take a very long time, as in hours.</p><p> The next thing we need to do, is configure Mastodon to create our R2 bucket</p><h2>Configuring Mastodon to use Cloudflare R2</h2><p>To have Mastodon use the R2 bucket, there are just a few steps to take. Let’s go.</p><ul><li><p>Make a backup of your <code>.env.production</code> file located in the Mastodon installation directory, typically <code>/home/mastodon/live/</code></p></li><li><p>Edit the <code>.env.production</code> file and make sure the following is added:</p></li></ul>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_code_block.antlers.html -->
+<div class="p2 my-4 size-lg">
+    <pre class='relative'><code class='torchlight' 
+                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">S3_ENABLED=true</span></div><div class='line'><span style="color: #A6ACCD;">S3_BUCKET=your_bucket_name</span></div><div class='line'><span style="color: #A6ACCD;">S3_REGION=auto</span></div><div class='line'><span style="color: #A6ACCD;">AWS_ACCESS_KEY_ID=your_r2_api_access_id</span></div><div class='line'><span style="color: #A6ACCD;">AWS_SECRET_ACCESS_KEY=your_r2_api_secret_access_id</span></div><div class='line'><span style="color: #A6ACCD;">S3_ALIAS_HOST=your.r2.hostname</span></div><div class='line'><span style="color: #A6ACCD;">S3_HOSTNAME=your.r2.hostname</span></div><div class='line'><span style="color: #A6ACCD;">S3_ENDPOINT=your_cloudflare_api_endpoint</span></div><div class='line'><span style="color: #A6ACCD;">S3_PERMISSION=private</span></div></code>
+                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'></div></pre>
+</div>
+<!-- End: /components/_code_block.antlers.html -->
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>Carefully replace all data for S3_BUCKET, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, S3_ALIAS_HOST, S3_HOSTNAME and S3_ENDPOINT.</p><p>If you want to use a custom domain name for your bucket, you can add one by added a custom domain in the “Public access” settings of your bucket.</p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_image.antlers.html -->
+<figure
+    class="not-prose
+        size-md
+    "
+>
+    <!-- statamic-peak-tools::components/_picture.antlers.html -->
+
+    
+        
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+
+        
+        
+
+        <picture>
+            
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/3ea6b31bb12d5e0e1c36bb2b4e9147b5/cloudflare-bucket-public-access-custom-domain.webp 320w,
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/662b1c8ea97f829653711a1730eb5e79/cloudflare-bucket-public-access-custom-domain.webp 480w,
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/f948cf84a8ace4742a58e524832ba0b5/cloudflare-bucket-public-access-custom-domain.webp 640w,
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/3304ef39efde4adb258f03b07ba69cc1/cloudflare-bucket-public-access-custom-domain.webp 768w,
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/c80c0b7d3c37be741eb8106402742c6d/cloudflare-bucket-public-access-custom-domain.webp 1024w,
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/7fb48e57387f7ae1731c2d63e93f1891/cloudflare-bucket-public-access-custom-domain.webp 1280w,
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/464564c5d4c9ff1bd6ca0509a9d30ee7/cloudflare-bucket-public-access-custom-domain.webp 1440w,
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/6d41fc1b71383428850a5073d135273c/cloudflare-bucket-public-access-custom-domain.webp 1536w,
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/fe81d7a33a45b8922acbf11b44d6cd6a/cloudflare-bucket-public-access-custom-domain.webp 1680w
+                            
+                        "
+                        sizes="
+            
+        "
+                        type="image/webp"
+                    >
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/54e421d8a3dc10596335c36ea3c81180/cloudflare-bucket-public-access-custom-domain.jpg 320w,
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/c007c72f62b18877c962adac77a15aaf/cloudflare-bucket-public-access-custom-domain.jpg 480w,
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/da90e409ffb9d9fec5761dc9d9e12a31/cloudflare-bucket-public-access-custom-domain.jpg 640w,
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/6e9bd5707815e27bd3d777c0e0b90280/cloudflare-bucket-public-access-custom-domain.jpg 768w,
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/0d4a45dd08b5586290136b6c8cf788ab/cloudflare-bucket-public-access-custom-domain.jpg 1024w,
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/5738e6c569f8d2e749b10d2812d05ebd/cloudflare-bucket-public-access-custom-domain.jpg 1280w,
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/0f65e4627debc0e746592cca07c0f19b/cloudflare-bucket-public-access-custom-domain.jpg 1440w,
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/1bd71ac4a80f83419b6ecfe31aef4b67/cloudflare-bucket-public-access-custom-domain.jpg 1536w,
+                            
+                                /img/containers/images/cloudflare-bucket-public-access-custom-domain.png/6e1d397b7922bf6a2c024d083b0768cf/cloudflare-bucket-public-access-custom-domain.jpg 1680w
+                            
+                        "
+                        sizes="
+            
+        "
+                        type="image/jpeg"
+                    >
+                
+                <img
+                    width="1167"
+                    height="346"
+                    src="/img/containers/images/cloudflare-bucket-public-access-custom-domain.png/44af27fdaef75e3c1e067e83e06a484a/cloudflare-bucket-public-access-custom-domain.png"
+                    alt="Screenshot with text: 
+
+Public access
+Specify how your bucket can be accessed.
+
+Custom domains
+When a custom domain is connected to your bucket, the contents of your bucket will be made publicly accessible through that domain. Websites connected can also benefit from Cloudflare features such as bot management, Access, and Cache. 
+Domain Status	Access to Bucket	
+r2.toot.re	Active  Active."
+                    
+                        class="
+        h-auto
+        "
+                    
+                    
+                    
+                        loading="lazy"
+                    
+                >
+            
+        </picture>
+    
+
+<!-- End: statamic-peak-tools::components/_picture.antlers.html -->
+
+
+    <!-- /typography/_caption.antlers.html -->
+
+    <figcaption class="italic border-b border-brightgreen inline-block mt-0 text-sm text-neutral ">
+        Screenshot of the custom domain for public access in the Cloudflare R2 settings 
+    </figcaption>
+
+<!-- End: /typography/_caption.antlers.html -->
+
+</figure>
+<!-- End: /components/_image.antlers.html -->
+
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>When the <code>.env.production</code> file is saved, it’s time to restart Mastodon.</p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_notice_block.antlers.html -->
+<div class="notice rounded-md p-4 my-4 w-full bg-brightgreen">
+    <p>You can choose to flip the switch while the `rclone sync` is running, or wait until the `rclone` job is done. I flipped the switch during the `rclone` job, and it results in images not being loaded, because they were not yet synced.</p>
+    
+</div>
+<!-- End: /components/_notice_block.antlers.html -->
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>To restart the Mastodon processes, run:</p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_code_block.antlers.html -->
+<div class="p2 my-4 size-lg">
+    <pre class='relative'><code class='torchlight' 
+                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">$ sudo systemctl restart mastodon-web mastodon-sidekiq mastodon-streaming</span></div></code>
+                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'></div></pre>
+</div>
+<!-- End: /components/_code_block.antlers.html -->
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>Now post a test post, and upload an image, like the <a href="https://toot.re/@mbootsman/113725566309605020">post I posted</a>. This should be working, and if it is, congratulate yourself with a job well done! If it’s not working, please carefully go over all the steps in this guide.</p><h2>Conclusion</h2><p>This was a tough one for me, since I had no clue what to do before I started this process. After reading a lot of docs and posts by other Mastodon instance owners, I decided I was ready to do this. And yes, I learned a few things (see the Lessons learned paragraph).</p><p>I think embracing cloud storage for your Mastodon server not only enhances your infrastructure but also demonstrates a commitment to providing the best experience for your users. By investing in a robust and scalable solution like Cloudflare R2, you position your server to handle the demands of the decentralized social web.</p><p>Decentralized FTW!</p><h2>Other optional things to do</h2><h3>Clean up local storage</h3><p>When the migration has succeeded, and the rclone job is done, you can safely remove local Mastodon media files. Be sure that you have made a backup, and then execute: <code>rm -rf /home/mastodon/live/public/system/*</code>. If you are not sure to execute this right after the migration, then set a reminder to do this one month after the migration.</p><h3>Monitor your bucket usage</h3><p>Regularly open the Cloudflare dashboard and check the metrics of your R2 bucket. It’s advised to keep track of the resource usage, performance, and plan ahead the costs.</p><h3>Backup R2 bucket offsite</h3><p>It’s never a bad thing to have a backup. So, go ahead, and think of a way to backup your bucket to another place, in case Cloudflare pulls the plug. Next on my list is setting up an <code>rclone sync</code> job to sync the bucket contents to my Synology Diskstation.</p><h3>Remove cached remote accounts that no longer exist</h3><p>Mastodon keeps a cache for all accounts it ‘sees’. Now would be a good time to clean that up. You can use the <a href="https://docs.joinmastodon.org/admin/tootctl/#accounts-cull">Mastodon Admin CLI tool</a> <code>accounts cull</code> command to that for you. </p><p>The result of this command on my server was this: <code>Visited 298103 accounts, removed 3283</code>. 🎉</p><h2>Lessons learned (aka “things I can do better next time”)</h2><ol start="1"><li><p>Make a backup of local files.</p></li><li><p>Read the docs carefully. You might miss that you have to add <code>no_check_bucket = true</code> to the <code>rclone</code> config to prevent “Access Denied, 403” errors when using <code>rclone</code> and post a question on the Cloudflare Discord to find that out.</p></li><li><p>Use <code>rclone sync</code> and not <code>rclone move</code>. Because, well, <code>move</code> deletes local files, and in case of failure and not doing what I said in bullet 1., you loose files.</p></li></ol><p></p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_notice_block.antlers.html -->
+<div class="notice rounded-md p-4 my-4 w-full bg-brightgreen">
+    <p>Photo by <a href="https://unsplash.com/@elevatebeer">Elevate</a> on Unsplash</p>
+    
+</div>
+<!-- End: /components/_notice_block.antlers.html -->
 </article>
 <!-- End: /typography/_prose.antlers.html -->
 
