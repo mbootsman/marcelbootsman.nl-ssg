@@ -721,8 +721,20 @@
             <div class="grid grid-cols-4">
                 
                     
+                        <!-- /page_builder/_avatar.antlers.html -->
+<section class="hidden md:block">
+        
+        <img src="/images/marcel-bootsman.webp" alt="Picture of Marcel Bootsman" width="200" height="200" />
+        
+</section>
+<!-- End: /page_builder/_avatar.antlers.html -->
+                    
+                
+                    
                 
 
+                
+                    
                 
                     
                         <!-- /page_builder/_article.antlers.html -->
@@ -747,47 +759,9 @@
 >
     <!-- /components/_text.antlers.html -->
 <div class="size-lg">
-    <p>When working with Statamic&#039;s static site generation (SSG), one of the challenges you might encounter is generating static pages for category taxonomies. By default, Statamic generates static pages for entries but may not create static pages for categories. In this short note, I&#039;ll share how I overcame this hurdle by adding a URL to the <code>ssg.php</code> configuration file, allowing me to generate a static archive page containing all category taxonomy terms.</p><h3>The Challenge: A Category archive page in Statamic SSG</h3><p>In Statamic, category taxonomies are a powerful way to organize and categorize your content. However, when you embark on static site generation, you might notice that static pages are generated only for your entries. The category taxonomy archive page, which play a crucial role in structuring your content, is left out.</p><h3>The Solution: Adding an URL to <code>ssg.php</code></h3><p>The solution to generating static pages for category taxonomies is surprisingly straightforward. You can achieve this by adding a URL to the <code>ssg.php</code> configuration file in your Statamic project. Here&#039;s how to do it:</p><p><strong>1. Locate Your </strong><code>ssg.php</code> <strong>Configuration File</strong><br>In your Statamic project, navigate to the <code>config</code> directory. Inside this directory, you&#039;ll find the <code>ssg.php</code> configuration file. Open it in your preferred code editor.</p><p><strong>2. Configure the URL for Category Taxonomies</strong><br>To generate static pages for category taxonomies, you&#039;ll need to add a URL pattern that corresponds to your taxonomy structure. In the <code>ssg.php</code> file, look for the <code>urls</code> section.</p>
+    <h2>About Marcel Bootsman</h2><p>Marcel discovered the web in 1995. Since then he has paid attention to and worked with lots of technologies and founded his own WordPress oriented business <a href="https://nostromo.nl">nostromo.nl</a> in 2009.</p><p>Currently Marcel is Partnerships & Community Manager EMEA at <a href="/kinsta">Kinsta</a>. where he helps Kinsta&#039;s client base grow with <a href="/kinsta-managed-wordpress-hosting">Managed WordPress</a>, <a href="/kinsta-application-database-hosting">Application, Database</a> and <a href="https://kinsta.com/static-site-hosting/">Static site hosting</a>.</p><p>You can contact Marcel on a diverse range of online platforms. Please see the Connect section on the <a href="/#connect">homepage</a> for the details.</p>
 </div>
 <!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">urls</span><span style="color: #89DDFF;">&#39;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">[</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/feed</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/feed/atom</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span></div><div class='line'><span style="color: #A6ACCD;">        </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">/categories</span><span style="color: #89DDFF;">&#39;</span></div><div class='line'><span style="color: #89DDFF;">],</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>php</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p>In this example, we&#039;ve added a URL pattern <code>/categories</code> that maps to the category archive page in my blog.</p><p><strong>3. Create the needed templates for the archive page and terms</strong><br>We need to tell Statamic which template to use for the category archive, and the terms. To do this, in your views directory, create a <code>categories</code> directory. Within that directory create two files:</p><ul><li><p> <code>index.antlers.html</code> which will be used for the category archive page,</p></li><li><p> <code>show.antlers.html</code> which will be used to show content associated with the selected term.</p></li></ul><p><strong>4. Regenerate your static site</strong><br>After making these configurations, it&#039;s time to regenerate your static site. Open your terminal and run the Statamic CLI command:</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">php</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">please</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">ssg:generate</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>bash</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p></p><p>That&#039;s it! </p><p>Statamic will now generate a static page for your category taxonomy archive according to the URL pattern you&#039;ve defined, making your static site even more comprehensive and structured.</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_notice_block.antlers.html -->
-<div class="notice rounded-md p-4 my-4 w-full bg-brightgreen">
-    <p>Photo by <a href="https://unsplash.com/@mvdheuvel">Maarten van den Heuvel</a></p>
-    
-</div>
-<!-- End: /components/_notice_block.antlers.html -->
 </article>
 <!-- End: /typography/_prose.antlers.html -->
 
