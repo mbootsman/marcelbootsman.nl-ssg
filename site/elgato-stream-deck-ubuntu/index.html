@@ -623,7 +623,7 @@
     
         Published: November 27th, 2023
         
-            | Updated: September 8th, 2024
+            | Updated: May 23rd, 2025
         
     
 </span>
@@ -666,37 +666,7 @@
 >
     <!-- /components/_text.antlers.html -->
 <div class="size-lg">
-    <p>Using the Elgato Stream Deck with Ubuntu can (and will if you use it wisely) enhance your workflow, whether you&#039;re a content creator, programmer, or someone who loves streamlining tasks. </p><p>While Elgato primarily supports Windows and macOS for its Stream Deck software, there are workarounds to get it up and running smoothly on Ubuntu, thanks to community-driven solutions like <code>streamdeck-linux-gui</code>. </p><p>This guide will walk you through the steps to set up and use the Elgato Stream Deck on Ubuntu using <code>streamdeck-linux-gui</code>.</p><h2>Understanding the Elgato Stream Deck</h2><p>I’m assuming you know what the Elgato Stream Deck is, but for completeness I explain a bit what it is. </p><p>The Elgato Stream Deck is a customizable control device with programmable LCD keys, enabling users to create personalized shortcuts for various applications and tasks. Whether it&#039;s launching software, controlling streaming tools, executing commands, or integrating with popular platforms like OBS Studio or Twitch, the Stream Deck streamlines actions with the tap of a button.</p><h2>Getting started</h2><p>To begin, ensure your Elgato Stream Deck is connected to your Ubuntu machine. <code>streamdeck-linux-gui</code> is a third-party open-source tool that acts as a bridge between the Stream Deck hardware and Linux, providing the necessary functionalities to configure and use the device.</p><h3>Installing streamdeck-linux-gui</h3><h4>Step 1: Install dependencies an prerequisites</h4><p>Open a terminal and make sure your system is up to date by running:</p><p><code>sudo apt update &amp;&amp; sudo apt upgrade</code></p><p>Next, install some dependencies:</p><p><code>sudo apt install libhidapi-libusb0 python3-pip libjpeg-dev zlib1g-dev pipx </code>  </p><p>Now add <code>~/.local/bin</code> to your path. Be sure to add this to your <code>.bashrc</code> (or equivalent) file so it automatically sets it for you in future. This is necessary to be able to run <code>streamdeck-linux-gui</code>.</p><p><code>PATH=$PATH:$HOME/.local/bin</code> </p><h4>Step 2: Configure access to Elgato device(s)</h4><p>Ubuntu, or to be more precise, your user, needs to have access to the Elgato device(s). Therefore we need to add a USB rule. The following will create a file called <code>/etc/udev/rules.d/60-streamdeck.rules</code> and add the following required rules for using your USB Stream Deck. Creating this file adds udev rules that provides your user with access to USB devices created by Elgato.</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">sudo</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">sh</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">-c</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">echo -e &#39;SUBSYSTEM==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">usb</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, ATTRS{idVendor}==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">0fd9</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, ATTRS{idProduct}==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">0060</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, TAG+=</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">uaccess</span><span style="color: #A6ACCD;">\&quot;\\</span><span style="color: #C3E88D;">n&#39;</span><span style="color: #A6ACCD;">\</span></div><div class='line'><span style="color: #C3E88D;">&#39;SUBSYSTEM==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">usb</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, ATTRS{idVendor}==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">0fd9</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, ATTRS{idProduct}==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">0063</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, TAG+=</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">uaccess</span><span style="color: #A6ACCD;">\&quot;\\</span><span style="color: #C3E88D;">n&#39;</span><span style="color: #A6ACCD;">\</span></div><div class='line'><span style="color: #C3E88D;">&#39;SUBSYSTEM==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">usb</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, ATTRS{idVendor}==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">0fd9</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, ATTRS{idProduct}==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">006c</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, TAG+=</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">uaccess</span><span style="color: #A6ACCD;">\&quot;\\</span><span style="color: #C3E88D;">n&#39;</span><span style="color: #A6ACCD;">\</span></div><div class='line'><span style="color: #C3E88D;">&#39;SUBSYSTEM==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">usb</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, ATTRS{idVendor}==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">0fd9</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, ATTRS{idProduct}==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">006d</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, TAG+=</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">uaccess</span><span style="color: #A6ACCD;">\&quot;\\</span><span style="color: #C3E88D;">n&#39;</span><span style="color: #A6ACCD;">\</span></div><div class='line'><span style="color: #C3E88D;">&#39;SUBSYSTEM==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">usb</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, ATTRS{idVendor}==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">0fd9</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, ATTRS{idProduct}==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">0080</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, TAG+=</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">uaccess</span><span style="color: #A6ACCD;">\&quot;\\</span><span style="color: #C3E88D;">n&#39;</span><span style="color: #A6ACCD;">\</span></div><div class='line'><span style="color: #C3E88D;">&#39;SUBSYSTEM==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">usb</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, ATTRS{idVendor}==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">0fd9</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, ATTRS{idProduct}==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">0084</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, TAG+=</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">uaccess</span><span style="color: #A6ACCD;">\&quot;\\</span><span style="color: #C3E88D;">n&#39;</span><span style="color: #A6ACCD;">\</span></div><div class='line'><span style="color: #C3E88D;">&#39;SUBSYSTEM==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">usb</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, ATTRS{idVendor}==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">0fd9</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, ATTRS{idProduct}==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">008f</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, TAG+=</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">uaccess</span><span style="color: #A6ACCD;">\&quot;\\</span><span style="color: #C3E88D;">n&#39;</span><span style="color: #A6ACCD;">\</span></div><div class='line'><span style="color: #C3E88D;">&#39;KERNEL==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">uinput</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, SUBSYSTEM==</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">misc</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, OPTIONS+=</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">static_node=uinput</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, TAG+=</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">uaccess</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, GROUP=</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">input</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">, MODE=</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">0660</span><span style="color: #A6ACCD;">\&quot;</span><span style="color: #C3E88D;">&#39; &gt; /etc/udev/rules.d/60-streamdeck.rules</span><span style="color: #89DDFF;">&quot;</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>Bash</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p>Source: <a href="https://github.com/streamdeck-linux-gui/streamdeck-linux-gui/blob/main/docs/installation/ubuntu.md#configure-access-to-elgato-devices-udev-rules">https://github.com/streamdeck-linux-gui/streamdeck-linux-gui/blob/main/docs/installation/ubuntu.md#configure-access-to-elgato-devices-udev-rules</a></p><p>For the rule to take immediate effect, run the following command:</p><p><code>sudo udevadm trigger</code></p><h4>Step 3: Install streamdeck-linux-gui</h4><p>Installing <code>streamdeck-linux-gui</code> is done with the Pipx installer, just launch this command:</p><p><code>python3 -m pipx install streamdeck-linux-gui</code></p><p>When this is done, you can launch the application with <code>streamdeck</code> </p><p>If you get an error, like I did, that says: </p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">qt.qpa.plugin: From 6.5.0, xcb-cursor0 or libxcb-cursor0 is needed to load the Qt xcb platform plugin.</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'></div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p>You can fix it by installing an extra package:</p><p><code>sudo apt install libxcb-cursor-dev</code></p><h2>Using Stream Deck UI</h2><p>After you launch Stream Deck UI with the command <code>streamdeck</code>, you will see the following window, but empty. You can add all sorts of shortcuts to for executing commands, sending key presses and writing text. </p>
+    <p>Using the Elgato Stream Deck with Ubuntu can (and will if you use it wisely) enhance your workflow, whether you&#039;re a content creator, programmer, or someone who loves streamlining tasks. </p><p>While Elgato primarily supports Windows and macOS for its Stream Deck software, there are workarounds to get it up and running smoothly on Ubuntu, thanks to community-driven solutions like <code>streamdeck-linux-gui</code>. </p><p>This guide will walk you through the steps to set up and use the Elgato Stream Deck on Ubuntu using <code>streamdeck-linux-gui</code>.</p><h2>Understanding the Elgato Stream Deck</h2><p>I’m assuming you know what the Elgato Stream Deck is, but for completeness I explain a bit what it is. </p><p>The Elgato Stream Deck is a customizable control device with programmable LCD keys, enabling users to create personalized shortcuts for various applications and tasks. Whether it&#039;s launching software, controlling streaming tools, executing commands, or integrating with popular platforms like OBS Studio or Twitch, the Stream Deck streamlines actions with the tap of a button.</p><h2>Getting started</h2><p>To begin, ensure your Elgato Stream Deck is connected to your Ubuntu machine. <a href="https://github.com/nekename/OpenDeck">OpenDeck</a> is a third-party open-source tool that acts as a bridge between the Stream Deck hardware and Linux, providing the necessary functionalities to configure and use the device. </p><p>OpenDeck supports plugins made for the original Stream Deck SDK, allowing many plugins made for the Elgato software ecosystem to be used, or the <a rel="nofollow" href="https://openaction.amankhanna.me/">OpenAction</a> API.</p><h3>Installing OpenDeck</h3><p>Install the application through <a href="https://flathub.org/apps/me.amankhanna.opendeck">Flathub</a>, or install it by downloading the latest release from the OpenDeck <a href="https://github.com/nekename/OpenDeck/releases/latest">GitHub Releases</a> page.</p><h4>Step 2: Configure access to Elgato device(s)</h4><p>Ubuntu, or to be more precise, your user, needs to have access to the Elgato device(s). Therefore we need to add USB rules. Download the rules from <a href="https://raw.githubusercontent.com/streamduck-org/elgato-streamdeck/main/40-streamdeck.rules">here</a>, and copy it to the correct location with <code>sudo cp 40-streamdeck.rules /etc/udev/rules.d/</code></p><p></p><p> The following will create a file called <code>/etc/udev/rules.d/60-streamdeck.rules</code> and add the following required rules for using your USB Stream Deck. Creating this file adds udev rules that provides your user with access to USB devices created by Elgato.</p><p>For the rule to take immediate effect, run the following command:</p><p><code>sudo udevadm control --reload-rules</code></p><h2>Using OpenDeck</h2><p>After you launch OpenDeck, you will see the following window, but empty. You can add all sorts of shortcuts for executing commands, sending key presses, writing text and many more with the help of plugins.</p>
 </div>
 <!-- End: /components/_text.antlers.html -->
 
@@ -732,23 +702,23 @@
                     <source
                         srcset="
                             
-                                /img/containers/images/stream-deck-main-window.png/2d8fe2291245755c7987c35be9e2ebbb/stream-deck-main-window.webp 320w,
+                                /img/containers/images/opendeck-main-screen.png/a111a1506d6e6fd7f657bf400767518a/opendeck-main-screen.webp 320w,
                             
-                                /img/containers/images/stream-deck-main-window.png/bc36f577cf579af70c39dce711b43dff/stream-deck-main-window.webp 480w,
+                                /img/containers/images/opendeck-main-screen.png/531114b4118e0cdb089b26266fd9a542/opendeck-main-screen.webp 480w,
                             
-                                /img/containers/images/stream-deck-main-window.png/6abd98708df7d63791b422a37f8e072e/stream-deck-main-window.webp 640w,
+                                /img/containers/images/opendeck-main-screen.png/e9f4196e3f9d09d04e2d80ced2610086/opendeck-main-screen.webp 640w,
                             
-                                /img/containers/images/stream-deck-main-window.png/773dc3dde149887acc14b320d73abc4c/stream-deck-main-window.webp 768w,
+                                /img/containers/images/opendeck-main-screen.png/53820d1d62c5fd3c3d431929358e9cae/opendeck-main-screen.webp 768w,
                             
-                                /img/containers/images/stream-deck-main-window.png/b98b0352fc1942ed3a54ebc1f13ca9fa/stream-deck-main-window.webp 1024w,
+                                /img/containers/images/opendeck-main-screen.png/017fd78f59836b6910f7539e26effa2e/opendeck-main-screen.webp 1024w,
                             
-                                /img/containers/images/stream-deck-main-window.png/0da9549e27e42ba020cbbc03c2986aec/stream-deck-main-window.webp 1280w,
+                                /img/containers/images/opendeck-main-screen.png/83923b9f82a052d1a533ece0a65b2074/opendeck-main-screen.webp 1280w,
                             
-                                /img/containers/images/stream-deck-main-window.png/7c2ab63ffdd9ff22cfd0ec7d01a43dae/stream-deck-main-window.webp 1440w,
+                                /img/containers/images/opendeck-main-screen.png/d6463f8baa445781ba5ee30a38aece4d/opendeck-main-screen.webp 1440w,
                             
-                                /img/containers/images/stream-deck-main-window.png/f238d1675b37ecde9c5b1c5299f0cc88/stream-deck-main-window.webp 1536w,
+                                /img/containers/images/opendeck-main-screen.png/9b86bcb7705a6bc448bac116f5522317/opendeck-main-screen.webp 1536w,
                             
-                                /img/containers/images/stream-deck-main-window.png/b44fbceea0986c84dc313b951380a460/stream-deck-main-window.webp 1680w
+                                /img/containers/images/opendeck-main-screen.png/883d7b5c90b4d150c4b94f65572f93fc/opendeck-main-screen.webp 1680w
                             
                         "
                         sizes="
@@ -760,23 +730,23 @@
                     <source
                         srcset="
                             
-                                /img/containers/images/stream-deck-main-window.png/66538b6cda4fbdf7c14e341c78f72c31/stream-deck-main-window.jpg 320w,
+                                /img/containers/images/opendeck-main-screen.png/fd234c29c657145b67c49ce552edc6fd/opendeck-main-screen.jpg 320w,
                             
-                                /img/containers/images/stream-deck-main-window.png/20f402cca00477552b46a9d55d21f237/stream-deck-main-window.jpg 480w,
+                                /img/containers/images/opendeck-main-screen.png/c9d0e335897ee8de52b3eca83fed47d9/opendeck-main-screen.jpg 480w,
                             
-                                /img/containers/images/stream-deck-main-window.png/308e594915891e0ab9524e0d7eda3a87/stream-deck-main-window.jpg 640w,
+                                /img/containers/images/opendeck-main-screen.png/348fdbfe9fc3476d09d8261c910c6111/opendeck-main-screen.jpg 640w,
                             
-                                /img/containers/images/stream-deck-main-window.png/b90a719a5dae14abe8cbfbffb5db1019/stream-deck-main-window.jpg 768w,
+                                /img/containers/images/opendeck-main-screen.png/28dea1c99d022367f44a1c42918f1a53/opendeck-main-screen.jpg 768w,
                             
-                                /img/containers/images/stream-deck-main-window.png/0be9705e12a1f09513f4f4f009720b41/stream-deck-main-window.jpg 1024w,
+                                /img/containers/images/opendeck-main-screen.png/f7a19519adfe2bdb74845e65a99965e5/opendeck-main-screen.jpg 1024w,
                             
-                                /img/containers/images/stream-deck-main-window.png/b580142b8a1444c7b6ef105d7f543d17/stream-deck-main-window.jpg 1280w,
+                                /img/containers/images/opendeck-main-screen.png/6fb8c64d978766ea26e30cf49542c2bf/opendeck-main-screen.jpg 1280w,
                             
-                                /img/containers/images/stream-deck-main-window.png/e7d52476ecf99e0b22e669e354e10892/stream-deck-main-window.jpg 1440w,
+                                /img/containers/images/opendeck-main-screen.png/819291cd77f5bcbe9637b07631b30664/opendeck-main-screen.jpg 1440w,
                             
-                                /img/containers/images/stream-deck-main-window.png/4166ebf92c48565025ea8640f6f0a7fc/stream-deck-main-window.jpg 1536w,
+                                /img/containers/images/opendeck-main-screen.png/cf7175044a192ce09401113a8ac08672/opendeck-main-screen.jpg 1536w,
                             
-                                /img/containers/images/stream-deck-main-window.png/8dbbc7c73e582d500fb2f57b8145bf0a/stream-deck-main-window.jpg 1680w
+                                /img/containers/images/opendeck-main-screen.png/87ebe4a437624c2813de2460e89fdf70/opendeck-main-screen.jpg 1680w
                             
                         "
                         sizes="
@@ -786,15 +756,17 @@
                     >
                 
                 <img
-                    width="1039"
-                    height="478"
-                    src="/img/containers/images/stream-deck-main-window.png/df8459021675fb458f22acfcb3cbf8ed/stream-deck-main-window.png"
-                    alt="Streamdeck main window with some icons to operate the Stream Deck device."
+                    width="897"
+                    height="675"
+                    src="/img/containers/images/opendeck-main-screen.png/8e178cb70b04ccbdcad2d4ded3492e3e/opendeck-main-screen.png"
+                    alt=""
                     
                         class="
         h-auto
         "
                     
+                    
+                        aria-hidden="true"
                     
                     
                         loading="lazy"
@@ -810,7 +782,7 @@
     <!-- /typography/_caption.antlers.html -->
 
     <figcaption class="italic border-b border-brightgreen inline-block mt-0 text-sm text-neutral ">
-        Stream Deck UI main window 
+        OpenDeck main window 
     </figcaption>
 
 <!-- End: /typography/_caption.antlers.html -->
@@ -821,7 +793,7 @@
     
     <!-- /components/_text.antlers.html -->
 <div class="size-lg">
-    <p>For the icons in the screenshot above I have used icons from Anggara on <a href="https://www.flaticon.com/authors/anggara/color-lineal-color?author_id=1427&amp;type=standard">flaticon.com</a>.</p><h2>Conclusion</h2><p>While Elgato might not officially support Ubuntu for the Stream Deck, the availability of community-driven solutions like <code>streamdeck-linux-gui</code> opens up the possibility for Ubuntu users to harness the potential of this powerful hardware. With the ability to create personalized shortcuts and workflows, the Stream Deck becomes an invaluable tool for boosting productivity and efficiency on Ubuntu systems.</p><h2>More information</h2><p><a href="https://github.com/timothycrosley/streamdeck-ui">Official </a><code>streamdeck-linux-gui</code><a href="https://github.com/timothycrosley/streamdeck-ui"> repository on Github</a>.</p><p><a href="https://timothycrosley.github.io/streamdeck-ui/">Extended </a><code>streamdeck-ui</code><a href="https://github.com/streamdeck-linux-gui/streamdeck-linux-gui/blob/main/docs/installation/ubuntu.md"> documentation.</a></p>
+    <p>For the icons in the screenshot above I have used icons from Anggara on <a href="https://www.flaticon.com/authors/anggara/color-lineal-color?author_id=1427&amp;type=standard">flaticon.com</a>.</p><h2>Conclusion</h2><p>While Elgato might not officially support Ubuntu for the Stream Deck, the availability of community-driven solutions like OpenDeck opens up the possibility for Ubuntu users to harness the potential of this powerful hardware. With the ability to create personalized shortcuts and workflows, the Stream Deck becomes an invaluable tool for boosting productivity and efficiency on Ubuntu systems.</p>
 </div>
 <!-- End: /components/_text.antlers.html -->
 </article>
