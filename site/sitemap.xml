@@ -204,8 +204,16 @@
         
             
                 <url>
+                    <loc>https://marcelbootsman.nl/adhd-the-day-i-got-answers</loc>
+                    <lastmod>2025-07-31</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.5</priority>
+                    
+                </url>
+            
+                <url>
                     <loc>https://marcelbootsman.nl/my-recent-experiences-with-adhd</loc>
-                    <lastmod>2025-07-20</lastmod>
+                    <lastmod>2025-07-31</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>
                     
