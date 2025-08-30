@@ -58,7 +58,7 @@
     <meta property="og:description" content="I discovered an ingenious way to selectively load scripts using Antlers stacks for certain posts while using picture galleries. Read how I did it.">
 
 
-    <meta property="og:image" content="https://marcelbootsman.nl/img/containers/social_images/optimize-statamic-script-loading-with-the-use-of-antlers-stacks-og-1697113471.png/b52f623d41cc0c33203474be18912448/optimize-statamic-script-loading-with-the-use-of-antlers-stacks-og-1697113471.png">
+    <meta property="og:image" content="https://marcelbootsman.nl/img/containers/social_images/optimize-statamic-script-loading-with-the-use-of-antlers-stacks-og-1756580788.png/9f77b4342df845114b02f4e97e689c6b/optimize-statamic-script-loading-with-the-use-of-antlers-stacks-og-1756580788.png">
 
 
 
@@ -721,8 +721,20 @@
             <div class="grid grid-cols-4">
                 
                     
+                        <!-- /page_builder/_avatar.antlers.html -->
+<section class="hidden md:block">
+        
+        <img class="px-4" style="border-radius: 500px;" src="/images/marcel-bootsman-portretfoto-mei-2025-600x600-rond.webp" alt="Portretfoto van Marcel Bootsman" width="600" height="600" />
+        
+</section>
+<!-- End: /page_builder/_avatar.antlers.html -->
+                    
+                
+                    
                 
 
+                
+                    
                 
                     
                         <!-- /page_builder/_article.antlers.html -->
@@ -747,47 +759,9 @@
 >
     <!-- /components/_text.antlers.html -->
 <div class="size-lg">
-    <p>Creating dynamic and engaging websites can be both challenging and rewarding. For this website I am using Statamic, with Static Site Generation and some of my posts require extra scripts and CSS to be displayed correctly. Since I do not want to load these scripts when they are not needed, I looked for a solution.</p><p>Today, I discovered an ingenious way to achieve this using Antlers stacks, allowing me to include scripts selectively for certain posts while using picture galleries. </p><h2>The power of Antlers stacks</h2><p>Antlers is the <a href="https://statamic.dev/antlers">default templating language used in Statamic</a>. It offers a straightforward and elegant way to customize the presentation of data on your website. One of the powerful features is the ability to create stacks, a concept that allows you to inject content into predefined sections of your templates. For the WordPress devs out there, this works like how a hook works in WordPress.</p><p>For this project, I wanted to include scripts in some of my blog posts to enhance the user experience. However, I didn&#039;t want to load these scripts for every post, as that could affect performance and load times. Antlers stacks provided the perfect solution.</p><h2>Selectively adding scripts</h2><h3>1. Define a Stack</h3><p>To begin, I created an Antlers stack named <code>gallery_scripts</code> in my base layout template, <code>/resources/views/layout.antlers.html</code>. This stack acts as a designated place for including scripts. To include the stack in the <code>head</code> section of the HTML I added the following code between the <code>&lt;head&gt;..&lt;/head&gt;</code> tags:</p>
+    <h2>About Marcel Bootsman</h2><p>Marcel discovered the web in 1995. Since then he has paid attention to and worked with lots of technologies and founded his own WordPress oriented business <a href="https://nostromo.nl">nostromo.nl</a> in 2009.</p><p>Currently Marcel is Partnerships & Community Manager EMEA at <a href="/kinsta">Kinsta</a>. where he helps clients and partners grow with their business with <a href="/kinsta-managed-wordpress-hosting">Managed Hosting for WordPress</a>, and <a href="/kinsta-application-database-hosting">Application, Database</a>, <a href="https://kinsta.com/static-site-hosting/">Static site hosting</a>.</p><p>You can contact Marcel on a diverse range of online platforms. Please see the Connect section on the <a href="/#connect">homepage</a> for the details.</p>
 </div>
 <!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">{{</span><span style="color: #A6ACCD;"> stack</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;">gallery_scripts </span><span style="color: #89DDFF;">}}</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>PHP</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <h3>Edit the component template</h3><p>To trigger the insertion of the desired scripts and CSS, I needed to change the template that was used for a gallery. This way, every gallery automatically gets the rights scripts included in the page. The template location is <code>/resources/views/components/_gallery.antlers.html</code>.</p><p>Using the following code the desired scripts get added to the <code>head</code> section of the page, because of using the right stack identifier <code>gallery_scripts</code>. Oh, I’m using <a href="https://cdnjs.com/">cdnjs</a> for fast delivery of the desired scripts.</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">{{</span><span style="color: #A6ACCD;"> push</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;">gallery_scripts </span><span style="color: #89DDFF;">}}</span></div><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #A6ACCD;">script src</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> integrity</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">sha512-DUC8yqWf7ez3JD1jszxCWSVB0DMP78eOyBpMa5aJki1bIRARykviOuImIczkxlj1KhVSyS16w2FSQetkD4UU2w==</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> crossorigin</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">anonymous</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> referrerpolicy</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">no-referrer</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">&gt;&lt;/</span><span style="color: #A6ACCD;">script</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #A6ACCD;">script src</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.4/js/jquery.swipebox.min.js</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> integrity</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">sha512-RcpE0ybOapw3Pl77Nz/la9grsKWw3MQXBoeiCg1y+psaqTNcSIQ8JYn4p3wG5XakxdyEYl/r22NLp3EYsX4SXg==</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> crossorigin</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">anonymous</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> referrerpolicy</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">no-referrer</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">&gt;&lt;/</span><span style="color: #A6ACCD;">script</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #A6ACCD;">link rel</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">stylesheet</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> href</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.4/css/swipebox.css</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> integrity</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">sha512-aiphM8HYk085AcAAQwRkx5AcM9HvzCMjsaUirRoLEIdFCj6pkXgUgz73UNcG8Rr4CdvMOo7ApDDVNjpZOKx+CA==</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> crossorigin</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">anonymous</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> referrerpolicy</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">no-referrer</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">/&gt;</span></div><div class='line'><span style="color: #89DDFF;">{{</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">/</span><span style="color: #A6ACCD;">push</span><span style="color: #89DDFF;">:</span><span style="color: #A6ACCD;">gallery_scripts </span><span style="color: #89DDFF;">}}</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>php</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <p>By using Antlers stacks, I could customize the behavior of my posts dynamically. For posts which include a gallery, the specified scripts were loaded automatically, enhancing the content&#039;s interactivity. </p><p>This approach not only improved the user experience but also optimized performance by loading scripts only when needed, ultimately resulting in faster page load times and less used energy.</p><h2>Conclusion</h2><p>Antlers stacks offer an elegant and versatile solution for creating customized posts in a content-rich website. By selectively including scripts and showcasing galleries as required, I was able to create a more engaging and responsive web experience for my audience. If you&#039;re looking to tailor your content presentation, don&#039;t hesitate to explore the power of Antlers stacks in your web development projects.</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_notice_block.antlers.html -->
-<div class="notice rounded-md p-4 my-4 w-full bg-brightgreen">
-    <p>Photo by <a href="https://unsplash.com/@will_bolding_photography">Will Bolding</a></p>
-    
-</div>
-<!-- End: /components/_notice_block.antlers.html -->
 </article>
 <!-- End: /typography/_prose.antlers.html -->
 
