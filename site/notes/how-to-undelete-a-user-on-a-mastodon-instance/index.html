@@ -706,20 +706,8 @@
             <div class="grid grid-cols-4">
                 
                     
-                        <!-- /page_builder/_avatar.antlers.html -->
-<section class="hidden md:block">
-        
-        <img src="/images/marcel-bootsman.webp" alt="Picture of Marcel Bootsman" width="200" height="200" />
-        
-</section>
-<!-- End: /page_builder/_avatar.antlers.html -->
-                    
-                
-                    
                 
 
-                
-                    
                 
                     
                         <!-- /page_builder/_article.antlers.html -->
@@ -744,9 +732,32 @@
 >
     <!-- /components/_text.antlers.html -->
 <div class="size-lg">
-    <h2>About Marcel Bootsman</h2><p>Marcel discovered the web in 1995. Since then he has paid attention to and worked with lots of technologies and founded his own WordPress oriented business <a href="https://nostromo.nl">nostromo.nl</a> in 2009.</p><p>Currently Marcel is Partnerships & Community Manager EMEA at <a href="/kinsta">Kinsta</a>. where he helps clients and partners grow with their business with <a href="/kinsta-managed-wordpress-hosting">Managed Hosting for WordPress</a>, and <a href="/kinsta-application-database-hosting">Application, Database</a>, <a href="https://kinsta.com/static-site-hosting/">Static site hosting</a>.</p><p>You can contact Marcel on a diverse range of online platforms. Please see the Connect section on the <a href="/#connect">homepage</a> for the details.</p>
+    <p>Mastodon, the decentralized social network, offers a flexible and privacy-focused alternative to mainstream social media platforms. However, managing a Mastodon instance comes with its own set of challenges, including handling user accounts. </p><p>One issue that administrators might face is the need to undelete a user who was accidentally deleted or wants to restore their account. This small note will guide you through the process of undeleting a user on a Mastodon instance and explore some common use cases for this action.</p><h2>Use cases for undeleting a user</h2><ol start="1"><li><p><strong>Accidental deletion</strong>:</p><ul><li><p>An admin might mistakenly delete a user account. Restoring the account prevents data loss and maintains the user’s presence on the platform.</p></li></ul></li><li><p><strong>User regrets deleting their account</strong>:</p><ul><li><p>Sometimes users delete their accounts impulsively and later regret the decision. Allowing admins to restore these accounts provides flexibility and user satisfaction.</p></li></ul></li><li><p><strong>Security and moderation Issues</strong>:</p><ul><li><p>In cases where an account was deleted due to a security issue or moderation error, undeleting the account can help in rectifying mistakes and ensuring fair treatment of users.</p></li></ul></li><li><p><strong>Account recovery for inactive users</strong>:</p><ul><li><p>Users who return to the platform after a long period of inactivity might find their accounts deleted. Restoring these accounts can help in re-engaging users and maintaining community continuity.</p></li></ul></li></ol><h2>Step-by-Step guide to undeleting a user</h2><p>Undeleting a user on Mastodon requires access to the instance’s command prompt. Here are the steps you need to follow:</p><ol start="1"><li><p><strong>Access the Mastodon instance</strong>:</p><ul><li><p>Connect to your server where the Mastodon instance is running. You will need appropriate user access to run administrative commands.</p></li></ul></li><li><p><strong>Identify the user</strong>:</p><ul><li><p>Ensure you have the username or email of the user who needs to be undeleted. This information is crucial for the restoration process.</p></li></ul></li><li><p><strong>Use </strong><code>tootctl</code> to restore the user:</p><ul><li><p>The <code>tootctl</code> tool provides a straightforward command to undelete a user. This command reuses an old USERNAME with associated EMAIL after its account has been deleted and re-enables the user account.</p></li></ul></li></ol>
 </div>
 <!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_code_block.antlers.html -->
+<div class="p2 my-4 size-lg">
+    <pre class='relative'><code class='torchlight' 
+                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">tootctl</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">accounts</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">create</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">USERNAME</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--reattach</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--force</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">--email</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">EMAIL</span></div></code>
+                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>bash</div></pre>
+</div>
+<!-- End: /components/_code_block.antlers.html -->
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>After running the command, it&#039;s essential to verify that the user has been successfully restored. You can check this through the Mastodon web interface or by querying the account details again.</p><h2>Conclusion</h2><p>Undeleting a user on a Mastodon instance is a valuable skill for administrators, ensuring that mistakes can be rectified and users can return to the platform smoothly. </p><p>By using the <code>tootctl</code> tool, admins can efficiently manage user accounts and maintain a healthy and active community. Remember to always back up your instance before making any changes to avoid any unintended consequences.</p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_notice_block.antlers.html -->
+<div class="notice rounded-md p-4 my-4 w-full bg-brightgreen">
+    <p>Cover photo by <a href="https://unsplash.com/@sigmund">rivage</a></p>
+    
+</div>
+<!-- End: /components/_notice_block.antlers.html -->
 </article>
 <!-- End: /typography/_prose.antlers.html -->
 
