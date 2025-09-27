@@ -165,48 +165,6 @@
 
 </script>
 
-<script>
-    /* Generate a share link for the user's Mastodon domain */
-    function MastodonShare(e) {
-        // Get the source text
-        src = e.getAttribute("data-src");
-
-        // Get the Mastodon domain
-        domain = prompt("Enter your Mastodon domain", "toot.re");
-
-        if (domain == "" || domain == null) {
-            return;
-        }
-
-        // Build the URL
-        url = "https://" + domain + "/share?text=" + src;
-
-        // Open a window on the share page
-        window.open(url, '_blank');
-    }
-
-    function doSomethingWhenDocumentReady(functionToExecute) {
-        /* $(document).ready() without javascript
-        */
-        if (document.readyState === "complete" ||
-            (document.readyState !== "loading" && !document.documentElement.doScroll)
-        ) {
-            functionToExecute();
-        } else {
-            document.addEventListener("DOMContentLoaded", functionToExecute);
-        }
-    }
-
-    /* Call this on document.ready() */
-    function unhideMastodonShare() {
-        var button = document.getElementById('mastodonshare');
-        button.classList.remove('hidden');
-        button.classList.add('inline-flex');
-    }
-    doSomethingWhenDocumentReady(unhideMastodonShare);
-
-</script>
-
         
         
         <!-- Matomo -->
@@ -688,7 +646,7 @@
 </span>
     
         
-            <img class="mt-2 mb-2 rounded-md" src="/img/containers/images/doves-and-the-eiffel-tower.jpg/6651effc755c89cea016b4378e494566/doves-and-the-eiffel-tower.webp" width="860" height="450"
+            <img class="mt-2 mb-2 rounded-md" src="/img/containers/images/doves-and-the-eiffel-tower.jpg/6651effc755c89cea016b4378e494566/doves-and-the-eiffel-tower.webp" width="0" height="0"
                 alt="Two doves in front of the Eiffel tower">
         
     
