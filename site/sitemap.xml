@@ -80,6 +80,14 @@
                 </url>
             
                 <url>
+                    <loc>https://marcelbootsman.nl/notes/how-to-schedule-a-one-time-reboot-on-ubuntu</loc>
+                    <lastmod>2025-09-27</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.5</priority>
+                    
+                </url>
+            
+                <url>
                     <loc>https://marcelbootsman.nl/notes/devices-stuck-in-adopting-docker-unifi-controller</loc>
                     <lastmod>2025-03-07</lastmod>
                     <changefreq>weekly</changefreq>

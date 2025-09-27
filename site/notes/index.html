@@ -106,51 +106,10 @@
         
 
         
+        <link rel="alternate" type="application/atom+xml" title="marcelbootsman.nl" href="https://marcelbootsman.nl/feed/atom" />
+<link rel="alternate" type="application/rss+xml" title="marcelbootsman.nl" href="https://marcelbootsman.nl/feed" />
         
         
-        
-<script>
-    /* Generate a share link for the user's Mastodon domain */
-    function MastodonShare(e) {
-        // Get the source text
-        src = e.getAttribute("data-src");
-
-        // Get the Mastodon domain
-        domain = prompt("Enter your Mastodon domain", "toot.re");
-
-        if (domain == "" || domain == null) {
-            return;
-        }
-
-        // Build the URL
-        url = "https://" + domain + "/share?text=" + src;
-
-        // Open a window on the share page
-        window.open(url, '_blank');
-    }
-
-    function doSomethingWhenDocumentReady(functionToExecute) {
-        /* $(document).ready() without javascript
-        */
-        if (document.readyState === "complete" ||
-            (document.readyState !== "loading" && !document.documentElement.doScroll)
-        ) {
-            functionToExecute();
-        } else {
-            document.addEventListener("DOMContentLoaded", functionToExecute);
-        }
-    }
-
-    /* Call this on document.ready() */
-    function unhideMastodonShare() {
-        var button = document.getElementById('mastodonshare');
-        button.classList.remove('hidden');
-        button.classList.add('inline-flex');
-    }
-    doSomethingWhenDocumentReady(unhideMastodonShare);
-
-</script>
-
         
         
         <!-- Matomo -->
@@ -650,18 +609,21 @@
      
     <div class="border-solid border-brightgreen border-b my-4">
         
-        <h2 class="m-0 py-2"> 2025<span class="ml-1 inline-block align-top text-xs text-gray-500" title="Number of notes for 2025: 2">(2)</span></h2>
+        <h2 class="m-0 py-2"> 2025<span class="ml-1 inline-block align-top text-xs text-gray-500" title="Number of notes for 2025: 3">(3)</span></h2>
         
         
         <div class="flex flex-wrap w-full">
             
             
 
-            <h3 class="m-0 py-2 w-full md:w-1/4"> September<span class="ml-1 inline-block align-top text-xs text-gray-500" title="Number of notes for September,  2025: 1">(1)</span></h3>
+            <h3 class="m-0 py-2 w-full md:w-1/4"> September<span class="ml-1 inline-block align-top text-xs text-gray-500" title="Number of notes for September,  2025: 2">(2)</span></h3>
             <div class="w-full md:w-3/4 flex flex-colrow justify-items-end ">
                 <div class="pt-2 pb-4">
                     
                     <div class="p-0 m-0"><a href="/notes/how-to-restore-firefoxs-behavior-of-loading-all-tabs-at-startup">How to restore Firefox’s behavior of loading all tabs at startup</a></div>
+                    <span class="text-xs text-gray-500 ">September 27th, 2025</span>
+                    
+                    <div class="p-0 m-0"><a href="/notes/how-to-schedule-a-one-time-reboot-on-ubuntu">How to schedule a one-time reboot on Ubuntu</a></div>
                     <span class="text-xs text-gray-500 ">September 27th, 2025</span>
                     
                 </div>

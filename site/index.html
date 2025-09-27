@@ -106,9 +106,52 @@
         
 
         
+        <link rel="alternate" type="application/atom+xml" title="marcelbootsman.nl" href="https://marcelbootsman.nl/feed/atom" />
+<link rel="alternate" type="application/rss+xml" title="marcelbootsman.nl" href="https://marcelbootsman.nl/feed" />
         
         
-        
+<script>
+    /* Generate a share link for the user's Mastodon domain */
+    function MastodonShare(e) {
+        // Get the source text
+        src = e.getAttribute("data-src");
+
+        // Get the Mastodon domain
+        domain = prompt("Enter your Mastodon domain", "toot.re");
+
+        if (domain == "" || domain == null) {
+            return;
+        }
+
+        // Build the URL
+        url = "https://" + domain + "/share?text=" + src;
+
+        // Open a window on the share page
+        window.open(url, '_blank');
+    }
+
+    function doSomethingWhenDocumentReady(functionToExecute) {
+        /* $(document).ready() without javascript
+        */
+        if (document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            functionToExecute();
+        } else {
+            document.addEventListener("DOMContentLoaded", functionToExecute);
+        }
+    }
+
+    /* Call this on document.ready() */
+    function unhideMastodonShare() {
+        var button = document.getElementById('mastodonshare');
+        button.classList.remove('hidden');
+        button.classList.add('inline-flex');
+    }
+    doSomethingWhenDocumentReady(unhideMastodonShare);
+
+</script>
+
         
         
         <!-- Matomo -->
@@ -641,7 +684,7 @@
                 
                 <a href="/my-august-sabbatical-experiences">
                     
-                    <img class="shadow-md m-0" src="/img/containers/images/my-august-sabbatical-experiences.jpg/fa32a6a573a6c68d697fdb3245e359fe/my-august-sabbatical-experiences.webp" width="600" height="400" alt="My August sabbatical experiences">
+                    <img class="shadow-md m-0" src="/img/containers/images/my-august-sabbatical-experiences.jpg/fa32a6a573a6c68d697fdb3245e359fe/my-august-sabbatical-experiences.webp" width="0" height="0" alt="My August sabbatical experiences">
                     
                 </a>
                 
@@ -658,7 +701,7 @@
                 
                 <a href="/adhd-the-day-i-got-answers">
                     
-                    <img class="shadow-md m-0" src="/img/containers/images/they-day-i-got-answers.jpg/9f12b1261342a89268cc80d776355a63/they-day-i-got-answers.webp" width="600" height="400" alt="A forest from above with a bright cloud deck and some fog rising up from the trees">
+                    <img class="shadow-md m-0" src="/img/containers/images/they-day-i-got-answers.jpg/9f12b1261342a89268cc80d776355a63/they-day-i-got-answers.webp" width="0" height="0" alt="A forest from above with a bright cloud deck and some fog rising up from the trees">
                     
                 </a>
                 
@@ -675,7 +718,7 @@
                 
                 <a href="/my-recent-experiences-with-adhd">
                     
-                    <img class="shadow-md m-0" src="/img/containers/images/distraction.png/778a62e8c255105733a29f168ea98dd3/distraction.webp" width="600" height="400" alt="A view on the sea with text "Distraction isn't always a bad thing, it depends on the, oh look! A plane!">
+                    <img class="shadow-md m-0" src="/img/containers/images/distraction.png/778a62e8c255105733a29f168ea98dd3/distraction.webp" width="0" height="0" alt="A view on the sea with text "Distraction isn't always a bad thing, it depends on the, oh look! A plane!">
                     
                 </a>
                 
@@ -692,7 +735,7 @@
                 
                 <a href="/how-to-migrate-mastodon-local-file-storage-to-cloudflare-r2">
                     
-                    <img class="shadow-md m-0" src="/img/containers/images/cover-image-mastodon-r2.jpg/7c59f029bab1d9962f68c5a9b350be6e/cover-image-mastodon-r2.webp" width="600" height="400" alt="A forklift loading a pallet of boxes photographed from inside a trailer">
+                    <img class="shadow-md m-0" src="/img/containers/images/cover-image-mastodon-r2.jpg/7c59f029bab1d9962f68c5a9b350be6e/cover-image-mastodon-r2.webp" width="0" height="0" alt="A forklift loading a pallet of boxes photographed from inside a trailer">
                     
                 </a>
                 
@@ -709,7 +752,7 @@
                 
                 <a href="/firefox-is-the-essential-independent-browser">
                     
-                    <img class="shadow-md m-0" src="/img/containers/images/firefox.png/c02df15e7095b5ec99d3b3df147b5634/firefox.webp" width="600" height="400" alt="Firefox logo on a purple-ish background">
+                    <img class="shadow-md m-0" src="/img/containers/images/firefox.png/c02df15e7095b5ec99d3b3df147b5634/firefox.webp" width="0" height="0" alt="Firefox logo on a purple-ish background">
                     
                 </a>
                 
@@ -726,7 +769,7 @@
                 
                 <a href="/a-personal-2023-recap">
                     
-                    <img class="shadow-md m-0" src="/img/containers/images/cover-image-2023.jpg/add1d7f4dc3a15079d69ae6cd1112eb8/cover-image-2023.webp" width="600" height="400" alt="2023 typed on a piece of torn paper on a black background">
+                    <img class="shadow-md m-0" src="/img/containers/images/cover-image-2023.jpg/add1d7f4dc3a15079d69ae6cd1112eb8/cover-image-2023.webp" width="0" height="0" alt="2023 typed on a piece of torn paper on a black background">
                     
                 </a>
                 
@@ -752,7 +795,7 @@
                 
                 <a href="/notes/how-to-restore-firefoxs-behavior-of-loading-all-tabs-at-startup">
                     
-                    <img class="shadow-md m-0" src="/img/containers/images/restore-firefox-tab-loading-behavior.jpg/d6d8561aaecfa2cc2b120b449910cdce/restore-firefox-tab-loading-behavior.webp" width="860" height="450" alt="Schematic picture of a Firefox window">
+                    <img class="shadow-md m-0" src="/img/containers/images/restore-firefox-tab-loading-behavior.jpg/d6d8561aaecfa2cc2b120b449910cdce/restore-firefox-tab-loading-behavior.webp" width="0" height="0" alt="Schematic picture of a Firefox window">
                     
                 </a>
                 
@@ -767,9 +810,26 @@
         <div class="sm:flex py-2 ">
             <div class="pr-4 basis-1/3 shrink-0 ">
                 
+                <a href="/notes/how-to-schedule-a-one-time-reboot-on-ubuntu">
+                    
+                    <img class="shadow-md m-0" src="/img/containers/images/how-to-schedule-a-one-time-reboot-on-ubuntu.png/5285cadb1983ba63fbf79eab981fe367/how-to-schedule-a-one-time-reboot-on-ubuntu.webp" width="0" height="0" alt="">
+                    
+                </a>
+                
+            </div>
+            <div>
+                <a href="/notes/how-to-schedule-a-one-time-reboot-on-ubuntu" class="inline-block font-bold">How to schedule a one-time reboot on&nbsp;Ubuntu</a>
+                <span class="font-mono text-xs mb-3 block">September 27th, 2025</span>
+                Learn how to schedule a one-time reboot on Ubuntu using the at command. A simple alternative to cron for planned restarts with easy cancel options.
+            </div>
+        </div>
+        
+        <div class="sm:flex py-2 ">
+            <div class="pr-4 basis-1/3 shrink-0 ">
+                
                 <a href="/notes/devices-stuck-in-adopting-docker-unifi-controller">
                     
-                    <img class="shadow-md m-0" src="/img/containers/images/synology-unifi.png/7447787dd0ec53d6a84dc2f5a7cce845/synology-unifi.webp" width="860" height="450" alt="Image of a DiskStation DS1621+ and a Ubiquiti UniFi U6+">
+                    <img class="shadow-md m-0" src="/img/containers/images/synology-unifi.png/7447787dd0ec53d6a84dc2f5a7cce845/synology-unifi.webp" width="0" height="0" alt="Image of a DiskStation DS1621+ and a Ubiquiti UniFi U6+">
                     
                 </a>
                 
@@ -786,7 +846,7 @@
                 
                 <a href="/notes/change-user-folder-locations-ubuntu">
                     
-                    <img class="shadow-md m-0" src="/img/containers/images/folders.jpg/df94e9eb28067271e4a33f647c4f289f/folders.webp" width="860" height="450" alt="Stack of big folders or binders">
+                    <img class="shadow-md m-0" src="/img/containers/images/folders.jpg/df94e9eb28067271e4a33f647c4f289f/folders.webp" width="0" height="0" alt="Stack of big folders or binders">
                     
                 </a>
                 
@@ -803,7 +863,7 @@
                 
                 <a href="/notes/how-to-run-steam-windows-games-on-ubuntu">
                     
-                    <img class="shadow-md m-0" src="/img/containers/images/cover-image-ubuntu-steam.jpg/f2bad2843868845620183727128b07ee/cover-image-ubuntu-steam.webp" width="860" height="450" alt="Image showing the home screen of Steam with Command & Conquer visible.
+                    <img class="shadow-md m-0" src="/img/containers/images/cover-image-ubuntu-steam.jpg/f2bad2843868845620183727128b07ee/cover-image-ubuntu-steam.webp" width="0" height="0" alt="Image showing the home screen of Steam with Command & Conquer visible.
 The window is on a pinkish background with a Numbat in the grass">
                     
                 </a>
@@ -821,7 +881,7 @@ The window is on a pinkish background with a Numbat in the grass">
                 
                 <a href="/notes/how-to-undelete-a-user-on-a-mastodon-instance">
                     
-                    <img class="shadow-md m-0" src="/img/containers/images/cover-image-recycle.jpg/31489bead034a51c90ee9841442eb1a5/cover-image-recycle.webp" width="860" height="450" alt="Picture of a blue garbage container with a recycle icon on it">
+                    <img class="shadow-md m-0" src="/img/containers/images/cover-image-recycle.jpg/31489bead034a51c90ee9841442eb1a5/cover-image-recycle.webp" width="0" height="0" alt="Picture of a blue garbage container with a recycle icon on it">
                     
                 </a>
                 
@@ -830,23 +890,6 @@ The window is on a pinkish background with a Numbat in the grass">
                 <a href="/notes/how-to-undelete-a-user-on-a-mastodon-instance" class="inline-block font-bold">How to undelete a user on a Mastodon instance: A small guide for&nbsp;admins</a>
                 <span class="font-mono text-xs mb-3 block">May 30th, 2024</span>
                 This small note will guide you through the process of undeleting a user on a Mastodon instance and explore some common use cases for this action.
-            </div>
-        </div>
-        
-        <div class="sm:flex py-2 ">
-            <div class="pr-4 basis-1/3 shrink-0 ">
-                
-                <a href="/notes/enable-fingerprint-authentication-for-sudo-on-ubuntu">
-                    
-                    <img class="shadow-md m-0" src="/img/containers/images/cover-image-fingerprint.jpg/14a8142b982c7f1096328b170502fffc/cover-image-fingerprint.webp" width="860" height="450" alt="A white lit fingerprint on a darkblue background, with a dimmed lit circle around it.">
-                    
-                </a>
-                
-            </div>
-            <div>
-                <a href="/notes/enable-fingerprint-authentication-for-sudo-on-ubuntu" class="inline-block font-bold">Enable fingerprint authentication for sudo on&nbsp;Ubuntu</a>
-                <span class="font-mono text-xs mb-3 block">May 14th, 2024</span>
-                Follow this short step-by-step guide to enable fingerprint authentication for using it on the command line in Ubuntu
             </div>
         </div>
         
