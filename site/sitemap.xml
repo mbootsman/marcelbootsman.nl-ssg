@@ -72,6 +72,14 @@
         
             
                 <url>
+                    <loc>https://marcelbootsman.nl/notes/events</loc>
+                    <lastmod>2025-10-26</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.5</priority>
+                    
+                </url>
+            
+                <url>
                     <loc>https://marcelbootsman.nl/notes/how-to-restore-firefoxs-behavior-of-loading-all-tabs-at-startup</loc>
                     <lastmod>2025-09-27</lastmod>
                     <changefreq>weekly</changefreq>
