@@ -706,8 +706,20 @@
             <div class="grid grid-cols-4">
                 
                     
+                        <!-- /page_builder/_avatar.antlers.html -->
+<section class="hidden md:block">
+        
+        <img class="px-4" style="border-radius: 500px;" src="/images/marcel-bootsman-portretfoto-mei-2025-600x600-rond.webp" alt="Portretfoto van Marcel Bootsman" width="600" height="600" />
+        
+</section>
+<!-- End: /page_builder/_avatar.antlers.html -->
+                    
+                
+                    
                 
 
+                
+                    
                 
                     
                         <!-- /page_builder/_article.antlers.html -->
@@ -732,32 +744,9 @@
 >
     <!-- /components/_text.antlers.html -->
 <div class="size-lg">
-    <h2>Step 1</h2><p>Go to the directory where your video files are.</p><h2>Step 2</h2><p>Make sure you have the desired subtitle files ( `.srt` ) and that they have the same filename as the source video files. So, if you have <code>videofile_01.mp4</code>, you should have <code>videofile_01.srt</code>.</p><h2>Step 3</h2><p>Make sure <a href="https://ffmpeg.org/">ffmpeg</a> is installed.</p><h2>Step 4</h2><p>Copy the below script to a file, for instance: `add_subtitles.sh` and modify the file properties to make it executable. </p><p><code>chmod +x add_subtitles.sh</code></p>
+    <h2>About Marcel Bootsman</h2><p>Marcel discovered the web in 1995. Since then he has paid attention to and worked with lots of technologies and founded his own WordPress oriented business <a href="https://nostromo.nl">nostromo.nl</a> in 2009.</p><p>Currently Marcel is Partnerships & Community Manager EMEA at <a href="/kinsta">Kinsta</a>. where he helps clients and partners grow with their business with <a href="/kinsta-managed-wordpress-hosting">Managed Hosting for WordPress</a>, and <a href="/kinsta-application-database-hosting">Application, Database</a>, <a href="https://kinsta.com/static-site-hosting/">Static site hosting</a>.</p><p>You can contact Marcel on a diverse range of online platforms. Please see the Connect section on the <a href="/#connect">homepage</a> for the details.</p>
 </div>
 <!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_code_block.antlers.html -->
-<div class="p2 my-4 size-lg">
-    <pre class='relative'><code class='torchlight' 
-                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #676E95;">#!/bin/bash</span></div><div class='line'><span style="color: #89DDFF;">for</span><span style="color: #A6ACCD;"> i </span><span style="color: #89DDFF;">in</span><span style="color: #A6ACCD;"> ./</span><span style="color: #89DDFF;">*</span><span style="color: #A6ACCD;">.mp4</span></div><div class='line'><span style="color: #A6ACCD;">  </span><span style="color: #89DDFF;">do</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #FFCB6B;">ffmpeg</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">-i</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">$i</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">-i</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&quot;${</span><span style="color: #C3E88D;">i</span><span style="color: #89DDFF;">%</span><span style="color: #C3E88D;">.</span><span style="color: #89DDFF;">*}</span><span style="color: #C3E88D;">.srt</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">-c</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">copy</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">-c:s</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">mov_text</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&quot;</span><span style="color: #C3E88D;">added/</span><span style="color: #89DDFF;">${</span><span style="color: #C3E88D;">i</span><span style="color: #89DDFF;">%</span><span style="color: #C3E88D;">.</span><span style="color: #89DDFF;">*}</span><span style="color: #C3E88D;">-added-subtitle.mp4</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #82AAFF;">echo</span><span style="color: #A6ACCD;"> </span><span style="color: #C3E88D;">-e</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">${1}</span><span style="color: #C3E88D;"> converted successfully </span><span style="color: #89DDFF;">${</span><span style="color: #C3E88D;">i</span><span style="color: #89DDFF;">%</span><span style="color: #C3E88D;">.</span><span style="color: #89DDFF;">*}</span><span style="color: #C3E88D;">-added-subtitle.mp4</span><span style="color: #89DDFF;">&quot;</span><span style="color: #89DDFF;">;</span></div><div class='line'><span style="color: #A6ACCD;">  </span><span style="color: #89DDFF;">done</span></div></code>
-                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>shell</div></pre>
-</div>
-<!-- End: /components/_code_block.antlers.html -->
-    
-    <!-- /components/_text.antlers.html -->
-<div class="size-lg">
-    <h2>Step 5</h2><p>Execute the script by running <code>add_subtitles.sh</code>.</p><h2>Step 6</h2><p>Test the generated file(s) and remove the one(s) without subtitles if you want to free up some disk space.</p>
-</div>
-<!-- End: /components/_text.antlers.html -->
-
-    
-    <!-- /components/_notice_block.antlers.html -->
-<div class="notice rounded-md p-4 my-4 w-full bg-brightgreen">
-    <p>Photo by <a href="https://unsplash.com/@macroman">Immo Wegmann</a></p>
-    
-</div>
-<!-- End: /components/_notice_block.antlers.html -->
 </article>
 <!-- End: /typography/_prose.antlers.html -->
 
