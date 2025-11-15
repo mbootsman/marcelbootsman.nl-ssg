@@ -722,20 +722,8 @@
             <div class="grid grid-cols-4">
                 
                     
-                        <!-- /page_builder/_avatar.antlers.html -->
-<section class="hidden md:block">
-        
-        <img class="px-4" style="border-radius: 500px;" src="/images/marcel-bootsman-portretfoto-mei-2025-600x600-rond.webp" alt="Portretfoto van Marcel Bootsman" width="600" height="600" />
-        
-</section>
-<!-- End: /page_builder/_avatar.antlers.html -->
-                    
-                
-                    
                 
 
-                
-                    
                 
                     
                         <!-- /page_builder/_article.antlers.html -->
@@ -760,7 +748,37 @@
 >
     <!-- /components/_text.antlers.html -->
 <div class="size-lg">
-    <h2>About Marcel Bootsman</h2><p>Marcel discovered the web in 1995. Since then he has paid attention to and worked with lots of technologies and founded his own WordPress oriented business <a href="https://nostromo.nl">nostromo.nl</a> in 2009.</p><p>Currently Marcel is Partnerships & Community Manager EMEA at <a href="/kinsta">Kinsta</a>. where he helps clients and partners grow with their business with <a href="/kinsta-managed-wordpress-hosting">Managed Hosting for WordPress</a>, and <a href="/kinsta-application-database-hosting">Application, Database</a>, <a href="https://kinsta.com/static-site-hosting/">Static site hosting</a>.</p><p>You can contact Marcel on a diverse range of online platforms. Please see the Connect section on the <a href="/#connect">homepage</a> for the details.</p>
+    <p>When using the WordPress REST API, it might be needed to hide some WP REST API links from the page source to the outside world. Here’s how to do that.</p><h2>Remove WordPress REST API Links</h2><p>Let’s say you have added your own endpoint to the WP REST API, and do not want to publicly show it in the page source. There are two places the WP REST API link is added to the page source:</p><ul><li><p><a href="https://core.trac.wordpress.org/browser/tags/5.2/src/wp-includes/default-filters.php#L271">default-filters.php @ 271</a> (WordPress version 5.2.4)</p></li><li><p><a href="https://core.trac.wordpress.org/browser/tags/5.2/src/wp-includes/default-filters.php#L272">default-filters.php @ 272</a> (WordPress version 5.2.4)</p></li></ul><p>To remove these links we simply remove the functions that are hooked to <code>wp_head</code> and <code>template_redirect</code></p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_code_block.antlers.html -->
+<div class="p2 my-4 size-lg">
+    <pre class='relative'><code class='torchlight' 
+                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #676E95;">// Hide WP REST API links in page headers</span></div><div class='line'><span style="color: #82AAFF;">remove_action</span><span style="color: #89DDFF;">(</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">wp_head</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">rest_output_link_wp_head</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">10</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #82AAFF;">remove_action</span><span style="color: #89DDFF;">(</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">template_redirect</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">rest_output_link_header</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #F78C6C;">11</span><span style="color: #89DDFF;">);</span></div></code>
+                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>php</div></pre>
+</div>
+<!-- End: /components/_code_block.antlers.html -->
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>Be aware that if REST API calls are done via AJAX, the browser shows the URL that is called, and it is visible to the public.</p><h2>Bonus: Clear the WP-JSON index</h2><p>If you have the WP REST API active, and don’t want people to see what endpoints are available, use the code below.</p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_code_block.antlers.html -->
+<div class="p2 my-4 size-lg">
+    <pre class='relative'><code class='torchlight' 
+                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #676E95;">// Hide WP REST API JSON index</span></div><div class='line'><span style="color: #82AAFF;">add_filter</span><span style="color: #89DDFF;">(</span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">rest_index</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">,</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">&#39;</span><span style="color: #C3E88D;">nstrm_hide_wp_json_index</span><span style="color: #89DDFF;">&#39;</span><span style="color: #89DDFF;">);</span></div><div class='line'><span style="color: #C792EA;">function</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">nstrm_hide_wp_json_index</span><span style="color: #89DDFF;">(</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">$</span><span style="color: #A6ACCD;">response </span><span style="color: #89DDFF;">){</span></div><div class='line'><span style="color: #A6ACCD;">    </span><span style="color: #89DDFF;">return</span><span style="color: #A6ACCD;"> </span><span style="color: #82AAFF;">array</span><span style="color: #89DDFF;">();</span></div><div class='line'><span style="color: #89DDFF;">}</span></div></code>
+                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>php</div></pre>
+</div>
+<!-- End: /components/_code_block.antlers.html -->
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>If you want to further customize the WP REST API, use the plugin <a href="https://wordpress.org/plugins/disable-json-api/">Disable REST API</a>. This plugin disables all endpoint of the WP REST API and allows you to enable individual endpoints.</p>
 </div>
 <!-- End: /components/_text.antlers.html -->
 </article>

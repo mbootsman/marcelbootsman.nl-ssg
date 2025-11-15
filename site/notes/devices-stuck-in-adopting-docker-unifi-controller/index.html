@@ -683,20 +683,8 @@
             <div class="grid grid-cols-4">
                 
                     
-                        <!-- /page_builder/_avatar.antlers.html -->
-<section class="hidden md:block">
-        
-        <img class="px-4" style="border-radius: 500px;" src="/images/marcel-bootsman-portretfoto-mei-2025-600x600-rond.webp" alt="Portretfoto van Marcel Bootsman" width="600" height="600" />
-        
-</section>
-<!-- End: /page_builder/_avatar.antlers.html -->
-                    
-                
-                    
                 
 
-                
-                    
                 
                     
                         <!-- /page_builder/_article.antlers.html -->
@@ -721,7 +709,7 @@
 >
     <!-- /components/_text.antlers.html -->
 <div class="size-lg">
-    <h2>About Marcel Bootsman</h2><p>Marcel discovered the web in 1995. Since then he has paid attention to and worked with lots of technologies and founded his own WordPress oriented business <a href="https://nostromo.nl">nostromo.nl</a> in 2009.</p><p>Currently Marcel is Partnerships & Community Manager EMEA at <a href="/kinsta">Kinsta</a>. where he helps clients and partners grow with their business with <a href="/kinsta-managed-wordpress-hosting">Managed Hosting for WordPress</a>, and <a href="/kinsta-application-database-hosting">Application, Database</a>, <a href="https://kinsta.com/static-site-hosting/">Static site hosting</a>.</p><p>You can contact Marcel on a diverse range of online platforms. Please see the Connect section on the <a href="/#connect">homepage</a> for the details.</p>
+    <p>I recently replaced an old WiFi router with an Ubiquiti UniFi U6+. I connected it to a Ubiquiti UniFi Switch Lite 8 PoE.</p><p>To manage Ubiquiti devices, you need the UniFi Network Application, which can be run from a dedicated device or from a Docker image. As you might know, I’m a big fan of running certain applications as Docker containers on my Synology DiskStation.</p><p>I have installed <a href="https://hub.docker.com/r/jacobalberty/unifi/">this</a> Docker image with help from <a href="https://lazyadmin.nl/home-network/unifi-controller-on-a-synology-nas-with-docker/">this guide</a>. After starting the container, I could log in and start adopting my devices. </p><p>The devices were found, but remained stuck in the “Adopting” status. I did a factory reset for both devices, but nothing changed. After reading the documentation more thoroughly (#protip), I found an explanation.</p><p><strong>Override &quot;Inform Host&quot; IP</strong></p><p>For your Unifi devices to &quot;find&quot; the Unifi Controller running in Docker, you <em>MUST</em> override the Inform Host IP with the address of the Docker host computer. (By default, the Docker container usually gets the internal address 172.17.x.x while Unifi devices connect to the (external) address of the Docker host.) To do this:</p><ul><li><p>Find <strong>Settings -&gt; System -&gt; Other Configuration -&gt; Override Inform Host:</strong> in the Unifi Controller web GUI. (It&#039;s near the bottom of that page.)</p></li><li><p>Check the &quot;Enable&quot; box, and enter the IP address of the Docker host machine.</p></li><li><p>Save settings in Unifi Controller</p></li><li><p>Restart UniFi-in-Docker container</p></li></ul><p><em>The above was copied from the docs.</em></p><p>Now my devices were adopted and I could continue setting them up and integrate them into the home network.</p>
 </div>
 <!-- End: /components/_text.antlers.html -->
 </article>
