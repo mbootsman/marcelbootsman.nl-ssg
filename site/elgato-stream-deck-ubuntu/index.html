@@ -840,20 +840,8 @@
             <div class="grid grid-cols-4">
                 
                     
-                        <!-- /page_builder/_avatar.antlers.html -->
-<section class="hidden md:block">
-        
-        <img class="px-4" style="border-radius: 500px;" src="/images/marcel-bootsman-portretfoto-mei-2025-600x600-rond.webp" alt="Portretfoto van Marcel Bootsman" width="600" height="600" />
-        
-</section>
-<!-- End: /page_builder/_avatar.antlers.html -->
-                    
-                
-                    
                 
 
-                
-                    
                 
                     
                         <!-- /page_builder/_article.antlers.html -->
@@ -878,7 +866,162 @@
 >
     <!-- /components/_text.antlers.html -->
 <div class="size-lg">
-    <h2>About Marcel Bootsman</h2><p>Marcel discovered the web in 1995. Since then he has paid attention to and worked with lots of technologies and founded his own WordPress oriented business <a href="https://nostromo.nl">nostromo.nl</a> in 2009.</p><p>Currently Marcel is Partnerships & Community Manager EMEA at <a href="/kinsta">Kinsta</a>. where he helps clients and partners grow with their business with <a href="/kinsta-managed-wordpress-hosting">Managed Hosting for WordPress</a>, and <a href="/kinsta-application-database-hosting">Application, Database</a>, <a href="https://kinsta.com/static-site-hosting/">Static site hosting</a>.</p><p>You can contact Marcel on a diverse range of online platforms. Please see the Connect section on the <a href="/#connect">homepage</a> for the details.</p>
+    <p>Using the Elgato Stream Deck with Ubuntu can (and will if you use it wisely) enhance your workflow, whether you&#039;re a content creator, programmer, or someone who loves streamlining tasks. </p><p>While Elgato primarily supports Windows and macOS for its Stream Deck software, there are workarounds to get it up and running smoothly on Ubuntu, thanks to community-driven solutions like OpenDeck. </p><p>This guide will walk you through the steps to set up and use the Elgato Stream Deck on Ubuntu using OpenDeck.</p><h2>Understanding the Elgato Stream Deck</h2><p>I’m assuming you know what the Elgato Stream Deck is, but for completeness I explain a bit what it is. </p><p>The Elgato Stream Deck is a customizable control device with programmable LCD keys, enabling users to create personalized shortcuts for various applications and tasks. Whether it&#039;s launching software, controlling streaming tools, executing commands, or integrating with popular platforms like OBS Studio or Twitch, the Stream Deck streamlines actions with the tap of a button.</p><h2>Getting started</h2><p>To begin, ensure your Elgato Stream Deck is connected to your Ubuntu machine. <a href="https://github.com/nekename/OpenDeck">OpenDeck</a> is a third-party open-source tool that acts as a bridge between the Stream Deck hardware and Linux, providing the necessary functionalities to configure and use the device. </p><p>OpenDeck supports plugins made for the original Stream Deck SDK, allowing many plugins made for the Elgato software ecosystem to be used, or the <a rel="nofollow" href="https://openaction.amankhanna.me/">OpenAction</a> API.</p><h3>Installing OpenDeck</h3><p>Install the application through <a href="https://flathub.org/apps/me.amankhanna.opendeck">Flathub</a>, or install it by downloading the latest release from the OpenDeck <a href="https://github.com/nekename/OpenDeck/releases/latest">GitHub Releases</a> page.</p><h4>Step 2: Configure access to Elgato device(s)</h4><p>Ubuntu, or to be more precise, your user, needs to have access to the Elgato device(s). Therefore we need to add USB rules. Download the rules from <a href="https://raw.githubusercontent.com/streamduck-org/elgato-streamdeck/main/40-streamdeck.rules">here</a>, and copy it to the correct location with <code>sudo cp 40-streamdeck.rules /etc/udev/rules.d/</code></p><p></p><p> The following will create a file called <code>/etc/udev/rules.d/60-streamdeck.rules</code> and add the following required rules for using your USB Stream Deck. Creating this file adds udev rules that provides your user with access to USB devices created by Elgato.</p><p>For the rule to take immediate effect, run the following command:</p><p><code>sudo udevadm control --reload-rules</code></p><h2>Using OpenDeck</h2><p>After you launch OpenDeck, you will see the following window, but empty. You can add all sorts of shortcuts for executing commands, sending key presses, writing text and many more with the help of plugins.</p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_image.antlers.html -->
+<figure
+    class="not-prose
+        size-md
+    "
+>
+    <!-- statamic-peak-tools::components/_picture.antlers.html -->
+
+    
+        
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+
+        
+        
+
+        <picture>
+            
+                
+                    <source
+                        srcset="
+                            
+                                 320w,
+                            
+                                 480w,
+                            
+                                 640w,
+                            
+                                 768w,
+                            
+                                 1024w,
+                            
+                                 1280w,
+                            
+                                 1440w,
+                            
+                                 1536w,
+                            
+                                 1680w
+                            
+                        "
+                        sizes="
+            
+        "
+                        type="image/avif"
+                    >
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/opendeck-main-screen.png/a111a1506d6e6fd7f657bf400767518a/opendeck-main-screen.webp 320w,
+                            
+                                /img/containers/images/opendeck-main-screen.png/531114b4118e0cdb089b26266fd9a542/opendeck-main-screen.webp 480w,
+                            
+                                /img/containers/images/opendeck-main-screen.png/e9f4196e3f9d09d04e2d80ced2610086/opendeck-main-screen.webp 640w,
+                            
+                                /img/containers/images/opendeck-main-screen.png/53820d1d62c5fd3c3d431929358e9cae/opendeck-main-screen.webp 768w,
+                            
+                                /img/containers/images/opendeck-main-screen.png/017fd78f59836b6910f7539e26effa2e/opendeck-main-screen.webp 1024w,
+                            
+                                /img/containers/images/opendeck-main-screen.png/83923b9f82a052d1a533ece0a65b2074/opendeck-main-screen.webp 1280w,
+                            
+                                /img/containers/images/opendeck-main-screen.png/d6463f8baa445781ba5ee30a38aece4d/opendeck-main-screen.webp 1440w,
+                            
+                                /img/containers/images/opendeck-main-screen.png/9b86bcb7705a6bc448bac116f5522317/opendeck-main-screen.webp 1536w,
+                            
+                                /img/containers/images/opendeck-main-screen.png/883d7b5c90b4d150c4b94f65572f93fc/opendeck-main-screen.webp 1680w
+                            
+                        "
+                        sizes="
+            
+        "
+                        type="image/webp"
+                    >
+                
+                    <source
+                        srcset="
+                            
+                                /img/containers/images/opendeck-main-screen.png/fd234c29c657145b67c49ce552edc6fd/opendeck-main-screen.jpg 320w,
+                            
+                                /img/containers/images/opendeck-main-screen.png/c9d0e335897ee8de52b3eca83fed47d9/opendeck-main-screen.jpg 480w,
+                            
+                                /img/containers/images/opendeck-main-screen.png/348fdbfe9fc3476d09d8261c910c6111/opendeck-main-screen.jpg 640w,
+                            
+                                /img/containers/images/opendeck-main-screen.png/28dea1c99d022367f44a1c42918f1a53/opendeck-main-screen.jpg 768w,
+                            
+                                /img/containers/images/opendeck-main-screen.png/f7a19519adfe2bdb74845e65a99965e5/opendeck-main-screen.jpg 1024w,
+                            
+                                /img/containers/images/opendeck-main-screen.png/6fb8c64d978766ea26e30cf49542c2bf/opendeck-main-screen.jpg 1280w,
+                            
+                                /img/containers/images/opendeck-main-screen.png/819291cd77f5bcbe9637b07631b30664/opendeck-main-screen.jpg 1440w,
+                            
+                                /img/containers/images/opendeck-main-screen.png/cf7175044a192ce09401113a8ac08672/opendeck-main-screen.jpg 1536w,
+                            
+                                /img/containers/images/opendeck-main-screen.png/87ebe4a437624c2813de2460e89fdf70/opendeck-main-screen.jpg 1680w
+                            
+                        "
+                        sizes="
+            
+        "
+                        type="image/jpeg"
+                    >
+                
+                <img
+                    width="897"
+                    height="675"
+                    src="/img/containers/images/opendeck-main-screen.png/8e178cb70b04ccbdcad2d4ded3492e3e/opendeck-main-screen.png"
+                    alt=""
+                    
+                        class="
+        h-auto
+        "
+                    
+                    
+                        aria-hidden="true"
+                    
+                    
+                        loading="lazy"
+                    
+                >
+            
+        </picture>
+    
+
+<!-- End: statamic-peak-tools::components/_picture.antlers.html -->
+
+
+    <!-- /typography/_caption.antlers.html -->
+
+    <figcaption class="italic border-b border-brightgreen inline-block mt-0 text-sm text-neutral ">
+        OpenDeck main window 
+    </figcaption>
+
+<!-- End: /typography/_caption.antlers.html -->
+
+</figure>
+<!-- End: /components/_image.antlers.html -->
+
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>For the icons in the screenshot above I have used icons from Anggara on <a href="https://www.flaticon.com/authors/anggara/color-lineal-color?author_id=1427&amp;type=standard">flaticon.com</a>.</p><h2>Conclusion</h2><p>While Elgato might not officially support Ubuntu for the Stream Deck, the availability of community-driven solutions like OpenDeck opens up the possibility for Ubuntu users to harness the potential of this powerful hardware. With the ability to create personalized shortcuts and workflows, the Stream Deck becomes an invaluable tool for boosting productivity and efficiency on Ubuntu systems.</p>
 </div>
 <!-- End: /components/_text.antlers.html -->
 </article>
