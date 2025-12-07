@@ -728,20 +728,8 @@
             <div class="grid grid-cols-4">
                 
                     
-                        <!-- /page_builder/_avatar.antlers.html -->
-<section class="hidden md:block">
-        
-        <img class="px-4" style="border-radius: 500px;" src="/images/marcel-bootsman-portretfoto-mei-2025-600x600-rond.webp" alt="Portretfoto van Marcel Bootsman" width="600" height="600" />
-        
-</section>
-<!-- End: /page_builder/_avatar.antlers.html -->
-                    
-                
-                    
                 
 
-                
-                    
                 
                     
                         <!-- /page_builder/_article.antlers.html -->
@@ -766,7 +754,52 @@
 >
     <!-- /components/_text.antlers.html -->
 <div class="size-lg">
-    <h2>About Marcel Bootsman</h2><p>Marcel discovered the web in 1995. Since then he has paid attention to and worked with lots of technologies and founded his own WordPress oriented business <a href="https://nostromo.nl">nostromo.nl</a> in 2009.</p><p>Currently Marcel is Partnerships & Community Manager EMEA at <a href="/kinsta">Kinsta</a>. where he helps clients and partners grow with their business with <a href="/kinsta-managed-wordpress-hosting">Managed Hosting for WordPress</a>, and <a href="/kinsta-application-database-hosting">Application, Database</a>, <a href="https://kinsta.com/static-site-hosting/">Static site hosting</a>.</p><p>You can contact Marcel on a diverse range of online platforms. Please see the Connect section on the <a href="/#connect">homepage</a> for the details.</p>
+    <p>If you want to change the default locations of your user directories like Downloads, Videos, or Documents in Ubuntu, it’s quite simple. Here’s a step-by-step guide to help you through the process.</p><h2>Open configuration file</h2><ol start="1"><li><p>Open a terminal (Ctrl + Alt + T).</p></li><li><p>Type the following command to edit your user’s configuration file:</p></li></ol>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_code_block.antlers.html -->
+<div class="p2 my-4 size-lg">
+    <pre class='relative'><code class='torchlight' 
+                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">nano</span><span style="color: #A6ACCD;"> </span><span style="color: #89DDFF;">~</span><span style="color: #C3E88D;">/.config/user-dirs.dirs</span></div></code>
+                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>Bash</div></pre>
+</div>
+<!-- End: /components/_code_block.antlers.html -->
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <h2>Edit folder location</h2><p>In the text editor, you’ll see lines corresponding to each user directory. For example, to change the location of the Downloads folder, find the line:</p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_code_block.antlers.html -->
+<div class="p2 my-4 size-lg">
+    <pre class='relative'><code class='torchlight' 
+                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">XDG_DOWNLOAD_DIR</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">$HOME</span><span style="color: #C3E88D;">/Downloads</span><span style="color: #89DDFF;">&quot;</span></div></code>
+                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>Bash</div></pre>
+</div>
+<!-- End: /components/_code_block.antlers.html -->
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <p>You can change the location to a new path, just make sure it exists. For example:</p>
+</div>
+<!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_code_block.antlers.html -->
+<div class="p2 my-4 size-lg">
+    <pre class='relative'><code class='torchlight' 
+                style='background-color: #292D3E; --theme-selection-background: #00000080;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #A6ACCD;">XDG_DOWNLOAD_DIR</span><span style="color: #89DDFF;">=</span><span style="color: #89DDFF;">&quot;</span><span style="color: #A6ACCD;">$HOME</span><span style="color: #C3E88D;">/Misc/Downloads</span><span style="color: #89DDFF;">&quot;</span></div></code>
+                <div class='text-xs select-none opacity-50 top-0 right-0 p-2 absolute uppercase'>Bash</div></pre>
+</div>
+<!-- End: /components/_code_block.antlers.html -->
+    
+    <!-- /components/_text.antlers.html -->
+<div class="size-lg">
+    <h2>Save the file and log in again</h2><p>You can now save the file and close nano with <code>CTRL + X</code>, then <code>Y</code>, and <code>Enter</code>.</p><p>You might need to log out and log back in to activate the changes.</p><p>Changing user directory locations in Ubuntu can help you organize your files better or free up space on your primary drive. By following these steps, you’ll be able to customize your file management experience to fit your needs.</p>
 </div>
 <!-- End: /components/_text.antlers.html -->
 </article>

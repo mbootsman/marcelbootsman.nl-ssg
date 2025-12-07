@@ -691,20 +691,8 @@
             <div class="grid grid-cols-4">
                 
                     
-                        <!-- /page_builder/_avatar.antlers.html -->
-<section class="hidden md:block">
-        
-        <img class="px-4" style="border-radius: 500px;" src="/images/marcel-bootsman-portretfoto-mei-2025-600x600-rond.webp" alt="Portretfoto van Marcel Bootsman" width="600" height="600" />
-        
-</section>
-<!-- End: /page_builder/_avatar.antlers.html -->
-                    
-                
-                    
                 
 
-                
-                    
                 
                     
                         <!-- /page_builder/_article.antlers.html -->
@@ -729,9 +717,17 @@
 >
     <!-- /components/_text.antlers.html -->
 <div class="size-lg">
-    <h2>About Marcel Bootsman</h2><p>Marcel discovered the web in 1995. Since then he has paid attention to and worked with lots of technologies and founded his own WordPress oriented business <a href="https://nostromo.nl">nostromo.nl</a> in 2009.</p><p>Currently Marcel is Partnerships & Community Manager EMEA at <a href="/kinsta">Kinsta</a>. where he helps clients and partners grow with their business with <a href="/kinsta-managed-wordpress-hosting">Managed Hosting for WordPress</a>, and <a href="/kinsta-application-database-hosting">Application, Database</a>, <a href="https://kinsta.com/static-site-hosting/">Static site hosting</a>.</p><p>You can contact Marcel on a diverse range of online platforms. Please see the Connect section on the <a href="/#connect">homepage</a> for the details.</p>
+    <p>To prevent NFS mounts from attempting to mount while your system is offline and disable retry attempts in Ubuntu, you can use the <code>noauto</code> option in conjunction with the <code>retry=0</code> option in your <code>/etc/fstab</code> file. Here&#039;s how to do it:</p><ol start="1"><li><p>Open a terminal window.</p></li><li><p>Edit the /etc/fstab file using your preferred text editor. You may need superuser privileges, so use sudo:<br><code>sudo nano /etc/fstab</code> .</p></li><li><p>Locate the line for the NFS mount you want to modify. It will look something like this:<br><code>server:/export /mnt/nfs nfs defaults 0 0</code></p></li><li><p>Add the noauto and retry=0 options to the list of options. The modified line will look like this:<br><code>server:/export /mnt/nfs nfs noauto,retry=0 0 0</code></p></li><li><p>Save the file and exit the text editor.</p></li></ol><p>After making this change, the NFS share will not be automatically mounted at boot, and it will not attempt to retry if the server is offline. You can manually mount it when needed using the mount command or by accessing the directory. For example:<br><code>sudo mount /mnt/nfs</code></p>
 </div>
 <!-- End: /components/_text.antlers.html -->
+
+    
+    <!-- /components/_notice_block.antlers.html -->
+<div class="notice rounded-md p-4 my-4 w-full bg-brightgreen">
+    <p>Photo by <a href="https://unsplash.com/@jordanharrison">Jordan Harrison</a></p>
+    
+</div>
+<!-- End: /components/_notice_block.antlers.html -->
 </article>
 <!-- End: /typography/_prose.antlers.html -->
 
